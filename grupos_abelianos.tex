@@ -1,0 +1,272 @@
+%!TEX root = algebra.tex
+\chapter{Grupos Abelianos Finitamente Gerados} % (fold)
+\label{cha:grupos_abelianos_finitamente_gerados}
+
+\begin{definicao}
+	\begin{enumerate}
+		\item Dada uma fam{\'\i}lia $\{(G_\lambda,\cdot) \mid \lambda \in \Lambda\}$ de grupos. O \textbf{produto cartesiano externo} determinado pela fam{\'\i}lia \'e o grupo $(G, \cdot)$ onde
+		\[
+			G = \displaystyle\prod_{\lambda \in \Lambda} G_\lambda,
+		\]
+		isto \'e, $G = \{(g_\lambda)_{\lambda \in \Lambda}; g_\lambda \in G_\lambda, \lambda \in \Lambda\}$ e $(g_\lambda)_\lambda \cdot (g'_\lambda)_\lambda = (g_\lambda\cdot g'_\lambda)_{\lambda \in \Lambda}$. Nota\c{c}\~ao: se $G = H_\lambda$ para todo $\lambda \in \Lambda$, ent\~ao $G = H^\Lambda$. Em particular se $\Lambda = \{1, \dots, n\}$, ent\~ao $G = H^n$.
+		\item Seja $(G, \cdot)$ um grupo, $H_1$, \dots, $H_n$ subgrupos normais de $G$, ent\~ao dizemos que $G$ \'e o \textbf{produto direto interno} de $H_1$, \dots, $H_n$ se as seguintes condi\c{c}\~oes s\~ao satisfeitas:
+		\begin{enumerate}
+			\item $G = H_1\dots H_n$;
+			\item para todo $i$, $H_i \cap (H_1 \dots \hat{H_i}\dots H_n) = \{e\}$, onde $H_1 \dots \hat{H_i}\dots H_n = H_1 \dots H_{i - 1}H_{i + 1}\dots H_n$.
+		\end{enumerate}
+	\end{enumerate}
+\end{definicao}
+
+\begin{observacao}
+	Seja $\{H_\lambda\}_{\lambda \in \Lambda}$ uma fam{\'\i}lia de subgrupos normais de um grupo $G$. Ent\~ao $\prod H_\lambda$ est\'a contido em $G$, onde $\prod H_\lambda = \{\prod_{\lambda \in \Lambda} h_y,\ h_\lambda \in H_\lambda,\ h_\lambda = e \mbox{ quase sempre}\} \le G$. Neste caso dizemos que $G$ \'e o \textbf{produto direto interno} da fam{\'\i}lia $\{H_\lambda, \lambda \in \Lambda, H_\lambda \unlhd G\}$ se satisfaz:
+	\begin{enumerate}
+		\item $G = \prod H_\lambda$;
+		\item para todo $\lambda \in \Lambda$, $H_\lambda \cap (\prod_{\beta \ne \lambda}H_\beta) = \{e\}$.
+	\end{enumerate}
+\end{observacao}
+
+\begin{lema}\label{produto_direto}
+	Sejam $(G, \cdot)$ um grupo e $H_1$, \dots, $H_n$ subgrupos normais de $G$. Ent\~ao $G$ \'e produto	direto de $H_1$, \dots, $H_n$ se e s\'o se para todo $g \in G$ existem \'unicos $h_1$, \dots, $h_n$ tais que $h_i \in H_i$ e $g = h_1\cdots h_n$.
+\end{lema}
+\begin{prova}
+	
+\end{prova}
+
+\begin{proposicao}
+	Nas condi\c{c}\~oes do Lema \ref{produto_direto}, $G$ \'e o produto direto interno de $H_1$, \dots, $H_n$ se, e somente se, $\varphi : H_1 \times \dots \times H_n \to G$ dada por $\varphi(h_1, \dots, h_n) = h_1\dots h_n$ \'e um isomorfismo.
+\end{proposicao}
+\begin{prova}
+	
+\end{prova}
+
+\begin{corolario}
+	Se $G$ \'e o produto direto dos subgrupos $H_1$, \dots, $H_n$ e para todo $i$ temos $K_i \lhd H_i$, ent\~ao $K = K_1\dots K_n$ \'e um subgrupo normal de $G$ e
+	\[
+		\dfrac{G}{H} = \dfrac{H_1}{K_1} \times \cdots \times \dfrac{H_n}{K_n}.
+	\]
+\end{corolario}
+\begin{prova}
+	
+\end{prova}
+
+
+\begin{definicao}
+	\begin{enumerate}
+		\item Seja $(G, +)$ um grupo abeliano e $g \in G$. Dizemos que $g$ \'e \textbf{livre} se $o(g) = \infty$, isto \'e, n\~ao existe $m \in \Z$ tal que $mg = 0$, ou ainda, dado $m \in \Z$, temos $mg = 0$ se, s\'o se, $m = 0$.\index{Livre!Elemento}
+		\item O conjunto $\{g_1,\dots,g_n\}\sub G$ \'e chamado \textbf{livre} se
+		\[
+			m_1g_1 + \cdots + m_ng_n = 0
+		\]
+		onde $m_i \in \Z$ possui somente a solu\c{c}\~ao $m_i = 0$ para $i = 1$, \dots, $n$.
+		\item O conjunto $\mathcal{F} = \{g_\lambda \mid \lambda \in \Lambda\} \sub G$ \'e chamado de \textbf{livre} se qualquer subconjunto finito de $\mathcal{F}$ \'e livre.\index{Livre!Conjunto}
+		\item Um conjunto $\{g_1, \dots, g_n\}$ \'e um \textbf{conjunto de geradores} de $G$ se para todo $g \in G$ existem $m_1$, \dots, $m_n \in \Z$ tais que $g = m_1g_1 + \cdots + m_ng_n$. Neste caso dizemos que $G$ \'e um \textbf{grupo abeliano finitamente gerado} por $\{g_1,\dots,g_n\}$. Nota\c{c}\~ao: $G = g_1\Z + \cdots + g_n\Z = \{m_1g_1 + \cdots + m_ng_n \mid m_i \in \Z\}$.\index{Grupo Abeliano! Finitamente Gerados}
+	\end{enumerate}
+\end{definicao}
+
+\begin{definicao}
+	Um grupo abeliano $(G, +)$ \'e chamado de \textbf{livre de posto finito} se $G$ admite uma base livre e finita, isto \'e, se existe $\beta = \{g_1, \dots, g_n\} \sub G$ tal que $\beta$ \'e livre e gera $G$.\index{Grupo Abeliano!Livre de posto finito}
+\end{definicao}
+
+\begin{lema}
+	Sejam $(G, +)$ um grupo abeliano e $\beta = \{g_1,\dots, g_n\} \sub G$. Ent\~ao $\beta$ \'e base livre de $G$ se, e somente se, $G = g_1\Z \oplus \cdots \oplus g_n\Z$ e cada $g_i$ \'e livre.
+\end{lema}
+
+
+\begin{observacao}
+	Suponha que $G$ \'e um grupo abeliano livre de posto finito. Se $\beta = \{g_1, \dots, g_n\}$ \'e base livre de $G$, ent\~ao
+	\[
+		G \cong g_1\Z \times \cdots \times g_n\Z \cong \Z \times \cdots \times \Z = \Z^n
+	\]
+	Mais ainda, $2g_i\Z \le g_i\Z$ da{\'\i}
+	\[
+		K = 2g_1\Z \oplus \cdots \oplus 2g_n\Z = 2G
+	\]
+	e ent\~ao
+	\[
+		\dfrac{G}{2G} = \dfrac{G}{K} \cong \dfrac{g_1\Z}{2g_1\Z} \times \cdots \times \dfrac{g_n\Z}{2g_n\Z} \cong \Z_2 \times \cdots \times \Z_2 = \Z_2^n.
+	\]
+	Portanto
+	\[
+		\left|\dfrac{G}{2G}\right| = 2^n
+	\]
+	onde $n = \#(\beta)$ e $\beta$ \'e uma base livre de $G$.
+\end{observacao}
+
+\begin{proposicao}
+	Se $(G, +)$ \'e um grupo abeliano livre de posto finito, ent\~ao quaisquer duas bases livres de $G$ t\^em o mesmo n\'umero $n$ de elementos. Tal $n$ \'e chamado o \textbf{posto} do grupo livre $G$.\index{Grupos Abelianos!Posto}
+\end{proposicao}
+
+Suponha que $L$ \'e um grupo livre de posto $n$ e que $\beta = \{u_1, \dots, u_n\}$ seja uma base livre de $L$. Tome $u \in L$. Logo existem \'unicos $x_1$, \dots, $x_n \in \Z$ tais que $u = x_1u_1 + \cdots + x_nu_n$. Assim podemos escrever
+\[
+	[u]_\beta = \begin{pmatrix}
+		x_1\\
+		\vdots\\
+		x_n
+	\end{pmatrix} \in \Z^n,
+\]
+isto \'e, $x_1$, \dots, $x_n$ s\~ao as coordenadas de $u$ na base $\beta$.
+
+\begin{proposicao}
+	Se $L$ \'e um grupo livre de posto $n$ e $\beta = \{u_1,\dots,u_n\}$ \'e uma base livre de $L$, ent\~ao
+	\begin{align*}
+		\varphi: L \to \Z^n\\
+		u \mapsto [u]_\beta
+	\end{align*}
+	\'e um isomorfismo de grupos abelianos.
+\end{proposicao}
+
+\begin{observacao}
+	Assim o estudo dos grupos abelianos livres de posto finito fica reduzido ao estudo dos grupos $\Z^n$.
+\end{observacao}
+
+\begin{proposicao}
+	Seja $G = g_1\Z + \cdots + g_n\Z$ um grupo abeliano finitamente gerado. Ent\~ao
+	\begin{align*}
+		\varphi: \Z^n \to G\\
+		\begin{pmatrix}
+		x_1\\
+		\vdots\\
+		x_n
+	\end{pmatrix} \mapsto \sum_{i = 1}^nx_ig_i
+	\end{align*}
+	\'e um homomorfismo sobrejetivo. Assim se $K = \ker\varphi$, tem-se $G \cong \dfrac{\Z^n}{K}$.
+\end{proposicao}
+
+\begin{notacao}
+	\begin{enumerate}
+		\item $M_n(\Z)$: matrizes $n\times n$ com entradas em $\Z$.
+		\item $GL_n(\Z) = \{A \in M_n(\Z) \mid \mbox{ existe} A^{-1} \in M_n(\Z)\}$;
+		\item Dada $A \in M_n(\Z)$, $\adj(A) = C^t$, onde $C = (c_{ij})$, $c_{ij} = (-1)^{i + j}\det A_{ij}$ e $A_{ij}$ \'e matriz obtida a partir de $A$ ao removermos a linha $i$ e a coluna $j$.
+		\item Se $A \in M_n(\Z)$, ent\~ao $\adj(A) \in M_n(\Z)$.
+		\item $A\cdot\adj(A) = \adj(A)\cdot A = \det(A) I_n$.
+		\item $A \in GL_n(A)$ se, e somente se, $A\cdot A^{-1} = I_n$ e $A^{-1} \in M_n(\Z)$. Assim $\det(A) = \pm 1$.
+		\item Se $\det(A) = \pm 1$, ent\~ao $A^{-1} = \pm\adj(A)$. Logo $A^{-1} \in M_n(\Z)$ e portanto $A \in GL_n(\Z)$.
+	\end{enumerate}
+\end{notacao}
+
+Do exposto anteriormente obtemos
+\[
+	GL_n(\Z) = \{A \in M_n(\Z) \mid \det(A) = \pm 1\}.
+\]
+
+\begin{lema}
+	Seja $\beta = \{v_1,\dots, v_n\} \sub \Z^n$. Para cada $j$, escreva
+	\[
+		v_j = \begin{pmatrix}
+			a_{1j}\\
+			\vdots\\
+			a_{nj}
+		\end{pmatrix}
+	\]
+	e $A = [v_1 \cdots v_n]$. Ent\~ao $\beta$ \'e base de $\Z^n$ se, e somente se, $A \in GL_n(\Z)$.
+\end{lema}
+\begin{prova}
+	
+\end{prova}
+
+\begin{lema}
+	Se $\beta = \{v_1,\cdots, v_n\}$ gera $\Z^n$, ent\~ao $\beta$ \'e base livre de $\Z^n$.
+\end{lema}
+
+\begin{observacao}
+	Seja $\beta = \{v_1, \cdots, v_n\} \sub \Z^n$ tal que $\beta$ \'e livre. N\~ao necessariamente $\beta$ ser\'a base livre. Por exemplo tome
+	\[
+		A = \begin{pmatrix}
+			1 & 0\\
+			0 & 2
+		\end{pmatrix}.
+	\]
+	Neste caso
+	\[
+		\beta = \left\{v_1 = \begin{pmatrix}
+			1\\0
+		\end{pmatrix}, v_2 = \begin{pmatrix}
+			0\\2
+		\end{pmatrix}\right\}
+	\]
+	\'e livre mas n\~ao gera $\Z^2$. De fato, temos $H = v_1\Z \oplus v_2\Z = \Z \times 2\Z$.
+\end{observacao}
+
+\begin{lema}
+	Seja $A = [v_1 \cdots v_n]$ a matriz cujas colunas s\~ao os vetores
+	\[
+		v_j = \begin{pmatrix}
+			a_{1j}\\
+			\vdots\\
+			a_{nj}
+		\end{pmatrix}
+	\]
+	e $\beta = \{v_1, \dots, v_n\}$. Ent\~ao
+	\begin{enumerate}
+		\item $\beta$ \'e base de $\Z^n$ se, e somente se, $A \in GL_n(\Z)$.
+		\item $\beta$ gera $\Z^n$ se, e somente se, $A \in GL_n(\Z)$.
+	\end{enumerate}
+\end{lema}
+
+Tome $K \le \Z^n$, $K \ne \{0\}$ e seja $l = \max\{s \in \N,\ s \ge 1 \mid \mbox{ existe um conjuto livre } \{u_1, \dots, u_s\} \sub K\} \le n$. Denotamos $l = \rank(K)$.
+
+\begin{lema}
+	Seja $\{0\} \ne K \le \Z^n$, com posto $l$. Ent\~ao $K$ pode ser gerado por $l$ elementos. Em particular $K$ pode ser gerado por $n$ elementos.
+\end{lema}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{definicao}
+	Seja $R$ um dom{\'\i}nio. As \textbf{opera\c{c}\~oes elementates em linhas e colunas de uma matriz $A \in M_{k\times l}(R)$} s\~ao:\index{Matrizes!Opera\c{c}\~oes Elementares}
+	\begin{enumerate}
+		\item Permutar duas linhas ou colunas de $A$.
+		\item Multiplica\c{c}\~ao de uma linha ou coluna por um elemento n\~ao nulo do anel.
+		\item Substitui\c{c}\~ao de uma linha ou coluna pela soma desta com alguma outra.
+	\end{enumerate}
+\end{definicao}
+
+\begin{definicao}
+	Dadas as matrizes $A$, $B \in M_{k\times l}(R)$, dizemos que $B$ \'e \textbf{equivalente} a $A$ se existem $U \in GL_m(R)$ e $V \in GL_n(R)$ tais que $B = UAV$.\index{Matrizes!Equivalentes}
+\end{definicao}
+
+\begin{proposicao}
+	Se $R$ \'e um dom{\'\i}nio principal e $A \in M_n(R)$, ent\~ao existem $U$, $V \in GL_n(R)$, $r \in \N$, $0 \le r \le n$ e elementos invert{\'\i}vies $a_1$, \dots, $a_r$ com $a_1 \mid a_2 \mid \cdots \mid a_r$ tais que
+	\[
+		UAV = \begin{bmatrix}
+			a_1\\
+			& a_2\\
+			& & \ddots\\
+			& & & a_r\\
+			& & & & 0\\
+			& & & & & \ddots\\
+			& & & & & & 0
+		\end{bmatrix}.
+	\]
+\end{proposicao}
+\begin{prova}
+	A demonstra\c{c}\~ao pode ser encontrada em \cite{newman}.
+\end{prova}
+
+\begin{lema}
+	Se $R$ \'e dom{\'\i}nio principal, $a_1$, \dots, $a_n \in R$ e $Rd = Ra_1 + \cdots + a_nR$, ent\~ao:
+	\begin{enumerate}
+		\item Existe $B \in M_n(R)$ tal que os elementos $a_1$, \dots, $a_n$ formam a primeira linha (ou coluca) de $B$ e $\det B = d$.
+		\item Se $d = a_1c_1 + \cdots + a_nc_n$, ent\~ao $Rc_1 + \cdots + Rc_n = R$ e existe uma matriz $U \in GL_n(R)$ cuja primeira linha \'e formada por $c_1$, \dots, $c_n$ e tal que $\det U = 1$.
+	\end{enumerate}
+\end{lema}
+\begin{prova}
+	A demonstra\c{c}\~ao pode ser encontrada em \cite{newman}.
+\end{prova}
+% chapter grupos_abelianos_finitamente_gerados (end)

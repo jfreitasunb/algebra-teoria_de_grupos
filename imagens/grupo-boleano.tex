@@ -1,0 +1,30 @@
+\documentclass{standalone}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,backgrounds}
+\begin{document}
+\pagestyle{empty}
+% Suppose we have three circles or ellipses or whatever. Let us define
+% commands for their paths since we will need them repeatedly in the
+% following:
+
+\def\firstcircle{(0,0) circle (1.5cm)}
+\def\secondcircle{(0:2cm) circle (1.5cm)}
+%\def\thirdcircle{(0:2cm) circle (1.5cm)}
+
+\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+        \begin{scope}[even odd rule]% first circle without the second
+            \clip \secondcircle (-2,-2) rectangle (3,3);
+        \fill[blue!45] \firstcircle;
+        \end{scope}
+        \begin{scope}[even odd rule]% first circle without the second
+            \clip \firstcircle (-2,-2) rectangle (4,4);
+        \fill[blue!45] \secondcircle;
+        \end{scope}
+        \draw \firstcircle node {$A$};
+        \draw \secondcircle node {$B$};
+    \end{scope}
+    
+\end{tikzpicture}
+\end{document}

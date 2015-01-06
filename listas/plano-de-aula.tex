@@ -1,0 +1,158 @@
+%!TEX program = xelatex 
+%!TEX encoding = ISO-8859-1
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath,amsfonts,amsthm,amstext}
+\usepackage[brazil]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\graphicspath{{/home/jfreitas/Dropbox/imagens-latex/}{/Users/jfreitas/Dropbox/imagens-latex/}}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage[all]{xy}
+
+%\usepackage{url}
+
+
+\newcommand{\real}{\mathbb{R}}
+
+%\DeclareGraphicsRule{jpg}{*[}{}{`jpeg2eps #1.jpg}
+%\input{seteps}
+%\input{setbmp-dvips}
+
+\setlength{\topmargin}{-1.0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{10.1in}
+\setlength{\textwidth}{6.5in}
+\setlength{\baselineskip}{12mm}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{figure}[h]
+    \begin{minipage}[c]{2cm}
+    \includegraphics[width=2cm]{ufv.pdf}
+    \end{minipage}%
+    \hspace{0pt}
+    \begin{minipage}[c]{4in}
+    {Universidade Federal de Vi\c{c}osa} \\
+    {Departamento de Matem{\'a}tica}
+    \end{minipage}
+\end{figure}
+\vspace{-0.2cm}
+\hrule
+
+\begin{center}
+{\large\bf Plano de Ensino} \\
+{\large\bf \'Algebra - Ver\~ao 2015}\\
+Prof. Jos{\'e} Ant{\^o}nio O. Freitas
+\end{center}
+\hrule
+\vspace{0.25cm}
+\noindent {\bf{PROGRAMA:}} 6 semanas.
+\begin{enumerate}[label=({\arabic*})]
+\item Grupos, Subgrupos, Teorema de Lagrange, Grupos c{\'\i}clicos, Subgrupos Normais, Grupos Quociente, Teorema de Isomorfismos de grupos, Teorema de Cayley, Teorema de Sylow.
+
+\item Grupos livres, Grupos abelianos finitamente gerados, Grupos Sol\'uveis, Grupos Nilpotentes.
+
+\item Introdu\c{c}\~ao a teoria dos an\'eis: An\'eis e homomorfismos; algumas classes especiais de an\'eis; dom{\'\i}nios de ideais principais; dom{\'\i}nios euclidianos; an\'eis de polin\^omios; fatora\c{c}\~ao \'unica em an\'eis de polin\^omios. (Esta parte depender\'a do tempo dispon{\'\i}vel.)
+
+\end{enumerate}
+
+\noindent {\bf{BIBLIOGRAFIA:}}
+\begin{itemize}
+\item {\it Advanced Modern Algebra}, Rotman, J. J.; Prentice Hall, 2003.
+\item {\it Algebra}, Lang, S.; Boston: Addison-Wesley, 1984.
+\item {\it Elementos de \'Algebra}, Garcia, A., Lequain, Y.; IMPA, 2010.
+\item {\it Introdu\c{c}\~ao \`a \'Algebra}, Gon\c{c}alves, A.; Projeto Euclides, Impa, 2006.
+\end{itemize}
+
+\noindent {\bf{SISTEMA DE AVALIA\c{C}\~{A}O:}} Ser\~ao realizadas duas provas, as quais s\~{a}o atribu\'{\i}das as notas $P_1$ e $P_2$, nas datas detalhadas a seguir.
+
+\begin{center}
+    \begin{tabular}{c|c|c}
+        \hline\hline
+        \hspace{1cm}{\bf Prova}\hspace{1cm} & \hspace{3cm}{\bf Data}\hspace{3cm} & \hspace{1.7cm}{\bf Hor\'{a}rio}\hspace{1.7cm} \\
+        \hline\hline
+        $P_1$ & 26/01/15 (segunda-feira) \phantom{x} & 10:00 - 12:00 \\
+        \hline
+        $P_2$ & 11/02/15 (quarta-feira) \phantom{x} & 10:00 - 12:00 \\
+        \hline\hline
+        %$PF$ &  11/07/11 (segunda-fei) \phantom{x} & 8:00 - 9:50 \\
+        %\hline\hline
+    \end{tabular}
+\end{center}
+
+{\bf \noindent Nota Final:} A partir das notas das provas mencionadas neste texto, a nota final ($NF$) de cada estudante \'{e} dada
+por
+\vspace{-0.15cm}
+\[
+NF = \frac{ P_1 + P_2}{2}
+\]
+e ser\'{a} considerado aprovado o estudante que obtiver $NF \geq 5,00$.
+
+% {\bf \noindent Men\c{c}\~{a}o Final:} ser\'{a} obtida da $NF$ de
+% acordo com as normas da UnB.
+% \begin{center}
+%     \begin{tabular}{c|c}
+%         \hline\hline
+%         \hspace{1cm}{Nota}\hspace{1cm} & \hspace{0.25cm}{Men\c{c}\~{a}o}\hspace{0.25cm}\\
+%         \hline\hline
+%         9,00 a 10,0 & SS \\
+%         \hline
+%         7,00 a 8,99 & MS \\
+%         \hline
+%         5,00 a 6,99 & MM \\
+%         \hline
+%         3,00 a 4,99 & MI \\
+%         \hline
+%         0,00 a 2,99  & II \\
+%         \hline\hline
+%     \end{tabular}
+% \end{center}
+% Receber{\'a} a men{\c c}{\~a}o {\bf SR} quem estiver reprovado por faltar mais de 25\%
+% das aulas.
+
+% \noindent {\bf{P\'{A}GINA DA TURMA:}} Todos estudantes devem
+% obrigatoriamente se cadastrar (de prefer\^encia, com nome e matr\'icula) no MOODLE no endere\c{c}o \url{www.ead.unb.br}. Em seguida, devem se inscrever na disciplina
+% \begin{center}
+% ``Geometria Anal{\'\i}tica - Turma B/2014" usando o c\'odigo: ``GA2014-2-turmaB".
+% \end{center}
+
+% \begin{itemize}
+% \item Toda a comunica\c{c}\~{a}o oficial do curso, inclusive a divulga\c{c}\~{a}o de
+% notas e gabaritos, se dar\'{a} atrav\'{e}s do {\em F\'{o}rum de Not\'{\i}cias} do
+% MOODLE.\vspace{-0.20cm}
+% \item No {\em F\'{o}rum de Debates} do MOODLE poder\~{a}o ser
+% postadas d\'{u}vidas que ser\~{a}o respondidas on-line pelos seus
+% colegas ou pelo monitor dessa turma.
+% \end{itemize}
+
+\noindent {\bf{OBSERVA\c{C}\~{O}ES IMPORTANTES:}}
+
+\begin{enumerate}[label=({\arabic*})]
+\item As provas ser\~{a}o individuais e sem qualquer tipo de
+aux\'{\i}lio (calculadora, livros etc.), sendo vedado o empr\'{e}stimo de
+qualquer material entre os alunos durante as avalia\c{c}\~{o}es. As
+tentativas de fraude ser\~{a}o reprimidas com m\'{a}ximo rigor.
+\vspace{-0.25cm}
+
+\item \'{E} vedado o uso de telefones celulares e quaisquer dispositivos eletr\^{o}nicos pessoais durante a realiza\c{c}\~{a}o das atividades do curso em sala de aula. \vspace{-0.25cm}
+
+
+\item A aus\^{e}ncia acarretar\'{a} nota zero em qualquer uma das
+avalia\c{c}\~{o}es. \vspace{-0.25cm}
+
+\item A crit\'{e}rio do professor, as datas das provas poder\~{a}o
+ser alteradas. \vspace{-0.25cm}
+
+\item Haver{\'a} avalia{\c c}{\~a}o quanto {\`a} clareza, apresenta{\c
+c}{\~a}o e formaliza{\c c}{\~a}o na  resolu{\c c}{\~a}o das quest{\~o}es de
+cada prova. A nota do aluno poder{\'a} ser alterada em raz{\~a}o da
+inobserv{\^a}ncia desses par{\^a}metros.
+\end{enumerate}
+
+
+\vfill
+\hrule
+\end{document}
