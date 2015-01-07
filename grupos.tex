@@ -232,9 +232,21 @@ Quando $g \in G$ escrevemos
 	A \textbf{ordem} de um grupo $G$ \'e o n\'umero de elementos em $G$.\index{Grupos!Ordem}
 \end{definicao}
 
-\begin{proposicao}
-	Resultado sobre ordem de elemento.
+\begin{proposicao}\label{ordem_de_elemento}
+	Seja $G$ um grupo finito e seja $\alpha \in G$. Ent\~ao a ordem de $\alpha$ \'e igual ao n\'umero de elementos em $\ger{\alpha}$, isto \'e,
+	\[
+		|\alpha| = |\ger{\alpha}|.
+	\]
 \end{proposicao}
+\begin{prova}
+	Como $G$ \'e finito, existe um menor inteiro $k \ge 1$ tal que $1$, $\alpha$, $\alpha^2$, \dots, $\alpha^{k - 1}$ s\~ao todos as pot\^encias distintas de $\alpha$, enquanto que em $1$, $\alpha$, $\alpha^2$, \dots, $\alpha^{k - 1}$, $\alpha^k$ temos repeti\c{c}\~oes de pot\^encias. Da{\'\i} $\alpha^k = \alpha^i$ para algum $0 \le i \le k - 1$. Se $i \ge 1$, ent\~ao $\alpha^{k - i} = 1$, o que contradiz a escolha de $k$. Logo $a^k = a^0 = 1$ e assim $k$ \'e a ordem de $\alpha$.
+
+	Agora seja $H = \{1, \alpha, \alpha^2, \dots, \alpha^{k - 1}\}$. Ent\~ao $|H| = k$. Seja $\alpha^i \in \ger{\alpha}$, com $i \in \Z$. Pelo Algor{\'\i}tmo da Divis\~ao de Euclides, existem $q$, $r \in \Z$ tais que $i = qk + r$, com $0 \le r < k$. Assim $\alpha^i = \alpha^{qk}\alpha^r = \alpha^r \in H$, isto \'e, $\ger{\alpha} \sub H$. Como $H \sub \ger{\alpha}$ pela defini\c{c}\~ao de $H$, ent\~ao $H = \ger{\alpha}$. Portanto,
+	\[
+		|\alpha| = |\ger{\alpha}|
+	\]
+	como quer{\'\i}amos.
+\end{prova}
 
 \begin{teorema}
 	Se $G = \ger{a}$ \'e um grupo c{\'\i}clico de ordem $n$, ent\~ao $a^k$ \'e um gerador de $G$ se, e somente se, $mdc(k,n) = 1$.
@@ -247,18 +259,6 @@ Quando $g \in G$ escrevemos
 		a = a^{kp + nq} = a^{nq}(a^k)^p = (a^k)^p
 	\]
 	e ent\~ao $G = \ger{a}$.
-\end{prova}
-
-\begin{proposicao}\label{ordem_de_elemento}
-	Seja $G$ um grupo finito e seja $a \in G$. Ent\~ao a ordem de $a$ \'e igual ao n\'umero de elementos em $\ger{a}$, ou seja,
-	\[
-		|a| = |\ger{a}|.
-	\]
-\end{proposicao}
-\begin{prova}
-	Como $G$ \'e finito, existe um inteiro $k \ge 1$ tal que o conjunto $\{1, a, a^2, \dots, a^{k - 1}\}$ cont\'em todos os elementos distintos de $G$, enquanto na lista $1$, $a$, $a^2$, \dots, $a^k$ possui elementos repetidos. Da{\'\i} $a^k \in \{1, a, a^2, \dots, a^{k - 1}\}$. Assim $a^k = a^i$ para algum $i$ com $0 \le i \le k - 1$. Se $i \ge 1$, ent\~ao $a^{k - i} = 1$, o que contradiz o fato de que n\~ao h\'a repeti\c{c}\~oes entre os elementos $1$, $a$, $a^2$, \dots, $a^{k - 1}$. Logo $a^k = a^0 = 1$ e assim $k$ \'e a ordem de $a$.
-
-	Se $H = \{1, a, a^2, \dots, a^{k - 1}\}$, ent\~ao $|H| = k$. Assim \'e suficiente provar que $H = \ger{a}$. Claramente $H \sub \ger{a}$. Agora seja $a^i \in \ger{a}$. Pelo Algor{\'\i}tmo da Divis\~ao de Euclides, existem $q$ e $r \in \Z$ tais que $i = qk + r$, onde $0 \le r \le k$. Assim $a^i = a^{qk}a^r = a^r \in H$, isto \'e, $\ger{a} \sub H$. Portanto, $H = \ger{a}$.
 \end{prova}
 
 \begin{definicao}
