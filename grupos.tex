@@ -437,7 +437,7 @@ para todos $x$, $y \in G$ e para todos $y$, $k \in H$. Isto \'e, devemos ter
 \end{align*}
 para todo $y \in G$ e $h \in H$. Portanto a opera\c{c}\~ao \eqref{operacao_no_grupo_quociente} est\'a bem definida em $G/H$ se, e somente se,
 \[
-	yhy^{-1} \in H
+	y^{-1}hy \in H
 \]
 para todo $y \in G$ e todo $h \in H$.
 
@@ -445,8 +445,8 @@ para todo $y \in G$ e todo $h \in H$.
 	Seja $H$ um subgrupo de um grupo $G$. As afirma\c{c}\~oes seguintes s\~ao equivalentes:
 	\begin{enumerate}[label=({\roman*})]
 		\item a opera\c{c}\~ao \eqref{operacao_no_grupo_quociente} est\'a bem definida;
-		\item $gHg^{-1} \sub H$, para todo $g \in G$;
-		\item $gHg^{-1} = H$, para todo $g \in G$;
+		\item $g^{-1}Hg \sub H$, para todo $g \in G$;
+		\item $g^{-1}Hg = H$, para todo $g \in G$;
 		\item $gH = Hg$, para todo $g \in G$.
 	\end{enumerate}
 \end{proposicao}
@@ -459,7 +459,7 @@ para todo $y \in G$ e todo $h \in H$.
 
 	$(ii) \Rightarrow (ii)$ Suponha que $gHG^{-1} \sub H$ para todo $g \in G$. Sejam $h \in H$ e $g \in G$. Temos
 	\[
-		h = g(g^{-1}hg)g^{-1} \in g(g^{-1}Hg)g^{-1} \sub gHg^{-1},
+		h = g^{-1}(ghg^{-1})g \in g^{-1}(gHg^{-1})g \sub g^{-1}Hg,
 	\]
 	como quer{\'\i}amos.
 \end{prova}
