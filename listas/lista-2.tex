@@ -24,6 +24,7 @@
 \addtocounter{exercicios}{1}
 \noindent{\bf Exerc{\'\i}cio \arabic{exercicios}: }}
 
+\newcommand{\aut}{{\rm Aut\,}}
 \newcommand{\equi}{\Leftrightarrow}
 \newcommand{\bic}{\leftrightarrow}
 \newcommand{\cond}{\rightarrow}
@@ -88,6 +89,34 @@ O subgrupo $G'$ \'e chamado de \textbf{subgrupo de comutadores}.
 \questao Sejam $G$ e $H$ grupos e $\phi : G \to H$ um homomorfismo. Mostre que $\ker\phi \unlhd G$.
 
 \vesp
+
+\questao \'E verdade que se $K \unlhd H \unlhd G$, ent\~ao $H \unlhd G$?
+
+\vesp
+
+\questao Seja $G$ um grupo. Um isomorfismo $\phi : G \to G$ \'e chamado de um \textbf{automorfismo} de $G$. Seja $\aut G = \{\phi : G \to G \mid \phi \mbox{ \'e um automorfismo de } G\}$. Mostre que $\aut G$ \'e um grupo com a composi\c{c}\~ao de fun\c{c}\~oes.
+
+\vesp
+
+\questao Sejam $G$ um grupo e $\mathcal{I}_a : G \to G$, para $a \in G$ fixado, definido por $\mathcal{I}_a(x) = a^{-1}xa$.
+\begin{enumerate}[label=({\alph*})]
+  \item Mostre que $\mathcal{I}_a$ \'e um isomorfismo.
+  \item Seja $\mathcal{I}(G) = \{\mathcal{I}_a \mid a \in G\} \sub \aut(G)$. Mostre que $\mathcal{I}(G)$ \'e um subgrupo normal de $\aut(G)$.
+\end{enumerate}
+
+\vesp
+
+\questao Considere a fun\c{c}\~ao
+\begin{align*}
+  \mathcal{I} : (G, \cdot) &\to (\mathcal{I}(G),\comp)\\
+  a &\mapsto \mathcal{I}_a.
+\end{align*}
+Por defini\c{c}\~ao, $\mathcal{I}$ \'e uma fun\c{c}\~ao sobrejetora.
+\begin{enumerate}[label=({\alph*})]
+  \item Mostre que $\mathcal{I}$ \'e um homomorfismo de grupos.
+  \item Mostre que $\ker\mathcal{I} = Z(G)$ e que $\mathcal{I}(G) \cong G /Z(G)$.
+  \item Mostre que se $G$ n\~ao \'e abeliano, ent\~ao $\mathcal{I}(G)$ n\~ao \'e c{\'\i}clico.
+\end{enumerate}
 
 \questao Seja $G$ um grupo finito e sejam $K < H < G$. Mostre que
   \[
