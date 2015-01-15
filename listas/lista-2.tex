@@ -72,7 +72,30 @@
 
 \vspace{.6cm}
 
-\questao Determine a ordem de cada elemento de $D_4$. Determine todos os subgrupos de $D_4$.
+\questao Seja $Q_8 = \{\pm 1, \pm i, \pm j, \pm k\}$, onde $i^2 = j^2 = k^2 = -1$ e $ij = k$, $jk = i$, $ki = j$, $ji = -k$, $kj = -i$, $ik = -j$. Mostre que $Q_8$ é um grupo e que $Q_8 \cong \mathcal{Q}$, onde
+\[
+    \mathcal{Q} = \{I, A, A^2, A^3, B, BA, BA^2, BA^3\}
+\]
+onde $I$ \'e a matriz identidade e
+    \[
+      A = \begin{bmatrix}
+        0 & 1\\-1 & 0
+      \end{bmatrix}, \quad B = \begin{bmatrix}
+        0 & i\\i & 0
+      \end{bmatrix}
+    \]
+com $i \in \cmp$, $i^2 = -1$.
+\vesp
+
+\questao Calcule todos os subgrupos grupos dados. Quais são normais?
+\begin{enumerate}[label=({\alph*})]
+  \item $S_3$
+  \item $D_8$
+  \item $D_6$
+  \item $Q_8$
+\end{enumerate}
+
+\vesp
 
 \questao Seja $G$ um grupo. Defina $G' =  \ger{\{xyx^{-1}y^{-1} \mid x, y \in G\}}$. Mostre que
 \begin{enumerate}[label=({\alph*})]
@@ -97,7 +120,7 @@ O subgrupo $G'$ \'e chamado de \textbf{subgrupo de comutadores}.
 \vesp
 
 \questao Seja $\phi : G \to H$ um isomorfimo de grupos. Mostre que:
-\begin{enumerate}
+\begin{enumerate}[label=({\alph*})]
   \item Se $a \in G$ tem ordem infinita, ent\~ao $\phi(a)$ tamb\'em tem ordem infinita.
   \item Se $a \in G$ tem ordem $n$, ent\~ao $\phi(a)$ tamb\'em tem ordem $n$.
   \item Conclua que se $G$ tem um elemento de ordem $n$ e $H$ n\~ao possui elemento com essa ordem, ent\~ao $G \ncong H$.
