@@ -599,6 +599,23 @@ para todo $y \in G$ e todo $h \in H$.
 	Exerc{\'\i}cio.
 \end{prova}
 
+\begin{lema}
+	Seja $\phi : G \to H$ um homomorfismo de grupos.
+	\begin{enumerate}
+		\item Se $P \le G$, então $\phi(P) \le H$ e $\phi^{-1}(\phi(P)) = P\ker\phi$.
+		\item Se $R \le H$, então $\phi^{-1}(R)$ é um subgrupo de $G$ contendo $\ker\phi$ e $\phi(\phi^{-1}(R)) = R \cap \im\phi$.
+	\end{enumerate}
+\end{lema}
+\begin{prova}
+	\begin{enumerate}
+		\item A prova de que $\phi(P)$ é um subgrupo de $H$ é deixada para o leitor. Provemos que $\phi^{-1}(\phi(P)) = P\ker\phi$. Seja $xk \in P$. Temos
+		\[
+			\phi(xk) = \phi(x)\phi(k) = \phi(x) \in \phi(P)
+		\]
+		daí $P\ker\phi \sub \phi^{-1}(\phi(P))$. Agora, seja $y \in \phi^{-1}(\phi(P))$. Por definião, $\phi(y) \in \phi(P)$ e assim existe $x \in P$ tal que $\phi(x) = \phi(y)$. Isto é, $\phi(x^{-1}y) = 1_H$, donde $x^{-1}y \in \ker\phi$. Logo $y = x(x^{-1}y)\in P\ker\phi$. Portanto, $\phi^{-1}\phi(P) = P\ker\phi$.
+	\end{enumerate}
+\end{prova}
+
 
 
 
