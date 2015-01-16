@@ -599,20 +599,23 @@ para todo $y \in G$ e todo $h \in H$.
 	Exerc{\'\i}cio.
 \end{prova}
 
-\begin{lema}
+\begin{lema}\label{imagem_direta_e_inversa_de_subgrupos}
 	Seja $\phi : G \to H$ um homomorfismo de grupos.
 	\begin{enumerate}
-		\item Se $P \le G$, então $\phi(P) \le H$ e $\phi^{-1}(\phi(P)) = P\ker\phi$.
-		\item Se $R \le H$, então $\phi^{-1}(R)$ é um subgrupo de $G$ contendo $\ker\phi$ e $\phi(\phi^{-1}(R)) = R \cap \im\phi$.
+		\item Se $P \le G$, ent\~ao $\phi(P) \le H$ e $\phi^{-1}(\phi(P)) = P\ker\phi$.
+		\item Se $R \le H$, ent\~ao $\phi^{-1}(R)$ \'e um subgrupo de $G$ contendo $\ker\phi$ e $\phi(\phi^{-1}(R)) = R \cap \im\phi$.
 	\end{enumerate}
 \end{lema}
 \begin{prova}
 	\begin{enumerate}
-		\item A prova de que $\phi(P)$ é um subgrupo de $H$ é deixada para o leitor. Provemos que $\phi^{-1}(\phi(P)) = P\ker\phi$. Seja $xk \in P$. Temos
+		\item A prova de que $\phi(P)$ \'e um subgrupo de $H$ \'e deixada para o leitor. Provemos que $\phi^{-1}(\phi(P)) = P\ker\phi$. Seja $xk \in P$. Temos
 		\[
 			\phi(xk) = \phi(x)\phi(k) = \phi(x) \in \phi(P)
 		\]
-		daí $P\ker\phi \sub \phi^{-1}(\phi(P))$. Agora, seja $y \in \phi^{-1}(\phi(P))$. Por definião, $\phi(y) \in \phi(P)$ e assim existe $x \in P$ tal que $\phi(x) = \phi(y)$. Isto é, $\phi(x^{-1}y) = 1_H$, donde $x^{-1}y \in \ker\phi$. Logo $y = x(x^{-1}y)\in P\ker\phi$. Portanto, $\phi^{-1}\phi(P) = P\ker\phi$.
+		da{\'\i} $P\ker\phi \sub \phi^{-1}(\phi(P))$. Agora, seja $y \in \phi^{-1}(\phi(P))$. Por defini\c{c}\~ao, $\phi(y) \in \phi(P)$ e assim existe $x \in P$ tal que $\phi(x) = \phi(y)$. Isto \'e, $\phi(x^{-1}y) = 1_H$, donde $x^{-1}y \in \ker\phi$. Logo $y = x(x^{-1}y)\in P\ker\phi$. Portanto, $\phi^{-1}\phi(P) = P\ker\phi$.
+		\item Como $R \le H$, ent\~ao $1_H \in R$ e como $\phi(x) = 1_H$ para todo $x \in \ker\phi$, ent\~ao $\ker\phi \sub \phi^{-1}(R)$. Fica a cargo do leitor provar que $\phi^{-1}(R)$ \'e um subgrupo de $G$. Provemos que $\phi(\phi^{-1}(R)) = R \cap \im\phi$.
+
+		A inclus\~ao $\phi(\phi^{-1}(R)) \sub R \cap \im\phi$ \'e imediata. Agora, seja $y \in R \cap \im\phi$. Assim existe $x \in G$ tal que $\phi(x) = y$. Mas $y \in R$, da{\'\i} $x \in \phi^{-1}(R)$ e ent\~ao $y = \phi(x) \in \phi(\phi^{-1}(R))$. Portanto, $\phi(\phi^{-1}(R)) = R \cap \im\phi$.
 	\end{enumerate}
 \end{prova}
 
@@ -632,7 +635,6 @@ para todo $y \in G$ e todo $h \in H$.
 
 % section homomorfismo_de_grupos (end)
 \todo[inline, color=blue!30]{Grupos c{\'\i}clicos}
-\todo[inline, color=green!30]{Teorema de Isomorfismos de grupos}
 \todo[inline, color=green!20]{Teorema de Cayley}
 \todo[inline, color=green!10]{Teorema de Sylow}
 \todo[inline, color=red!40]{Grupos livres}
