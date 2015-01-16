@@ -619,7 +619,39 @@ para todo $y \in G$ e todo $h \in H$.
 	\end{enumerate}
 \end{prova}
 
-
+\begin{exemplos}
+	\begin{enumerate}
+		\item O grupo dihedral $D_6$ \'e dado por
+		\[
+			D_6 = \ger{a,b \mid a^2 = b^3 = 1,\ ab = b^2a}.
+		\]
+		Agora, $S_3 = \{id,\alpha,\beta,\beta^2,\alpha\beta,\alpha\beta^2\}$ onde
+		\[
+			\alpha = \begin{pmatrix}
+				1 & 2 & 3\\
+				2 & 1 & 3
+			\end{pmatrix},\quad
+			\beta = \begin{pmatrix}
+				1 & 2 & 3\\
+				2 & 3 & 1
+			\end{pmatrix},\quad
+			id = \begin{pmatrix}
+				1 & 2 & 3\\
+				1 & 2 & 3
+			\end{pmatrix}.
+		\]
+		A aplica\c{c}\~ao $\phi : S_3 \to D_6$ tal que
+		\begin{align*}
+			\phi(id) &= 1\\
+			\phi(\alpha) &= a\\
+			\phi(\beta) &= b\\
+			\phi(\alpha\beta) &= ab\\
+			\phi(\alpha\beta^2) &= ab^2
+		\end{align*}
+		\'e um homomorfismo bijetor. Portanto $S_3 \cong D_6$.
+		\item Seja $G = \ger{a} = \{\dots, a^{-1}, 1, a, a^2, \dots\}$ um grupo c{\'\i}clico infinito. \'E f\'acil verificar que $\phi: (\Z, +) \to (G, \cdot)$ dada por $\phi(t) = a^t$ \'e um isomorfismo. Portanto $\Z \cong G$.
+	\end{enumerate}
+\end{exemplos}
 
 
 
