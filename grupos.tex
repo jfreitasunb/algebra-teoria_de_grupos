@@ -675,6 +675,43 @@ para todo $y \in G$ e todo $h \in H$.
 		\end{enumerate}
 	\end{enumerate}
 \end{teorema}
+\begin{prova}
+	\begin{enumerate}
+		\item Inicialmente precisamos verificar que $\overline{\phi}$ est\'a bem definida. Para isso sejam $a_1\ker\phi = a_2\ker\phi$. Assim $a_1 = a_2k$, onde $k \in \ker\phi$. Ent\~ao
+		\[
+			\phi(a_1) = \phi(a_2k) = \phi(a_2),
+		\]
+		logo $\overline{\phi}(a_1\ker\phi) = \overline{\phi}(a_2\ker\phi)$ e ent\~ao $\overline{\phi}$ est\'a bem definida. Al\'em disso, da defini\c{c}\~ao de $\overline{\phi}$ vemos que esta aplica\c{c}\~ao \'e sobrejetora.
+
+		Agora, sejam $a_1\ker\phi$, $a_2\ker\phi \in \ker\phi$. Ent\~ao
+		\[
+			\overline{\phi}((a_1\ker\phi)(a_2\ker\phi)) = \overline{\phi}((a_1a_2)\ker\phi) = \phi(a_1a_2) = \phi(a_1)\phi(a_2) = \overline{\phi}(a_1\ker\phi)\overline{\phi}(a_2\ker\phi)
+		\]
+		e da{\'\i} $\overline{\phi}$ \'e um homomorfismo. Finalmente, se $a\ker\phi \in \ker\overline{\phi}$ ent\~ao
+		\[
+			\overline{\phi}(a\ker\phi) = \overline{\phi}(1_G\ker\phi)
+		\]
+		da{\'\i} $\phi(g) = \phi(1_G) = 1_H$, ou seja, $g \in \ker\phi$. Portanto $\ker\overline{\phi} = \{\ker\phi\}$ e ent\~ao $\overline{\phi}$ \'e injetora. Portanto $\overline{\phi}$ \'e um isomorfismo de grupos. Logo
+		\[
+			\dfrac{G}{\ker\phi} \cong \phi(G).
+		\]
+		\item Pelo Lema \ref{imagem_direta_e_inversa_de_subgrupos} sabemos que $\phi^{-1}(\phi(P)) = P\ker\phi$ para todo $P \le G$ e que $\phi(\phi^{-1}(R)) = R \cap \phi(G)$ para todo $R \le H$. Assim se $\ker\phi \sub P$, ent\~ao $\phi^{-1}(\phi(P)) = P$ e se $R \le \phi(G)$, ent\~ao $\phi(\phi^{-1}(R)) = R$. Logo as fun\c{c}\~oes $\psi$ e $\sigma$ s\~ao inversas uma da outra, isto \'e, s\~ao bije\c{c}\~oes.
+
+		Agora falta provar os demais itens:
+		\begin{enumerate}
+			\item Sejam $a \in \phi(P)$ e $b \in \phi(G)$. Ent\~ao existem $x \in P$ e $y \in G$ tais que $\phi(x) = a$ e $\phi(y) = b$. Queremos mostrar que $b^{-1}ab \in \phi(P)$. De fato,
+			\[
+				b^{-1}ab = \phi(y^{-1})\phi(x)\phi(y) = \phi(y^{-1}xy) \in \phi(P)
+			\]
+			pois $P \unlhd G$. Portanto, $\phi(P) \unlhd \phi(G)$.
+			\item Dados $a \in G$ e $x \in \phi^{-1}(R)$, queremos mostrar que $a^{-1}xa \in \phi^{-1}(R)$. Temos
+			\[
+				\phi(a^{-1}xa) = \phi(a)^{-1}\phi(x)\phi(a) \in R
+			\]
+			pois $R \unlhd \phi(G)$. Logo $a^{-1}xa \in \phi^{-1}(R)$, isto \'e, $\phi^{-1}(R) \unlhd G$, como quer{\'\i}amos.
+		\end{enumerate}
+	\end{enumerate}
+\end{prova}
 
 
 
