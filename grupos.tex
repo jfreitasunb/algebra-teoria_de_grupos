@@ -1081,6 +1081,41 @@ A equa\c{c}\~ao \eqref{equacao_de_classes} \'e chamada de \textbf{equa\c{c}\~ao 
 	\'E suficiente mostrar que $(\alpha\beta)(i) = (\beta\alpha)(i)$ para todo $i = 1$, \dots, $n$. Se $\beta$ move $i$, digamos $\beta(i) = j \ne i$, ent\~ao $\beta$ tamb\'em move $j$. Caso contr\'ario ter{\'\i}amos $\beta(i) = j = \beta(j)$, o que contradiz o fato de que $\beta$ \'e injetora. Como $\alpha$ e $\beta$ s\~ao disjuntas, ent\~ao $\alpha(i) = i$ e $\alpha(j) = j$. Da{\'\i} $(\alpha\beta)(i) = \alpha(j) = j = \beta(i) = (\beta\alpha)(i)$. De modo an\'alogo, mostra-se que se $\alpha$ move $i$, ent\~ao $(\alpha\beta)(i) = (\beta\alpha)(i)$. Se $\alpha$ e $\beta$ fixam $i$, ent\~ao $(\alpha\beta)(i) = \alpha(i) = i = \beta(i) = (\beta\alpha)(i)$. Portanto $\alpha\beta = \beta\alpha$.
 \end{prova}
 
+\begin{lema}
+	Se $\alpha \in S_n$ \'e um $r$-ciclo, ent\~ao $|\alpha| = r$.
+\end{lema}
+\begin{prova}
+	Seja $\alpha = (a_1 a_2 \dots a_r)$. Mostra-se, por indu\c{c}\~ao em $k$, que $\alpha^k(a_j) = a_{j + k}$, onde $j + k \equiv l \pmod r$ se $j + k > r$. Assim
+	\[
+		\alpha^r(a_k) = a_{k + r} = a_k
+	\]
+	para todo $k = 1$, \dots, $r$. Portanto $|\alpha|$ divide $r$. Agora, se $|\alpha| = l < r$, ent\~ao $\alpha^l = (1)$ e da{\'\i} $\alpha^l(i_k) = i_k$ para todo $k = 1$, \dots, $r$. Mas,
+	\[
+		\alpha^l(a_1) = a_{l + 1} \ne a_1
+	\]
+	pois $\alpha$ \'e um $r$-ciclo. Portanto $|\alpha| = r$.
+\end{prova}
+
+\begin{proposicao}
+	Seja $\alpha \in S_n$, $\alpha \ne (1)$. Ent\~ao a permuta\c{c}\~ao $\alpha$ \'e igual a um produto de ciclos disjuntos de comprimento $\ge 2$. Mais ainda, tal decomposi\c{c}\~ao \'e \'unica a menos da ordem dos fatores.
+\end{proposicao}
+\begin{prova}
+	Como $\alpha \ne (1)$, ent\~ao existe $i_1 \in \{1, \dots, n\}$ tal que $\alpha(i_1) \ne i_1$. Considere a sequ\^encia $i_1$, $\alpha(i_1)$, $\alpha^2(i_1)$, \dots. Ent\~ao existe um menor inteiro positivo $r_1$, $2 \le r_1 \le n$ tal que $i_1$, $\alpha(i_1)$, \dots, $\alpha^{r_1 - 1}(i_1)$ s\~ao elementos distintos e $\alpha^{r_1}(i_1) \in \{i_1, \alpha(i_1), \dots, \alpha^{r_1 - 1}(i_1)\}$. Se $\alpha^{r_1}(i_1) = \alpha^j(i_1)$, com $j \ne 0$ ent\~ao $\alpha^{r_1 - j}(i_1) = i_1$, o que contradiz a escolha de $r_1$. Da{\'\i} $\alpha^{r_1}(i_1) = i_1$. Assim a restri\c{c}\~ao de $\alpha$ ao conjunto $\{i_1, \alpha(i_1), \dots, \alpha^{r_1 - 1}(i_1)\}$ \'e tal que
+	\[
+		\alpha|_{\{i_1, \alpha(i_1), \dots, \alpha^{r_1 - 1}(i_1)\}} = (i_1 \alpha(i_1) \dots \alpha^{r_1 - 1}(i_1)).
+	\]
+	Denote este $r_1$-ciclo por $\sigma_1 = (i_1 \alpha(i_1) \dots \alpha^{r_1 - 1}(i_1))$.
+
+	Se a restri\c{c}\~ao de $\alpha$ ao complementar de $\{i_1, \alpha(i_1), \dots, \alpha^{r_1 - 1}(i_1)\}$ \'e a identidade, ent\~ao $\alpha = \sigma_1$. Caso contr\'ario, tome $i_2 \in \{1, 2, \dots, n\}\backslash \{i_1, \alpha(i_1), \dots, \alpha^{r_1 - 1}(i_1)\}$ tal que $\alpha(i_2) \ne i_2$. De modo an\'alogo ao caso anterior, existe $r_2 \ge 2$ tal que
+	\[
+		\alpha|_{\{i_2, \alpha(i_2), \dots, \alpha^{r_2 - 1}(i_2)\}} = (i_2 \alpha(i_2) \dots \alpha^{r_2 - 1}(i_2)).	
+	\]
+	Denote este $r_2$-ciclo por $\sigma_2 = (i_2 \alpha(i_2) \dots \alpha^{r_2 - 1}(i_2))$. Note que $\sigma_1$ e $\sigma_2$ s\~ao disjuntas.
+
+	Se a restri\c{c}\~ao de $\alpha$ ao complementar de $\{i_1, \alpha(i_1), \dots, \alpha^{r_1 - 1}(i_1), i_2, \alpha(i_2), \dots, \alpha^{r_2 - 1}(i_2)\}$ \'e a identidade, ent\~ao $\alpha = \sigma_1\sigma_2$. Caso contr\'ario, tome $i_3 \in \{1, 2, \dots, n\}\backslash \{i_1, \alpha(i_1), \dots, \alpha^{r_1 - 1}(i_1), i_2,\\ \alpha(i_2), \dots, \alpha^{r_2 - 1}(i_2)\}$ tal que $\alpha(i_3) \ne i_3$ e repita o processo anterior. Claramente depois de um n\'umero finito de etapas este processo ir\'a terminar e obteremos que $\alpha = \sigma_1\sigma_2 \cdots \sigma_t$, onde $\sigma_1$, \dots, $\sigma_t$ s\~ao ciclos disjuntos de comprimento $\ge 2$.
+
+	Suponha agora que tamb\'em temos $\alpha = \tau_1\tau_2\cdots \tau_l$ com $\tau_1$, $\tau_2$, \dots, $\tau_l$ ciclos disjuntos de comprimento $\ge 2$. Temos $\tau_1\cdots \tau_l(i_1) = \alpha(i_1) \ne i_1$ e como os $\tau_i$'s s\~ao disjuntos, ent\~ao existe um \'unico $\tau_j$ tal que $\tau_j(i_1) = \alpha(i_1)$. Mas os ciclos $\tau_i$'s comutam, assim podemos supor que $j = 1$ e ent\~ao $\tau_1(i_1) = \alpha(i_1)$. Mostremos que $\tau_1 = \sigma_1$. O ciclo $\tau_1$ n\~ao pode fixar $\alpha(i_1)$, isto \'e, $\tau_1(\alpha(i_1)) \ne \alpha(i_1)$ pois $\tau_1(i_1) = \alpha(i_1) \ne i_1$. Como os $\tau_j$'s s\~ao ciclos disjuntos, ent\~ao $\tau_j(\alpha(i_1)) = \alpha(i_1)$ para $j \ge 2$. Assim $\tau_1(\alpha(i_1)) = \alpha^2(i_1)$ e da{\'\i} $\tau_1(\alpha^k(i_1)) = \alpha^{k + 1}(i_1)$ para todo $k \ge 0$. Logo $\tau_1 = \sigma_1$. Aplicando o mesmo racioc{\'\i}nio com $i_2$ obtemos que $\tau_2 = \sigma_2$. Continuando com o procedimento obtemos que $t = l$ e que a menos da ordem $\sigma_j = \tau_j$ para cada $j = 1$, \dots, $t$.
+\end{prova}
 
 
 
