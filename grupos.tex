@@ -603,7 +603,7 @@ para todo $y \in G$ e todo $h \in H$.
 		\item O conjunto $\ker\phi = \{x \in G \mid \phi(x) = 1_H\}$ \'e um subgrupo normal de $G$ chamado de \textbf{n\'ucleo} ou \textbf{kernel} de $\phi$.\index{Homorfismo!Kernel}
 
 		\item O conjunto $\im\phi = \{y \in H \mid y = \phi(x) \mbox{ para algum } x \in G\}$ \'e um subgrupo de $H$ chamado de \textbf{imagem} de $\phi.$\index{Homomorfismo!Imagem}
-		
+
 		\item Sejam $\phi : (G, \cdot) \to (H, *)$ e $\psi : (H,*) \to (\mathcal{G},\times)$ dois homomorfismos de grupos. Ent\~ao a composi\c{c}\~ao $\psi\circ\phi : (G, \cdot) \to (\mathcal{G}, \times)$ \'e um homomorfismo.
 	\end{enumerate}
 \end{lema}
@@ -1024,9 +1024,56 @@ A equa\c{c}\~ao \eqref{equacao_de_classes} \'e chamada de \textbf{equa\c{c}\~ao 
 	\end{enumerate}
 \end{prova}
 
-
-
 % section grupos_ciclicos (end)
+
+\section{Grupos de Permuta\c{c}\~oes} % (fold)
+\label{sec:grupos_de_permutacoes}
+
+\begin{definicao}
+	Um permuta\c{c}\~ao $\alpha \in S_n$ \'e denominada um $r$-\textbf{ciclo} se existem elementos distintos $a_1$, \dots, $a_r \in \{1, \dots, n\}$ tais que
+	\begin{align*}
+		\alpha(a_1) &= a_2\\
+		\alpha(a_2) &= a_3\\
+		&\vdots\\
+		\alpha(a_{r - 1}) &= a_r\\
+		\alpha(a_r) &= a_1
+	\end{align*}
+	e tais que $\alpha(j) = j$ para todo $j \in \{1, \dots, n\}\backslash \{a_1, \dots, a_r\}$. Tal $r$-ciclo ser\'a denotado por $(a_1 a_2 \cdots a_r)$. O n\'umero $r$ \'e chamado o \textbf{comprimento} do ciclo. Se $r = 2$, ent\~ao chamamos os $2$-ciclos de \textbf{transposi\c{c}\~oes}. O \'unico $1$-ciclo \'e a identidade, que denotaremos por $(1)$.\index{Permuta\c{c}\~oes!$r$-ciclo}\index{Permuta\c{c}\~oes!transposi\c{c}\~oes}
+\end{definicao}
+
+\begin{exemplos}
+	Em $S_5$:
+	\begin{itemize}
+		\item A permuta\c{c}\~ao $\alpha = \begin{pmatrix}
+			1 & 2 & 3 & 4 & 5\\
+			2 & 3 & 4 & 5 & 1
+		\end{pmatrix}$ \'e um $5$-ciclo denotado por $\alpha = (12345)$. Tamb\'em podemos escrever $\alpha = (23451)$ ou $\alpha = (34512)$ ou $\alpha = (45123)$.
+
+		\item A permuta\c{c}\~ao $\alpha = \begin{pmatrix}
+			1 & 2 & 3 & 4 & 5\\
+			4 & 2 & 1 & 3 & 5
+		\end{pmatrix}$ \'e um $3$-ciclo denotado por $\alpha = (143)$. Tamb\'em podemos escrever $\alpha = (431)$ ou $\alpha = (314)$.
+
+		\item A permuta\c{c}\~ao $\alpha = \begin{pmatrix}
+			1 & 2 & 3 & 4 & 5\\
+			1 & 4 & 3 & 2 & 5
+		\end{pmatrix}$ \'e um $2$-ciclo denotado por $\alpha = (24)$ ou $\alpha = (42)$.
+
+		\item A permuta\c{c}\~ao $\alpha = \begin{pmatrix}
+			1 & 2 & 3 & 4 & 5\\
+			3 & 4 & 5 & 2 & 1
+		\end{pmatrix}$ n\~ao \'e um $r$-ciclo qualquer que seja $r$. Mas podemos escrever $\alpha = (135)(24)$ ou $\alpha = (24)(135)$.
+	\end{itemize}
+\end{exemplos}
+
+
+
+
+
+
+
+
+% section grupos_de_permutacoes (end)
 
 \todo[inline, color=green!10]{Teorema de Sylow}
 \todo[inline, color=red!40]{Grupos livres}
