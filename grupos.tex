@@ -599,9 +599,11 @@ para todo $y \in G$ e todo $h \in H$.
 
 \begin{lema}
 	Sejam $G$ e $H$ grupos e $\phi : G \to H$ um homomorfismo. Ent\~ao:
-	\begin{enumerate}
+	\begin{enumerate}[label=({\roman*})]
 		\item O conjunto $\ker\phi = \{x \in G \mid \phi(x) = 1_H\}$ \'e um subgrupo normal de $G$ chamado de \textbf{n\'ucleo} ou \textbf{kernel} de $\phi$.\index{Homorfismo!Kernel}
+
 		\item O conjunto $\im\phi = \{y \in H \mid y = \phi(x) \mbox{ para algum } x \in G\}$ \'e um subgrupo de $H$ chamado de \textbf{imagem} de $\phi.$\index{Homomorfismo!Imagem}
+		
 		\item Sejam $\phi : (G, \cdot) \to (H, *)$ e $\psi : (H,*) \to (\mathcal{G},\times)$ dois homomorfismos de grupos. Ent\~ao a composi\c{c}\~ao $\psi\circ\phi : (G, \cdot) \to (\mathcal{G}, \times)$ \'e um homomorfismo.
 	\end{enumerate}
 \end{lema}
@@ -611,18 +613,20 @@ para todo $y \in G$ e todo $h \in H$.
 
 \begin{lema}\label{imagem_direta_e_inversa_de_subgrupos}
 	Seja $\phi : G \to H$ um homomorfismo de grupos.
-	\begin{enumerate}
+	\begin{enumerate}[label=({\roman*})]
 		\item Se $P \le G$, ent\~ao $\phi(P) \le H$ e $\phi^{-1}(\phi(P)) = P\ker\phi$.
+
 		\item Se $R \le H$, ent\~ao $\phi^{-1}(R)$ \'e um subgrupo de $G$ contendo $\ker\phi$ e $\phi(\phi^{-1}(R)) = R \cap \im\phi$.
 	\end{enumerate}
 \end{lema}
 \begin{prova}
-	\begin{enumerate}
+	\begin{enumerate}[label=({\roman*})]
 		\item A prova de que $\phi(P)$ \'e um subgrupo de $H$ \'e deixada para o leitor. Provemos que $\phi^{-1}(\phi(P)) = P\ker\phi$. Seja $xk \in P$. Temos
 		\[
 			\phi(xk) = \phi(x)\phi(k) = \phi(x) \in \phi(P)
 		\]
 		da{\'\i} $P\ker\phi \sub \phi^{-1}(\phi(P))$. Agora, seja $y \in \phi^{-1}(\phi(P))$. Por defini\c{c}\~ao, $\phi(y) \in \phi(P)$ e assim existe $x \in P$ tal que $\phi(x) = \phi(y)$. Isto \'e, $\phi(x^{-1}y) = 1_H$, donde $x^{-1}y \in \ker\phi$. Logo $y = x(x^{-1}y)\in P\ker\phi$. Portanto, $\phi^{-1}\phi(P) = P\ker\phi$.
+
 		\item Como $R \le H$, ent\~ao $1_H \in R$ e como $\phi(x) = 1_H$ para todo $x \in \ker\phi$, ent\~ao $\ker\phi \sub \phi^{-1}(R)$. Fica a cargo do leitor provar que $\phi^{-1}(R)$ \'e um subgrupo de $G$. Provemos que $\phi(\phi^{-1}(R)) = R \cap \im\phi$.
 
 		A inclus\~ao $\phi(\phi^{-1}(R)) \sub R \cap \im\phi$ \'e imediata. Agora, seja $y \in R \cap \im\phi$. Assim existe $x \in G$ tal que $\phi(x) = y$. Mas $y \in R$, da{\'\i} $x \in \phi^{-1}(R)$ e ent\~ao $y = \phi(x) \in \phi(\phi^{-1}(R))$. Portanto, $\phi(\phi^{-1}(R)) = R \cap \im\phi$.
@@ -630,7 +634,7 @@ para todo $y \in G$ e todo $h \in H$.
 \end{prova}
 
 \begin{exemplos}
-	\begin{enumerate}
+	\begin{enumerate}[label=({\arabic*})]
 		\item O grupo dihedral $D_6$ \'e dado por
 		\[
 			D_6 = \ger{a,b \mid a^2 = b^3 = 1,\ ab = b^2a}.
@@ -659,13 +663,14 @@ para todo $y \in G$ e todo $h \in H$.
 			\phi(\alpha\beta^2) &= ab^2
 		\end{align*}
 		\'e um homomorfismo bijetor. Portanto $S_3 \cong D_6$.
+
 		\item Seja $G = \ger{a} = \{\dots, a^{-1}, 1, a, a^2, \dots\}$ um grupo c{\'\i}clico infinito. \'E f\'acil verificar que $\phi: (\Z, +) \to (G, \cdot)$ dada por $\phi(t) = a^t$ \'e um isomorfismo. Portanto $\Z \cong G$.
 	\end{enumerate}
 \end{exemplos}
 
 \begin{teorema}[Teorema do Isomorfismo]\label{teorema_isomorfismo}
 	Seja $\phi : (G, \cdot) \to (H, *)$ um homomorfismo de grupos.
-	\begin{enumerate}[label=({\arabic*})]
+	\begin{enumerate}[label=({\roman*})]
 		\item A fun\c{c}\~ao
 		\begin{align*}
 			\overline{\phi} : \dfrac{G}{\ker\phi} \to \phi(G)\\
@@ -688,7 +693,7 @@ para todo $y \in G$ e todo $h \in H$.
 	\end{enumerate}
 \end{teorema}
 \begin{prova}
-	\begin{enumerate}[label=({\arabic*})]
+	\begin{enumerate}[label=({\roman*})]
 		\item Inicialmente precisamos verificar que $\overline{\phi}$ est\'a bem definida. Para isso sejam $a_1\ker\phi = a_2\ker\phi$. Assim $a_1 = a_2k$, onde $k \in \ker\phi$. Ent\~ao
 		\[
 			\phi(a_1) = \phi(a_2k) = \phi(a_2),
@@ -717,7 +722,7 @@ para todo $y \in G$ e todo $h \in H$.
 				b^{-1}ab = \phi(y^{-1})\phi(x)\phi(y) = \phi(y^{-1}xy) \in \phi(P)
 			\]
 			pois $P \unlhd G$. Portanto, $\phi(P) \unlhd \phi(G)$.
-			
+
 			\item Dados $a \in G$ e $x \in \phi^{-1}(R)$, queremos mostrar que $a^{-1}xa \in \phi^{-1}(R)$. Temos
 			\[
 				\phi(a^{-1}xa) = \phi(a)^{-1}\phi(x)\phi(a) \in R
