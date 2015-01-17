@@ -356,6 +356,16 @@ Obtemos assim as \textbf{classes laterais \`a direita} de $H$ em $G$. A classe l
 	Segue da Proposi\c{c}\~ao \ref{ordem_de_elemento} pois $|\alpha| = |\ger{\alpha}|$.
 \end{prova}
 
+\begin{corolario}\label{segundo_corolario_lagrange}
+	Seja $G$ um grupo. Se $K \le H \le G$ com $K \unlhd G$ e $H \unlhd G$, ent\~ao
+\[
+  \dfrac{G/K}{H/K} \cong \dfrac{G}{H}.
+\]
+\end{corolario}
+\begin{prova}
+	A prova \'e deixada para o leitor.
+\end{prova}
+
 \begin{corolario}
 	Se $G$ \'e um grupo finito, ent\~ao $a^{|G|} = 1$ para todo $a \in G$.
 \end{corolario}
@@ -925,6 +935,28 @@ A equa\c{c}\~ao \eqref{equacao_de_classes} \'e chamada de \textbf{equa\c{c}\~ao 
 		\item $n\Z \sub m\Z$ se, e somente se, $m | n$. Neste caso temos $[m\Z : n\Z] = \frac{n}{m}$.
 	\end{enumerate}
 \end{proposicao}
+\begin{prova}
+	\begin{enumerate}
+		\item Se $H = n\Z$, com $n \in \N$, ent\~ao \'e f\'acil verificar que $H \le \Z$.
+
+		Agora seja $H \le \Z$, $H \ne \{0\}$. Tome $n = \min\{x \in H \mid x > 0\}$. Como $n \in H$ e como $H \le \Z$, ent\~ao $n\Z \sub H$. Dado $a \in H$, existem $q$ e $r \in \Z$ tais que $a = qn + r$ com $0 \le r < n$. Mas $a$, $n \in H$ da{\'\i} $r \in H$ e ent\~ao pela minimalidade de $n$ devemos ter $r = 0$. Logo $a \in n\Z$ e portanto $H = n\Z$.
+
+		\item \'E imediato verificar que $n\Z \sub m\Z$ se, e somente se, $m | n$. Suponha que $n\Z \le m\Z \le \Z$. Assim pelo Corol\'ario \ref{segundo_corolario_lagrange} temos
+		\[
+			\dfrac{\Z/n\Z}{m\Z/n\Z} \cong \dfrac{\Z}{m\Z},
+		\]
+		da{\'\i}
+		\[
+			\left|\dfrac{\Z/n\Z}{m\Z/n\Z}\right| = \left|\dfrac{\Z}{m\Z}\right|.
+		\]
+		Ent\~ao
+		\[
+			\dfrac{n}{[m\Z : n\Z]} = m
+		\]
+		e portanto $[m\Z : n\Z] = \dfrac{n}{m}$, como quer{\'\i}amos.
+
+	\end{enumerate}
+\end{prova}
 
 \begin{proposicao}
 	Seja $G = \ger{a} = \{\dots, a^{-1}, 1, a, a^2, \dots\}$ um grupo c{\'\i}clico de ordem infinita. Ent\~ao:
