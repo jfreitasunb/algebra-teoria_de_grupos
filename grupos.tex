@@ -744,6 +744,42 @@ para todo $y \in G$ e todo $h \in H$.
 	\'E f\'acil verificar que $\phi : G \to G/H$ dada por $\phi(a) = aH$ \'e um homomorfismo sobrejetivo. Aplicando a segunda parte do Teorema do Isomorfismo, Teorema \ref{teorema_isomorfismo}, obtemos o resultado.
 \end{prova}
 
+\begin{teorema}[Teorema da Representa\c{c}\~ao]\label{teorema_da_representacao}
+	Seja $G$ um grupo e $H$ um subgrupo de $G$ tal que $[G : H] = n$. Ent\~ao existe $N \sub H$, com $N \unlhd G$ tal que $G/N$ \'e um grupo isomorfo a um subgrupo de $S_n$. Mais ainda, $N$ \'e o ``maior'' subgrupo normal de $G$ que est\'a contido em $H$.
+\end{teorema}
+\begin{prova}
+	Seja $S = G/H = \{Hx_1, \dots, Hx_n\}$ e $\mathcal{P}(S)$ o grupo das permuta\c{c}\~oes do conjunto $S$. \'E claro que $\mathcal{P}(S) \cong S_n$.
+
+	Considere a seguinte aplica\c{c}\~ao
+	\begin{align*}
+		\psi : G \to \mathcal{P}(S)\\
+		a \mapsto \psi_a
+	\end{align*}
+	onde $\psi_a : S \to S$ \'e tal que $\psi_a(Hx_i) = Hx_ia^{-1}$.
+
+	Inicialmente para $a \in G$ temos $\psi_a(Hx_i) = \psi_a(Hx_j)$ se, e s\'o se, $Hx_ia^{-1} = Hx_ja^{-1}$. Isto \'e, $Hx_i = Hx_j$, logo $\psi_a$ \'e injetora. Como $|S| = n$, ent\~ao $\psi_a$ \'e sobrejetiva e da{\'\i} $\psi_a \in \mathcal{P}(S)$. Logo $\psi_a \in \mathcal{P}(S)$ para todo $a \in G$.
+
+	Verifiquemos agora que $\psi$ \'e um homomorfismo de grupos. Dados $a$, $b \in G$ queremos mostrar que $\psi(ab) = \psi(a)\psi(b)$. Mas $\psi(ab) = \psi_{ab}$. Seja $Hx_i \in S$. Temos
+	\[
+		\psi_{ab}(Hx_i) = Hx_i(ab)^{-1} = (Hx_ib^{-1})a^{-1} = \psi_a(\psi_b(Hx_i)) = (\psi_a\circ\psi_b)(Hx_i).
+	\]
+	Portanto $\psi$ \'e um homomorfismo de grupos.
+
+	Agora,
+	\[
+		\ker\psi = \{a \in G \mid \psi(a) = Id_S\} = \{a \in G \mid Hx_ia^{-1} = Hx_i, i = 1, \dots, n\}.
+	\]
+	Da{\'\i} $a \in \ker\psi$ se, e s\'o se, $Hx_ia^{-1} = Hx_i$ para todo $i = 1$, \dots, $n$. Mas isso ocorre se, e s\'o se, $Hx_i = Hx_ia$ para todo $i = 1$, \dots, $n$. Logo $a \in \ker\psi$ se, e s\'o se, $H = Hx_iax_i^{-1}$ para todo $i = 1$, \dots, $n$. Da{\'\i} $a \in \ker\psi$ se, e s\'o se, $x_iax_i^{-1} \in H$ para todo $i = 1$, \dots, $n$ e ent\~ao $a \in \ker\psi$ se, e s\'o se, $a \in x_i^{-1}Hx_i$ para todo $i = 1$, \dots, $n$. Mas $G = Hx_1 \cup \cdots \cup Hx_n$, uma uni\~ao disjunta e como $(hx_i)^{-1}H(hx_i) = x_i^{-1}Hx_i$ para todo $h \in H$, ent\~ao $a \in \ker\psi$ se, e s\'o se, $a \in x^{-1}Hx$ para todo $x \in G$. Ou seja, $a \in \ker\psi$ se, e somente se, $a \in \cap_{x \in G}(x^{-1}Hx)$. Portanto $\ker\psi = \cap_{x \in G}(x^{-1}Hx)$.
+
+	Seja $N = \ker\psi$. Ent\~ao $N \unlhd G$ e $N \sub H$. Agora, seja $L \unlhd G$ tal que $L \sub H$. Ent\~ao $x^{-1}Lx = L \sub x^{-1}Hx$ para todo $x \in G$. Assim, $L \sub N = \cap_{x \in G}(x^{-1}Hx)$. Portanto $N$ \'e o ``maior'' subgrupo normal de $G$ contido em $H$.
+
+	Finalmente pelo Teorema do Isomorfismo, Teorema \ref{teorema_isomorfismo}, temos
+	\[
+		\dfrac{G}{\ker\psi} = \dfrac{G}{N} \cong \psi(G) \le \mathcal{P}(S) \cong S_n,
+	\]
+	como quer{\'\i}amos.
+\end{prova}
+
 
 
 
