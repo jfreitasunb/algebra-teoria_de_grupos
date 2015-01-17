@@ -886,7 +886,32 @@ A equa\c{c}\~ao \eqref{equacao_de_classes} \'e chamada de \textbf{equa\c{c}\~ao 
 	Se $p$ \'e um n\'umero primo e $|G| = p^2$, ent\~ao $G$ \'e um grupo abeliano.
 \end{corolario}
 
+\begin{teorema}[Teorema de Cauchy]
+	Seja $p$ um divisor primo da ordem de um grupo finito $G$. Ent\~ao existe $a \in G$ tal que $|a| = p$.
+\end{teorema}
+\begin{prova}
+	Vamos usar indu\c{c}\~ao sobre a ordem de $G$. Se $|G| = 1$, nada h\'a a fazer. Vamos supor que o teorema \'e v\'alido para todo grupo $H$ tal que $1 \le |H| < |G|$. Temos tr\^es casos para analizar.
+	
+	\noindent \textit{Caso 1:} $G$ \'e c{\'\i}clico.
 
+	Seja $G = \ger{x}$  e seja $p$ um divisor primo de $|G|$. Neste caso $|x| = p^{\alpha k}$, onde $\alpha \ge 1$. Tome $a = x^{p^{\alpha - 1}k}$. Ent\~ao $a^p = 1$ e nenhum outra pot\^encia $r$ de $a$ menor que $p$ \'e tal que $a^r = 1$. Portanto $|a| = p$ como quer{\'\i}amos.
+
+	\noindent \textit{Caso 2:} $G$ \'e abeliano e n\~ao c{\'\i}clico.
+
+	Seja $p$ um divisor primo de $|G|$ e seja $x \in G$, $x \ne 1$. Se $p$ divide $|x|$ ent\~ao pelo \textit{Caso 1}, existe $a \in \ger{x}$ tal que $|a| = p$ e assim o teorema est\'a provado.
+
+	Suponha ent\~ao que $p$ n\~ao divide $|x|$. Seja $N = \ger{x}$. Como $G$ \'e abeliano, ent\~ao $L = G/N$ \'e um grupo tal que $p$ divide $|L| = [G : N]$. Mas $1 \le |L| < |G|$, assim pela hip\'otese de indu\c{c}\~ao existe $\overline{b} \in L$ tal que $\overline{b} \ne \overline{1}$ e $|\overline{b}| = p$. Assim $b \notin N$ e $b^p \in N$. Seja $|N| = r$, ent\~ao $(b^p)^r = 1$ e portanto $p$ divide $|b|$. Logo pelo \textit{Caso 1}, existe $a \in \ger{b}$ tal que $|a| = p$ e ent\~ao o teorema est\'a provado.
+
+	\noindent \textit{Caso 3:} $G$ n\~ao abeliano
+
+	Neste caso $Z(G) \ne G$. Se $p$ divide $|Z(G)|$, ent\~ao basta usar o \textit{Caso 2}. Assim suponha que $p$ n\~ao divide $|Z(G)|$. Temos
+	\[
+		|G| = |Z(G)| + \sum_{x \notin Z(G)}[G : C_G(x)].
+	\]
+	Como $p$ divide $|G|$ ent\~ao existe $x \notin Z(G)$ tal que $p$ n\~ao divide $[G : C_G(x)]$. Portanto $p$ divide $|H|$ onde $H = C_G(x) \ne G$. Como $1 \le |H| < |G|$, ent\~ao pela hip\'otese de indu\c{c}\~ao, existe $a \in H$ tal que $|a| = p$.
+
+	Portanto o teorema est\'a provado.
+\end{prova}
 
 
 
