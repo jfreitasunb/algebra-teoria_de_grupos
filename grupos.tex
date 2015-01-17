@@ -713,7 +713,36 @@ para todo $y \in G$ e todo $h \in H$.
 	\end{enumerate}
 \end{prova}
 
+\begin{corolario}
+	Seja $\phi : G \to H$ um homomorfismo de grupos e seja $K \le G$. Ent\~ao a fun\c{c}\~ao
+	\begin{align*}
+		\psi : \dfrac{K}{K \cap \ker\phi} \to \phi(K)\\
+		a(K \cap \ker\phi) \mapsto \phi(a)
+	\end{align*}
+	\'e um isomorfismo.
+\end{corolario}
+\begin{prova}
+	Considere o hommorfismo $\phi$ restrito a $K$;
+	\begin{align*}
+		\psi \coloneqq \phi|_{K} : K \to H\\
+		h \mapsto \phi(h).
+	\end{align*}
+	\'E imediato verificar que $\psi(K) = \phi(K)$ e que $\ker\psi = \ker\phi$. Logo pelo Teorema dos Isomorfismos, Teorema \ref{teorema_isomorfismo}, temos $K/\ker\psi \cong \psi(K)$, isto \'e,
+	\[
+		\dfrac{K}{K \cap \ker\phi} \cong \phi(K).
+	\]
+\end{prova}
 
+\begin{corolario}
+	Seja $H$ um subgrupo normal de $G$. Ent\~ao a fun\c{c}\~ao
+	\[
+		\{\mbox{subgrupos (normais) de } G \mbox{ que cont\^em } H\} \longleftrightarrow \{\mbox{subgrupos (normais) de } G/H\}.
+	\]
+	\'e uma bije\c{c}\~ao.
+\end{corolario}
+\begin{prova}
+	\'E f\'acil verificar que $\phi : G \to G/H$ dada por $\phi(a) = aH$ \'e um homomorfismo sobrejetivo. Aplicando a segunda parte do Teorema dos Isomorfismos, Teorema \ref{teorema_isomorfismo}, obtemos o resultado.
+\end{prova}
 
 
 
