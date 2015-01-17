@@ -1066,7 +1066,20 @@ A equa\c{c}\~ao \eqref{equacao_de_classes} \'e chamada de \textbf{equa\c{c}\~ao 
 	\end{itemize}
 \end{exemplos}
 
+\begin{definicao}
+	Seja $\alpha \in S_n$ um $r$-ciclo e seja $\beta \in S_n$ um $s$-ciclo. As permuta\c{c}\~oes $\alpha$ e $\beta$ s\~ao \textbf{disjuntas} se nenhum elemento de $\{1, \dots, n\}$ \'e movido por ambas, isto \'e, para todo $a \in \{1, \dots, n\}$ temos $\alpha(a) = a$ ou $\beta(a) = a$.\index{Permuta\c{c}\~oes!disjuntas}
+\end{definicao}
 
+\begin{exemplos}
+	Em $S_5$ os ciclos $(134)$ e $(25)$ s\~ao disjuntos, enquanto que $(135)$ e $(25)$ n\~ao s\~ao disjuntas.
+\end{exemplos}
+
+\begin{lema}
+	Sejam $\alpha$, $\beta \in S_n$. Se $\alpha$ e $\beta$ s\~ao permuta\c{c}\~oes disjuntas ent\~ao $\alpha\beta = \beta\alpha$.
+\end{lema}
+\begin{prova}
+	\'E suficiente mostrar que $(\alpha\beta)(i) = (\beta\alpha)(i)$ para todo $i = 1$, \dots, $n$. Se $\beta$ move $i$, digamos $\beta(i) = j \ne i$, ent\~ao $\beta$ tamb\'em move $j$. Caso contr\'ario ter{\'\i}amos $\beta(i) = j = \beta(j)$, o que contradiz o fato de que $\beta$ \'e injetora. Como $\alpha$ e $\beta$ s\~ao disjuntas, ent\~ao $\alpha(i) = i$ e $\alpha(j) = j$. Da{\'\i} $(\alpha\beta)(i) = \alpha(j) = j = \beta(i) = (\beta\alpha)(i)$. De modo an\'alogo, mostra-se que se $\alpha$ move $i$, ent\~ao $(\alpha\beta)(i) = (\beta\alpha)(i)$. Se $\alpha$ e $\beta$ fixam $i$, ent\~ao $(\alpha\beta)(i) = \alpha(i) = i = \beta(i) = (\beta\alpha)(i)$. Portanto $\alpha\beta = \beta\alpha$.
+\end{prova}
 
 
 
