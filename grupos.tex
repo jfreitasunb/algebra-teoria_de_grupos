@@ -665,13 +665,14 @@ para todo $y \in G$ e todo $h \in H$.
 
 \begin{teorema}[Teorema do Isomorfismo]\label{teorema_isomorfismo}
 	Seja $\phi : (G, \cdot) \to (H, *)$ um homomorfismo de grupos.
-	\begin{enumerate}
+	\begin{enumerate}[label=({\arabic*})]
 		\item A fun\c{c}\~ao
 		\begin{align*}
 			\overline{\phi} : \dfrac{G}{\ker\phi} \to \phi(G)\\
 			a\ker\phi \mapsto \phi(a)
 		\end{align*}
 		\'e um isomorfismo.
+
 		\item As seguintes fun\c{c}\~oes
 		\begin{align*}
 			\{\mbox{subgrupos de } G \mbox{ que cont\^em } \ker\phi\} &\longleftrightarrow \{\mbox{subgrupos de } \phi(G)\}\\
@@ -679,14 +680,15 @@ para todo $y \in G$ e todo $h \in H$.
 			\phi^{-1}(R)\quad &\xmapsfrom{\quad\sigma\quad} R
 		\end{align*}
 		s\~ao bije\c{c}\~oes, inversas uma da outra. Al\'em disso, estas bije\c{c}\~oes levam subgrupos normais em subgrupos normais, isto \'e,
-		\begin{enumerate}
+		\begin{enumerate}[label=({\alph*})]
 			\item Se $P \unlhd G$, ent\~ao $\phi(P) \unlhd \phi(G)$.
+
 			\item Se $R \unlhd \phi(G)$, ent\~ao $\phi^{-1}(R) \unlhd G$.
 		\end{enumerate}
 	\end{enumerate}
 \end{teorema}
 \begin{prova}
-	\begin{enumerate}
+	\begin{enumerate}[label=({\arabic*})]
 		\item Inicialmente precisamos verificar que $\overline{\phi}$ est\'a bem definida. Para isso sejam $a_1\ker\phi = a_2\ker\phi$. Assim $a_1 = a_2k$, onde $k \in \ker\phi$. Ent\~ao
 		\[
 			\phi(a_1) = \phi(a_2k) = \phi(a_2),
@@ -705,15 +707,17 @@ para todo $y \in G$ e todo $h \in H$.
 		\[
 			\dfrac{G}{\ker\phi} \cong \phi(G).
 		\]
+
 		\item Pelo Lema \ref{imagem_direta_e_inversa_de_subgrupos} sabemos que $\phi^{-1}(\phi(P)) = P\ker\phi$ para todo $P \le G$ e que $\phi(\phi^{-1}(R)) = R \cap \phi(G)$ para todo $R \le H$. Assim se $\ker\phi \sub P$, ent\~ao $\phi^{-1}(\phi(P)) = P$ e se $R \le \phi(G)$, ent\~ao $\phi(\phi^{-1}(R)) = R$. Logo as fun\c{c}\~oes $\psi$ e $\sigma$ s\~ao inversas uma da outra, isto \'e, s\~ao bije\c{c}\~oes.
 
 		Agora falta provar os demais itens:
-		\begin{enumerate}
+		\begin{enumerate}[label=({\alph*})]
 			\item Sejam $a \in \phi(P)$ e $b \in \phi(G)$. Ent\~ao existem $x \in P$ e $y \in G$ tais que $\phi(x) = a$ e $\phi(y) = b$. Queremos mostrar que $b^{-1}ab \in \phi(P)$. De fato,
 			\[
 				b^{-1}ab = \phi(y^{-1})\phi(x)\phi(y) = \phi(y^{-1}xy) \in \phi(P)
 			\]
 			pois $P \unlhd G$. Portanto, $\phi(P) \unlhd \phi(G)$.
+			
 			\item Dados $a \in G$ e $x \in \phi^{-1}(R)$, queremos mostrar que $a^{-1}xa \in \phi^{-1}(R)$. Temos
 			\[
 				\phi(a^{-1}xa) = \phi(a)^{-1}\phi(x)\phi(a) \in R
@@ -819,9 +823,11 @@ Seja $G$ um grupo. Dados $x$, $y \in G$ defina
 \end{definicao}
 
 Denote $a^{-1}xa = x^a$, onde $x$ e $a \in G$. As seguintes propriedades s\~ao v\'alidas:
-\begin{enumerate}
+\begin{enumerate}[label=({\arabic*})]
 	\item $x^{1_G} = x$ para todo $x \in G$.
+
 	\item Se $y = x^a$, ent\~ao $x = y^{a^{-1}}$ para todos $x$, $y$ e $a \in G$.
+
 	\item $(x^a)^b = x^{ab}$ para todos $x$, $a$ e $b \in G$.
 \end{enumerate}
 
@@ -930,13 +936,14 @@ A equa\c{c}\~ao \eqref{equacao_de_classes} \'e chamada de \textbf{equa\c{c}\~ao 
 \label{sec:grupos_ciclicos}
 
 \begin{proposicao}
-	\begin{enumerate}
+	\begin{enumerate}[label=({\roman*})]
 		\item Se $H \sub \Z$, ent\~ao $H$ \'e um subgrupo de $(\Z, +)$ se, e somente se, $H = n\Z$ para algum $n \in \N$.
+		
 		\item $n\Z \sub m\Z$ se, e somente se, $m | n$. Neste caso temos $[m\Z : n\Z] = \frac{n}{m}$.
 	\end{enumerate}
 \end{proposicao}
 \begin{prova}
-	\begin{enumerate}
+	\begin{enumerate}[label=({\roman*})]
 		\item Se $H = n\Z$, com $n \in \N$, ent\~ao \'e f\'acil verificar que $H \le \Z$.
 
 		Agora seja $H \le \Z$, $H \ne \{0\}$. Tome $n = \min\{x \in H \mid x > 0\}$. Como $n \in H$ e como $H \le \Z$, ent\~ao $n\Z \sub H$. Dado $a \in H$, existem $q$ e $r \in \Z$ tais que $a = qn + r$ com $0 \le r < n$. Mas $a$, $n \in H$ da{\'\i} $r \in H$ e ent\~ao pela minimalidade de $n$ devemos ter $r = 0$. Logo $a \in n\Z$ e portanto $H = n\Z$.
@@ -960,27 +967,57 @@ A equa\c{c}\~ao \eqref{equacao_de_classes} \'e chamada de \textbf{equa\c{c}\~ao 
 
 \begin{proposicao}
 	Seja $G = \ger{a} = \{\dots, a^{-1}, 1, a, a^2, \dots\}$ um grupo c{\'\i}clico de ordem infinita. Ent\~ao:
-	\begin{enumerate}
+	\begin{enumerate}[label=({\roman*})]
 		\item A fun\c{c}\~ao $\phi: (\Z, +) \to (G, \cdot)$ dada por $\phi(t) = a^t$ \'e um isomorfismo.
+
 		\item O elemento $a^r$ gera $G$ se, e somente se, $r = -1$ ou $r = 1$.
 	\end{enumerate}
 \end{proposicao}
+\begin{prova}
+	\begin{prova}
+		\begin{enumerate}[label=({\roman*})]
+			\item \'E f\'acil verificar que $\phi$ definida desse jeito \'e um isomorfismo.
 
-\begin{proposicao}
+			\item Como $\phi$ \'e um isomorfismo, ent\~ao $a^r$ gera $G$ se, e somente se, $r$ gera $\Z$. Mas os \'unicos geradores de $\Z$ s\~ao $r = -1$ ou $r = 1$.
+		\end{enumerate}
+	\end{prova}
+\end{prova}
+
+\begin{proposicao}\label{grupo_ciclico_infinito}
 	Seja $G = \ger{a} = \{1, a, \dots, a^{n - 1}\}$ um grupo c{\'\i}clico de ordem finita igual a $n$. Ent\~ao:
-	\begin{enumerate}
-		\item A fun\c{c}\~ao $\phi: (\Z/n\Z, +) \to (G, \cdot)$ dada por $\phi(\overline{t}) = a^t$ \'e um isomorfismo.
+	\begin{enumerate}[label=({\roman*})]
+		\item A fun\c{c}\~ao $\overline{\phi}: (\Z/n\Z, +) \to (G, \cdot)$ dada por $\phi(\overline{t}) = a^t$ \'e um isomorfismo.
+
 		\item O elemento $a^r$ gera $G$ se, e somente se, $mdc(m,n) = 1$.
 	\end{enumerate}
 \end{proposicao}
+\begin{prova}
+	\begin{enumerate}[label=({\roman*})]
+		\item Da Proposi\c{c}\~ao \ref{grupo_ciclico_infinito} obtemos que $\phi$ de $\Z$ em $G$ dada por $\phi(r) = a^r$ \'e sobrejetora. Al\'em disso, $\ker\phi = n\Z$. Logo
+		\[
+			\dfrac{\Z}{\ker\phi} = \dfrac{\Z}{n\Z} \cong G.
+		\]
+
+		\item Como $\overline{\phi}$ \'e um isomorfismo, ent\~ao $a^m$ gera $G$ se, e somente se, $m$ gera $\Z/n\Z$. O que ocorre se, e somente se, $mdc(m,n) = 1$.
+	\end{enumerate}
+\end{prova}
 
 \begin{proposicao}
 	$G = \ger{a} = \{1, a, \dots, a^{n - 1}\}$ um grupo c{\'\i}clico de ordem finita igual a $n$. Ent\~ao:
-	\begin{enumerate}
+	\begin{enumerate}[label=({\roman*})]
 		\item Se $H \le G$, ent\~ao $H$ \'e c{\'\i}clico. Mais ainda, $H = \ger{a^m}$ onde $m$ \'e o menor inteiro positivo tal que $a^m \in H$. O subgrupo $H$ tem ordem igual a $\frac{n}{m}$.
+
 		\item Se $d$ \'e um divisor de $n$, ent\~ao existe um \'unico subgrupo $H$ de $G$ com ordem igual a $a$. Mais ainda, $H = \ger{a^{\frac{n}{d}}}$.
 	\end{enumerate}
 \end{proposicao}
+\begin{prova}
+	\begin{enumerate}[label=({\roman*})]
+		\item Seja $m$ o menor inteiro positivo $a^m \in H$. Da{\'\i} $\ger{a^m} \sub H$. Agora, seja $a^\alpha \in H$. Ent\~ao existem $q$, $r \in \Z$ tais que $\alpha = mq + r$ com $0 \le r < m$. Da{\'\i} $a^\alpha = a^{mq}a^r$. Como $a^\alpha$, $a^{m} \in H$ e $H \le G$, ent\~ao $a^r \in H$. Logo $r = 0$, devido \`a minimalidade de $m$. Portanto $H = \ger{a^m}$.
+
+		Agora, $(a^m)^{n/m} = 1$. Seja $k < n/m$ tal que $(a^m)^k = 1$. Logo $n | mk$, mas $mk < n$, logo $k = 0$. Portanto $|a^m| = \dfrac{n}{m}$.
+		\item Seja $d$ um divisor de $n$. Pelo item anterior, o grupo $H = \ger{a^{n/d}}$ tem ordem $d$. Vamos provar que $H$ \'e \'unico. Seja $K$ um subgrupo de $G$ de ordem $d$. Novamente pelo item anterior, $K = \ger{a^m}$ tal que $|K| = \frac{n}{m} = d$. Assim $m = \dfrac{n}{d}$ e da{\'\i} $K = \ger{a^{n/d}} = H$, como quer{\'\i}amos.
+	\end{enumerate}
+\end{prova}
 
 
 
