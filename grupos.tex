@@ -913,18 +913,47 @@ A equa\c{c}\~ao \eqref{equacao_de_classes} \'e chamada de \textbf{equa\c{c}\~ao 
 	Portanto o teorema est\'a provado.
 \end{prova}
 
-
-
-
-
-
 % section classes_de_conjugacao (end)
 
 
+\section{Grupos C{\'\i}clicos} % (fold)
+\label{sec:grupos_ciclicos}
+
+\begin{proposicao}
+	\begin{enumerate}
+		\item Se $H \sub \Z$, ent\~ao $H$ \'e um subgrupo de $(\Z, +)$ se, e somente se, $H = n\Z$ para algum $n \in \N$.
+		\item $n\Z \sub m\Z$ se, e somente se, $m | n$. Neste caso temos $[m\Z : n\Z] = \frac{n}{m}$.
+	\end{enumerate}
+\end{proposicao}
+
+\begin{proposicao}
+	Seja $G = \ger{a} = \{\dots, a^{-1}, 1, a, a^2, \dots\}$ um grupo c{\'\i}clico de ordem infinita. Ent\~ao:
+	\begin{enumerate}
+		\item A fun\c{c}\~ao $\phi: (\Z, +) \to (G, \cdot)$ dada por $\phi(t) = a^t$ \'e um isomorfismo.
+		\item O elemento $a^r$ gera $G$ se, e somente se, $r = -1$ ou $r = 1$.
+	\end{enumerate}
+\end{proposicao}
+
+\begin{proposicao}
+	Seja $G = \ger{a} = \{1, a, \dots, a^{n - 1}\}$ um grupo c{\'\i}clico de ordem finita igual a $n$. Ent\~ao:
+	\begin{enumerate}
+		\item A fun\c{c}\~ao $\phi: (\Z/n\Z, +) \to (G, \cdot)$ dada por $\phi(\overline{t}) = a^t$ \'e um isomorfismo.
+		\item O elemento $a^r$ gera $G$ se, e somente se, $mdc(m,n) = 1$.
+	\end{enumerate}
+\end{proposicao}
+
+\begin{proposicao}
+	$G = \ger{a} = \{1, a, \dots, a^{n - 1}\}$ um grupo c{\'\i}clico de ordem finita igual a $n$. Ent\~ao:
+	\begin{enumerate}
+		\item Se $H \le G$, ent\~ao $H$ \'e c{\'\i}clico. Mais ainda, $H = \ger{a^m}$ onde $m$ \'e o menor inteiro positivo tal que $a^m \in H$. O subgrupo $H$ tem ordem igual a $\frac{n}{m}$.
+		\item Se $d$ \'e um divisor de $n$, ent\~ao existe um \'unico subgrupo $H$ de $G$ com ordem igual a $a$. Mais ainda, $H = \ger{a^{\frac{n}{d}}}$.
+	\end{enumerate}
+\end{proposicao}
 
 
 
-\todo[inline, color=blue!30]{Grupos c{\'\i}clicos}
+% section grupos_ciclicos (end)
+
 \todo[inline, color=green!10]{Teorema de Sylow}
 \todo[inline, color=red!40]{Grupos livres}
 \todo[inline, color=red!20]{Grupos Sol\'uveis}
