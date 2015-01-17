@@ -789,13 +789,110 @@ para todo $y \in G$ e todo $h \in H$.
 
 % section homomorfismo_de_grupos (end)
 
-\section{Classes de Conjugação} % (fold)
+\section{Classes de Conjuga\c{c}\~ao} % (fold)
 \label{sec:classes_de_conjugacao}
 
 Seja $G$ um grupo. Dados $x$, $y \in G$ defina
 \[
 	x \sim_G y \mbox{ se, e somente se, existe } a \in G \mbox{ tal que } y = a^{-1}xa.
 \]
+
+\begin{proposicao}
+	Seja $G$ um grupo. A rela\c{c}\~ao $\sim_G$ define uma rela\c{c}\~ao de equival\^encia em $G$.
+\end{proposicao}
+\begin{prova}
+	A prova \'e deixada para o leitor.
+\end{prova}
+
+\begin{definicao}
+	Se $x \sim_G y$, dizemos que $x$ e $y$ s\~ao elementos \textbf{conjugados} em $G$.\index{Elementos!Conjugados}
+\end{definicao}
+
+Denote $a^{-1}xa = x^a$, onde $x$ e $a \in G$. As seguintes propriedades s\~ao v\'alidas:
+\begin{enumerate}
+	\item $x^{1_G} = x$ para todo $x \in G$.
+	\item Se $y = x^a$, ent\~ao $x = y^{a^{-1}}$ para todos $x$, $y$ e $a \in G$.
+	\item $(x^a)^b = x^{ab}$ para todos $x$, $a$ e $b \in G$.
+\end{enumerate}
+
+A classe de equival\^encia de $x$ \'e dada por
+\[
+	C_x = \{y \in G \mid x \sim_G y\} = \{x^a \mid a \in G\}
+\]
+e \'e chamada de \textbf{classe de conjuga\c{c}\~ao} de $x$ em $G$.\index{Classe de Conjuga\c{c}\~ao}
+
+Se $G$ \'e um grupo finito e existem $n$ classes de conjuga\c{c}\~ao com representantes $x_1$, $x_2$, \dots, $x_n$ ent\~ao
+\[
+	G = C_{x_1} \cup C_{x_2} \cup \cdots \cup C_{x_n}
+\]
+uma uni\~ao disjunta. Assim
+\[
+	|G| = |C_{x_1}| + |C_{x_2}| + \cdots + |C_{x_n}|.
+\]
+Observe que $C_x = \{x\}$ se, e somente se, $x \in Z(G)$ e da{\'\i} a equa\c{c}\~ao anterior pode ser escrita como
+\begin{equation}\label{equacao_de_classes}
+	|G| = |Z(G)| + \sum_{x \notin Z(G)}|C_x|.
+\end{equation}
+
+A equa\c{c}\~ao \eqref{equacao_de_classes} \'e chamada de \textbf{equa\c{c}\~ao de classes}.\index{Equa\c{c}\~ao de Classes}
+
+\begin{proposicao}
+	Seja $G$ um grupo e $x \in G$. Ent\~ao o conjunto $C_G(x) = \{a \in G \mid ax = xa\}$ \'e um subgrupo de $G$.
+\end{proposicao}
+\begin{prova}
+	A cargo do leitor.
+\end{prova}
+
+\begin{proposicao}
+	Seja $G$ um grupo finito e $x \in G$. Ent\~ao
+	\[
+		[G : C_G(x)] = |C_x|.
+	\]
+	Em particular, $|C_x|$ \'e um divisor de $|G|$ para todo $x \in G$.
+\end{proposicao}
+\begin{prova}
+	Sejam $H = C_G(x)$ e $G/H = \{Ha \mid a \in G\}$ o conjunto de todas as classes laterais \`a direita de $H$ em $G$. Pelo Teorema de Lagrange, Teorema \ref{teorema_de_lagrange}, $|G| = [G : H]|H|$. Agora, considere a aplica\c{c}\~ao
+	\begin{align*}
+		\phi : \dfrac{G}{H} \to C_x\\
+		Ha \mapsto x^a.
+	\end{align*}
+	Claramente $\phi$ \'e sobrejetora. Sejam $Ha$, $Hb \in G/H$ tais que $\phi(Ha) = \phi(Hb)$. Da{\'\i} $x^a = x^b$ e ent\~ao $x^{ab^{-1}} = 1$, isto \'e, $ab^{-1} \in C_G(x) = H$ e portanto $Ha = Hb$. Logo $\phi$ \'e injetiva. Assim
+	\[
+		|C_x| = [G : C_G(x)]
+	\]
+	como quer{\'\i}amos.
+\end{prova}
+
+\begin{definicao}
+	Seja $p$ um n\'umero primo e $G$ um grupo. Se $|G| = p^n$, $n \in \N$, dizemos que $G$ \'e um $p$-\textbf{grupo}.\index{Grupos!$p$-grupos}
+\end{definicao}
+
+\begin{observacao}
+	Pelo Teorema de Lagrange, Teorema \ref{teorema_de_lagrange}, todo subgrupo de um $p$-grupo tamb\'em \'e um $p$-grupo.
+\end{observacao}
+
+\begin{teorema}
+	Se $G$ \'e um $p$-grupo e $|G| = p^n > 1$, ent\~ao $|Z(G)| = p^m > 1$.
+\end{teorema}
+\begin{prova}
+	Pela Equa\c{c}\~ao de classes, \eqref{equacao_de_classes}, obtemos
+	\[
+		|Z(G)| = |G| - \sum_{x \notin Z(G)}|C_x|.
+	\]
+	Mas para todo $x \notin Z(G)$, temos $|C_x| > 1$ e como $|C_x|$ divide $|G|$, ent\~ao $|C_x| = p^{\alpha_x}$ para todo $x \notin Z(G)$. Como $|G| = p^n > 1$, ent\~ao devemos ter $|Z(G)| = p^m > 1$.
+\end{prova}
+
+\begin{corolario}
+	Se $p$ \'e um n\'umero primo e $|G| = p^2$, ent\~ao $G$ \'e um grupo abeliano.
+\end{corolario}
+
+
+
+
+
+
+
+
 % section classes_de_conjugacao (end)
 
 
