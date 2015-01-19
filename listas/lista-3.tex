@@ -1,0 +1,92 @@
+%!TEX program = xelatex 
+%!TEX encoding = ISO-8859-1
+\documentclass[12pt]{article}
+
+\usepackage{amssymb}
+\usepackage{amsmath,amsfonts,amsthm,amstext}
+\usepackage[brazil]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\graphicspath{{/home/jfreitas/Dropbox/imagens-latex/}{/Users/jfreitas/Dropbox/imagens-latex/}}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage[all]{xy}
+
+\setlength{\topmargin}{-1.0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{10.1in}
+\setlength{\textwidth}{6.5in}
+\setlength{\baselineskip}{12mm}
+
+\newcounter{exercicios}
+\setcounter{exercicios}{0}
+\newcommand{\questao}{
+\addtocounter{exercicios}{1}
+\noindent{\bf Exerc{\'\i}cio \arabic{exercicios}: }}
+
+\newcommand{\aut}{{\rm Aut\,}}
+\newcommand{\sgn}{{\rm sgn\,}}
+\newcommand{\equi}{\Leftrightarrow}
+\newcommand{\bic}{\leftrightarrow}
+\newcommand{\cond}{\rightarrow}
+\newcommand{\impl}{\Rightarrow}
+\newcommand{\nao}{\sim}
+\newcommand{\sub}{\subseteq}
+\newcommand{\e}{\ \wedge\ }
+\newcommand{\ou}{\ \vee\ }
+\newcommand{\vaz}{\emptyset}
+\newcommand{\ger}[1]{\langle{#1}\rangle}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\cmp}{\mathbb{C}}
+\newcommand{\vesp}{\vspace{0.2cm}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newtheorem{defin}{Defini{\c c}{\~a}o}
+
+\newcommand{\compcent}[1]{\vcenter{\hbox{$#1\circ$}}}
+\newcommand{\comp}{\mathbin{\mathchoice
+{\compcent\scriptstyle}{\compcent\scriptstyle}
+{\compcent\scriptscriptstyle}{\compcent\scriptscriptstyle}}}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{figure}[h]
+        \begin{minipage}[c]{2cm}
+        \includegraphics[width=2cm]{ufv.pdf}
+        \end{minipage}%
+        \hspace{0pt}
+        \begin{minipage}[c]{4in}
+          {Universidade Federal de Vi\c{c}osa} \\
+          {Departamento de Matem{\'a}tica}
+\end{minipage}
+\end{figure}
+\vspace{-0.2cm}\hrule
+
+\begin{center}
+{\Large\bf {\'A}lgebra - Curso de Ver\~ao - UFV} \\ \vspace{9pt} {\large\bf
+  $3^{\underline{a}}$ Lista de Exerc{\'\i}cios -- 2015}\\ \vspace{9pt} Prof. Jos{\'e} Ant{\^o}nio O. Freitas
+\end{center}
+\hrule
+
+\vspace{.6cm}
+
+\questao Sejam $p$ um n\'umero primo e $n \in \N$. Mostre que:
+\begin{enumerate}
+  \item Todo elemento de ordem $p$ no grupo $S_p$ \'e um p-ciclo.
+  \item $S_p$ n\~ao tem elemento de ordem $kp$ com $k \ge 2$.
+  \item Se $t$ \'e um inteiro positivo, mostre que o grupo $S_n$ possui elementos de ordem $p^t$ se, e somente se, $n \ge p^t$.
+\end{enumerate}
+
+\vesp
+
+\questao Mostre que as poss{\'\i}veis ordens de elementos do grupo $S_7$ pertencem ao conjunto $\{1, 2, 3, 4, 5, 6, 7, 10, 12\}$.
+
+\vesp
+
+\questao Se $\sigma \in S_n$ \'e um $r$-ciclo, mostre que $(-1)^\sigma = (-1)^{r - 1}$.
+
+
+\end{document}
