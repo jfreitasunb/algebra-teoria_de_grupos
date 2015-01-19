@@ -25,7 +25,6 @@
 \noindent{\bf Exerc{\'\i}cio \arabic{exercicios}: }}
 
 \newcommand{\aut}{{\rm Aut\,}}
-\newcommand{\sgn}{{\rm sgn\,}}
 \newcommand{\equi}{\Leftrightarrow}
 \newcommand{\bic}{\leftrightarrow}
 \newcommand{\cond}{\rightarrow}
@@ -67,26 +66,168 @@
 
 \begin{center}
 {\Large\bf {\'A}lgebra - Curso de Ver\~ao - UFV} \\ \vspace{9pt} {\large\bf
-  $3^{\underline{a}}$ Lista de Exerc{\'\i}cios -- 2015}\\ \vspace{9pt} Prof. Jos{\'e} Ant{\^o}nio O. Freitas
+  $2^{\underline{a}}$ Lista de Exerc{\'\i}cios -- 2015}\\ \vspace{9pt} Prof. Jos{\'e} Ant{\^o}nio O. Freitas
 \end{center}
 \hrule
 
 \vspace{.6cm}
 
-\questao Sejam $p$ um n\'umero primo e $n \in \N$. Mostre que:
-\begin{enumerate}
-  \item Todo elemento de ordem $p$ no grupo $S_p$ \'e um p-ciclo.
-  \item $S_p$ n\~ao tem elemento de ordem $kp$ com $k \ge 2$.
-  \item Se $t$ \'e um inteiro positivo, mostre que o grupo $S_n$ possui elementos de ordem $p^t$ se, e somente se, $n \ge p^t$.
+\questao Seja $Q_8 = \{\pm 1, \pm i, \pm j, \pm k\}$, onde $i^2 = j^2 = k^2 = -1$ e $ij = k$, $jk = i$, $ki = j$, $ji = -k$, $kj = -i$, $ik = -j$. Mostre que $Q_8$ \'e um grupo e que $Q_8 \cong \mathcal{Q}$, onde
+\[
+    \mathcal{Q} = \{I, A, A^2, A^3, B, BA, BA^2, BA^3\},
+\]
+$I$ \'e a matriz identidade e
+    \[
+      A = \begin{bmatrix}
+        0 & 1\\-1 & 0
+      \end{bmatrix}, \quad B = \begin{bmatrix}
+        0 & i\\i & 0
+      \end{bmatrix}
+    \]
+com $i \in \cmp$, $i^2 = -1$.
+
+\vesp
+
+\questao Seja $G = \{f : \R \to \R \mid f(x) = ax + b, a \ne 0\}$. Prove que $G$ \'e um grupo com a composi\c{c}\~ao de fun\c{c}\~oes que \'e isomorfo ao subgrupo de $GL_2(\R)$ formado pelas matrizes do tipo
+\[
+  \begin{bmatrix}
+    a & b\\
+    0 & 1
+  \end{bmatrix}.
+\]
+
+\vesp
+
+\questao Calcule todos os subgrupos grupos dados. Quais subgrupos s\~ao normais?
+\begin{enumerate}[label=({\alph*})]
+  \item $S_3$
+  \item $D_8$
+  \item $D_6$
+  \item $Q_8$
 \end{enumerate}
 
 \vesp
 
-\questao Mostre que as poss{\'\i}veis ordens de elementos do grupo $S_7$ pertencem ao conjunto $\{1, 2, 3, 4, 5, 6, 7, 10, 12\}$.
+\questao Seja $G$ um grupo. Defina $G' =  \ger{\{xyx^{-1}y^{-1} \mid x, y \in G\}}$. Mostre que:
+\begin{enumerate}[label=({\alph*})]
+  \item $G'$ \'e um subgrupo normal de $G$.
+  \item $G/G'$ \'e abeliano.
+  \item $G'$ \'e o menor subgrupo normal de $G$ com esta propriedade, isto \'e, se $H \unlhd G$ \'e tal que $G/H$ \'e abeliano, ent\~ao $G'\sub H$.
+\end{enumerate}
+O subgrupo $G'$ \'e chamado de \textbf{subgrupo de comutadores}.
 
 \vesp
 
-\questao Se $\sigma \in S_n$ \'e um $r$-ciclo, mostre que $(-1)^\sigma = (-1)^{r - 1}$.
+\questao Seja $G$ um grupo tal que $\{1\}$ e $G$ s\~ao seus \'unicos subgrupos. Mostre que a ordem de $G$ \'e um n\'umero primo.
 
+\vesp
 
+\questao Sejam $G$ e $H$ grupos e $\phi : G \to H$ um homomorfismo. Mostre que se $|x| < \infty$, ent\~ao $|\phi(x)|$ divide $|x|$.
+
+\vesp
+
+\questao Seja $\phi : G \to H$ um homomorfismo de grupos. Se $\phi$ \'e injetivo, mostre que $|\phi(x)| = |x|$ para todo $x \in G$.
+
+\vesp
+
+\questao Seja $\phi : G \to H$ um isomorfimo de grupos. Mostre que:
+\begin{enumerate}[label=({\alph*})]
+  \item Se $a \in G$ tem ordem infinita, ent\~ao $\phi(a)$ tamb\'em tem ordem infinita.
+  \item Se $a \in G$ tem ordem $n$, ent\~ao $\phi(a)$ tamb\'em tem ordem $n$.
+  \item Conclua que se $G$ tem um elemento de ordem $n$ e $H$ n\~ao possui elemento com essa ordem, ent\~ao $G \ncong H$.
+\end{enumerate}
+ 
+
+\vesp
+
+\questao Prove que um grupo $G$ \'e abeliano, se e somente se, a fun\c{c}\~ao $f : G \to G$ dada por $f(a) = a^{-1}$ \'e um homomorfismo.
+
+\vesp
+
+\questao Seja $G$ um grupo e $H$ um subgrupo de $G$. Mostre que se $[G:H] = 2$, ent\~ao $H \unlhd G$.
+
+\vesp
+
+\questao Sejam $G$ e $H$ grupos e $\phi : G \to H$ um homomorfismo. Mostre que $\ker\phi \unlhd G$.
+
+\vesp
+
+\questao \'E verdade que se $K \unlhd H \unlhd G$, ent\~ao $K \unlhd G$?
+
+\vesp
+
+\questao Seja $G$ um grupo. Um isomorfismo $\phi : G \to G$ \'e chamado de um \textbf{automorfismo} de $G$. Seja $\aut G = \{\phi : G \to G \mid \phi \mbox{ \'e um automorfismo de } G\}$. Mostre que $\aut G$ \'e um grupo com a composi\c{c}\~ao de fun\c{c}\~oes.
+
+\vesp
+
+\questao Sejam $G$ um grupo e $\mathcal{I}_a : G \to G$, para $a \in G$ fixado, definido por $\mathcal{I}_a(x) = axa^{-1}$.
+\begin{enumerate}[label=({\alph*})]
+  \item Mostre que $\mathcal{I}_a$ \'e um isomorfismo.
+  \item Seja $\mathcal{I}(G) = \{\mathcal{I}_a \mid a \in G\} \sub \aut(G)$. Mostre que $\mathcal{I}(G)$ \'e um subgrupo normal de $\aut(G)$.
+\end{enumerate}
+
+\vesp
+
+\questao Considere a fun\c{c}\~ao
+\begin{align*}
+  \mathcal{I} : (G, \cdot) &\to (\mathcal{I}(G),\comp)\\
+  a &\mapsto \mathcal{I}_a.
+\end{align*}
+Por defini\c{c}\~ao, $\mathcal{I}$ \'e uma fun\c{c}\~ao sobrejetora.
+\begin{enumerate}[label=({\alph*})]
+  \item Mostre que $\mathcal{I}$ \'e um homomorfismo de grupos.
+  \item Mostre que $\ker\mathcal{I} = Z(G)$ e que $\mathcal{I}(G) \cong G /Z(G)$.
+  \item Mostre que se $G$ n\~ao \'e abeliano, ent\~ao $\mathcal{I}(G)$ n\~ao \'e c{\'\i}clico.
+\end{enumerate}
+
+\questao Seja $G$ um grupo finito e sejam $K \le H \le G$. Mostre que
+  \[
+    [G:K] = [G:H][H:K].
+  \]
+
+\vesp
+
+\questao Sejam $G$ um grupo e $a$, $b \in G$. Mostre que $(a^{-1}ba)^n = a^{-1}b^na$ para todo $n \in \Z$.
+
+\vesp
+
+\questao Seja $G$ um grupo. Mostre que se $H \unlhd G$ e $K \le G$, ent\~ao
+\[
+  \dfrac{K}{H \cap K} \cong \dfrac{HK}{H}.
+\]
+
+\vesp
+
+\questao Seja $G$ um grupo. Mostre que se $K \le H \le G$ com $K \unlhd G$ e $H \unlhd G$, ent\~ao
+\[
+  \dfrac{G/K}{H/K} \cong \dfrac{G}{H}.
+\]
+
+\vesp
+
+\questao Mostre que todo grupo $G$ tal que $|G| < 6$ \'e abeliano.
+
+\vesp
+
+\questao Mostre que se $G$ \'e um grupo de ordem 6, ent\~ao ou $G$ \'e c{\'\i}clico ou $G \cong S_3$.
+
+\vesp
+
+\questao Seja $p$ um n\'umero primo e $G$ um $p$-grupo de ordem $p^3$. Prove que se $G$ n\~ao \'e abeliano, ent\~ao $|Z(G)| = p$.
+
+\vesp
+
+\questao Mostre que todo grupo quociente de um grupo c{\'\i}clico \'e c{\'\i}clico.
+
+\vesp
+
+\questao Seja $G$ um grupo contendo apenas duas classes de conjuga\c{c}\~ao. Mostre que $|G| = 2$, isto \'e, $G$ \'e um grupo c{\'\i}clico de ordem 2.
+
+\vesp
+
+\questao Seja $G$ um grupo tal que $|G| = 2p$, onde $p$ \'e um n\'umero primo. Mostre que existe $H \unlhd G$ tal que $|H| = p$.
+
+\vesp
+
+\questao Seja $G$ um grupo tal que $|G| = pq$, onde $p$ e $q$ s\~ao primos. Mostre que se $G$ \'e abeliano e $p \ne q$, ent\~ao $G$ \'e c{\'\i}clico.
 \end{document}
