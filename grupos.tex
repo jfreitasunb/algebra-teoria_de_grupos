@@ -1161,6 +1161,36 @@ A equa\c{c}\~ao \eqref{equacao_de_classes} \'e chamada de \textbf{equa\c{c}\~ao 
 	\end{enumerate}
 \end{observacoes}
 
+\begin{teorema}
+	Seja $\alpha \in S_n$. Se $\alpha = \sigma_1 \cdots \sigma_r = \tau_1 \cdots \tau_l$, onde $\sigma_i$ e $\tau_i$ s\~ao transposi\c{c}\~oes para todo $i = 1$, \dots, $r$ e $j = 1$, \dots, $l$ ent\~ao $r \equiv l \pmod 2$.
+\end{teorema}
+\begin{prova}
+	Inicialmente note que toda transposi\c{c}\~ao tem ordem 2, da{\'\i} podemos escrever
+	\[
+		(1) = \alpha\alpha^{-1} = \sigma_1\cdots\sigma_r\tau_l\cdots\tau_1.
+	\]
+	Assim \'e suficiente mostrar que a identidade s\'o pode ser escrita como um n\'umero par de transposi\c{c}\~oes. Assim $r + l$ \'e par e ent\~ao teremos $r \equiv l \pmod 2$.
+
+	Suponha ent\~ao que
+	\begin{align}\label{identidade_como_produto_de_transposicoes}
+		(1) = (a_k b_k)\cdots (a_2 b_2)(a_1 b_1)
+	\end{align}
+	onde $k \ge 1$ e suponha que $a_i \ne b_i$ para todo $i$. Provemos que $k$ \'e par. Como $a_i \ne b_i$, ent\~ao $k > 1$. Assim $k \ge 2$ e faremos a prova por indu\c{c}\~ao em $k$. Suponha ent\~ao que em qualquer produto de transposi\c{c}\~oes que seja a identidade e que contenha menos do que $k$ transposi\c{c}\~oes, ocorra uma quantidade par de transposi\c{c}\~oes.
+
+	Considere um produto da forma \eqref{identidade_como_produto_de_transposicoes}. Alguma transposi\c{c}\~ao $(a_i b_i)$ para $i = 2$, \dots, $k$ deve mover $a_1$, caso contr\'ario n\~ao obter{\'\i}amos a identidade. Assim podemos supor que $a_1 = a_j$ para algum $j > 1$. Agora,
+	\begin{align*}
+		(ab)(cd) = (cd)(ab)\\
+		(ac)(bc) = (bc)(ab).
+	\end{align*}
+	Assim podemos mudar a ordem das transposi\c{c}\~oes $(a_i b_i)$ em \eqref{identidade_como_produto_de_transposicoes}, sem mudar sua quantidade, e supor que $a_2 = a_1$. Se $b_1 = b_2$, ent\~ao $(a_1 b_1)(a_2 b_2) = (1)$ em \eqref{identidade_como_produto_de_transposicoes} e obtemos um produto de $k - 2$ transposi\c{c}\~oes dando a identidade. Da{\'\i} pela hip\'otese de indu\c{c}\~ao $k - 2$ \'e par e logo $k$ \'e par.
+
+	Se $b_1 \ne b_2$, ent\~ao $(a_1 b_1)(a_1 b_2) = (a_1 b_2)(b_1 b_2)$ e da{\'\i} podemos reescrever \eqref{identidade_como_produto_de_transposicoes} como
+	\begin{align}\label{identidade_como_produto_de_transposicoes-reescrita}
+		(1) = (a_k b_k)\cdots (a_3 b_3)(a_1 b_1)(b_1 b_2)
+	\end{align}
+	onde somente os dois primeiros fatores de \eqref{identidade_como_produto_de_transposicoes} foram alterados. Note que o n\'umero de transposi\c{c}\~oes que podem mover $a_1$ foi reduzida em 1. Repita o argumento com \eqref{identidade_como_produto_de_transposicoes-reescrita}. Assim existe $a_j$, com $j \ge 3$, tal que $a_j = a_1$. Com isso ou reduzimos o n\'umero de transposi\c{c}\~oes em \eqref{identidade_como_produto_de_transposicoes-reescrita} e a{\'\i} usamos a hip\'otese de indu\c{c}\~ao ou ent\~ao reescrevemos \eqref{identidade_como_produto_de_transposicoes-reescrita} sem mudar o n\'umero total de transposi\c{c}\~oes, mas reduzindo em 1 o n\'umero de transposi\c{c}\~oes que movem $a_1$. Continuando com este processo, chegaremos na situa\c{c}\~ao em que as duas primeiras transposi\c{c}\~oes se cancelam, caso contr\'ario somente a primeira transposi\c{c}\~ao de \eqref{identidade_como_produto_de_transposicoes} moveria $a_1$ e portanto n\~ao seria a identidade. Chegando nesse instante a hip\'otese de indu\c{c}\~ao garante que $k$ \'e par.
+\end{prova}
+
 % section grupos_de_permutacoes (end)
 
 \todo[inline, color=green!10]{Teorema de Sylow}
