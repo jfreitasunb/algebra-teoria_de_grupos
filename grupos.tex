@@ -1333,14 +1333,26 @@ A equa\c{c}\~ao \eqref{equacao_de_classes} \'e chamada de \textbf{equa\c{c}\~ao 
 		\]
 		Aplicando a parte (a), \'e imediato verificar que $\sigma\rho\sigma^{-1} = \beta$. Observe que para cada ordena\c{c}\~ao do conjunto $c_1$, \dots, $c_k$ obtemos uma permuta\c{c}\~ao diferente que funciona.
 
-		\item Pela parte (b), existe $\sigma \in S_n$ tal que $\beta = \sigma\rho\sigma^{-1}$. Usando as mesmas nota\c{c}\~oes de (b), como $\rho$ fixa pelo menos duas letras, ent\~ao $k \ge 2$. Tome ent\~ao
+		\item Pela parte (b), existe $\sigma \in S_n$ tal que $\beta = \sigma\rho\sigma^{-1}$. Usando as mesmas nota\c{c}\~oes de (b), como $\rho$ fixa pelo menos duas letras, ent\~ao $k \ge 2$. Tomando
 		\[
 			\mu \coloneqq \begin{cases}
 				\sigma, & \mbox{se } \sigma \in A_n\\
 				\sigma (c_1 c_2), & \mbox{se } \sigma \notin A_n
 			\end{cases}.
 		\]
+		o resultado segue.
 	\end{enumerate}
+\end{prova}
+
+\begin{proposicao}
+	Seja $n \ge 3$. Ent\~ao $A_n = \ger{\{3\mbox{-ciclos}\}}$.
+\end{proposicao}
+\begin{prova}
+	Se $(i j k)$ \'e um 3-ciclo qualquer, ent\~ao como $(i j k) = (i k)(i j)$ temos $(i j k) \in A_n$. Logo $\ger{\{3\mbox{-ciclos}\}} \sub A_n$. Agora, seja $\tau \in A_n$. Assim $\tau = \sigma_1\sigma_2 \cdots \sigma_m$ com $\sigma_i$ transposi\c{c}\~ao para $i = 1$, \dots, $m$ e $m$ par. Logo se mostrarmos que $\sigma_i\sigma_j$ \'e um 3-ciclo, ent\~ao $\tau$ ser\'a um produto de 3-ciclos. Para simplificar a nota\c{c}\~ao, sejam $\alpha$ e $\beta$ duas transposi\c{c}\~oes. Se $\alpha$ e $\beta$ s\~ao disjuntas, digamos $\alpha = (i j)$ e $\beta = (k l)$, ent\~ao
+	\[
+		\alpha\beta = (i j)(k l) = [(i j)(k i)][(k i)(k l)] = (i k j)(i k l)
+	\]
+	e assim $\alpha\beta$ \'e um produto de dois 3-ciclos. Se $\alpha$ e $\beta$ n\~ao s\~ao disjuntas, digamos $\alpha = (i j)$ e $\beta = (j k)$, ent\~ao $\alpha\beta = (i j)(j k) = (i j k)$ \'e um 3-ciclo. Logo $\alpha\beta$ \'e sempre um produto de 3-ciclos se $\alpha$ e $\beta$ s\~ao transposi\c{c}\~oes. Logo o mesmo ocorre com $\tau$ e da{\'\i} $\tau \in \ger{\{3\mbox{-ciclos}\}}$. Portanto, $A_n = \ger{\{3\mbox{-ciclos}\}}$.
 \end{prova}
 
 % section grupos_de_permutacoes (end)
