@@ -1096,7 +1096,7 @@ A equa\c{c}\~ao \eqref{equacao_de_classes} \'e chamada de \textbf{equa\c{c}\~ao 
 	pois $\alpha$ \'e um $r$-ciclo. Portanto $|\alpha| = r$.
 \end{prova}
 
-\begin{proposicao}
+\begin{proposicao}\label{decomposicao_de_permutacao_em_ciclos_disjuntos}
 	Seja $\alpha \in S_n$, $\alpha \ne (1)$. Ent\~ao a permuta\c{c}\~ao $\alpha$ \'e igual a um produto de ciclos disjuntos de comprimento $\ge 2$. Mais ainda, tal decomposi\c{c}\~ao \'e \'unica a menos da ordem dos fatores.
 \end{proposicao}
 \begin{prova}
@@ -1117,9 +1117,49 @@ A equa\c{c}\~ao \eqref{equacao_de_classes} \'e chamada de \textbf{equa\c{c}\~ao 
 	Suponha agora que tamb\'em temos $\alpha = \tau_1\tau_2\cdots \tau_l$ com $\tau_1$, $\tau_2$, \dots, $\tau_l$ ciclos disjuntos de comprimento $\ge 2$. Temos $\tau_1\cdots \tau_l(i_1) = \alpha(i_1) \ne i_1$ e como os $\tau_i$'s s\~ao disjuntos, ent\~ao existe um \'unico $\tau_j$ tal que $\tau_j(i_1) = \alpha(i_1)$. Mas os ciclos $\tau_i$'s comutam, assim podemos supor que $j = 1$ e ent\~ao $\tau_1(i_1) = \alpha(i_1)$. Mostremos que $\tau_1 = \sigma_1$. O ciclo $\tau_1$ n\~ao pode fixar $\alpha(i_1)$, isto \'e, $\tau_1(\alpha(i_1)) \ne \alpha(i_1)$ pois $\tau_1(i_1) = \alpha(i_1) \ne i_1$. Como os $\tau_j$'s s\~ao ciclos disjuntos, ent\~ao $\tau_j(\alpha(i_1)) = \alpha(i_1)$ para $j \ge 2$. Assim $\tau_1(\alpha(i_1)) = \alpha^2(i_1)$ e da{\'\i} $\tau_1(\alpha^k(i_1)) = \alpha^{k + 1}(i_1)$ para todo $k \ge 0$. Logo $\tau_1 = \sigma_1$. Aplicando o mesmo racioc{\'\i}nio com $i_2$ obtemos que $\tau_2 = \sigma_2$. Continuando com o procedimento obtemos que $t = l$ e que a menos da ordem $\sigma_j = \tau_j$ para cada $j = 1$, \dots, $t$.
 \end{prova}
 
+\begin{proposicao}
+	\begin{enumerate}
+		\item Todo elemento de $S_n$ pode ser escrito como um produto de transposi\c{c}\~oes, isto \'e, $S_n = \ger{\mbox{transposi\c{c}\~oes}}$.
 
+		\item $S_n = \ger{(12), (13), \dots, (1n)}$.
 
+		\item $S_n = \ger{(12), (23), \dots, (n-1 n)}$.
+	\end{enumerate}
+\end{proposicao}
+\begin{prova}
+	\begin{enumerate}
+		\item Inicialmente temos $(1) = (12)(12) \in \ger{\mbox{transposi\c{c}\~oes}}$. Agora, pela Proposi\c{c}\~ao \ref{decomposicao_de_permutacao_em_ciclos_disjuntos}, dada uma permuta\c{c}\~ao $\alpha \in S_n$, \'e suficiente mostrar que cada $r$-ciclo de $\alpha$ pode ser escrito como um produto de transposi\c{c}\~oes. Assim se $(a_1 a_2 \cdots a_r)$ \'e um $r$-ciclo de $\alpha$, ent\~ao podemos escrever
+		\[
+			(a_1 a_2 \cdots a_r) = (a_1 a_r)(a_1 a_{r - 1})\cdots (a_1 a_3)(a_1 a_2).
+		\]
+		Donde obtemos o resultado desejado.
 
+		\item Pela parte (a), basta mostrar que toda transposi\c{c}\~ao $(i j)$ pertence a $\ger{(12), (13), \dots, (1n)}$. De fato
+		\[
+			(i j) = (1 i)(1 j)(1 i)
+		\]
+		para $i \ne j$, como quer{\'\i}amos.
+
+		\item Para todo inteiro $r \ge 2$, temos
+		\[
+			(1 i+1) = (1 i)(i i+1)(1 i),
+		\]
+		assim o subgrupo $\ger{(12), (23), \dots, (n-1 n)}$ cont\'em $(1 i)$, para cada $i = 2$, \dots, $n$. Logo pelo item (b), $S_n = \ger{(12), (23), \dots, (n-1 n)}$, como quer{\'\i}amos.
+	\end{enumerate}
+\end{prova}
+
+\begin{observacoes}
+	\begin{enumerate}
+		\item Um elemento $\alpha \in S_n$ pode ser escrito como um produto de transposi\c{c}\~oes disjuntas se, e somente se, sua ordem for igual a 2.
+
+		\item A decomposi\c{c}\~ao de $\alpha \in S_n$ em um produto de transposi\c{c}\~oes n\~ao \'e \'unica. Por exemplo:
+		\begin{enumerate}
+			\item para $\alpha = (123) \in S_4$ temos: $\alpha = (13)(12) = (23)(13) = (13)(42)(12)(14)$,
+			\item para $\alpha = (24) \in S_4$ temos: $\alpha = (24) = (13)(12)(13)(34)(23)$.
+		\end{enumerate}
+		Apesar da decomposi\c{c}\~ao n\~ao ser \'unica, existe um invariante nessa decomposi\c{c}\~ao que \'e a paridade do n\'umero de transposi\c{c}\~oes que aparecem em $\alpha$.
+	\end{enumerate}
+\end{observacoes}
 
 % section grupos_de_permutacoes (end)
 
