@@ -1252,8 +1252,24 @@ A equa\c{c}\~ao \eqref{equacao_de_classes} \'e chamada de \textbf{equa\c{c}\~ao 
 	Como $\sgn(1) = 1$, ent\~ao $(1) \in A_n$. Agora, dados $\alpha$, $\beta \in A_n$, ent\~ao $\sgn(\alpha\beta) = \sgn(\alpha)\sgn(\beta) = 1$. Logo $\alpha$, $\beta \in A_n$. Como $\sgn(\alpha) = \sgn(\alpha^{-1})$, ent\~ao $\alpha^{-1} \in A_n$ para todo $\alpha \in A_n$. Portanto $A_n$ \'e um subgrupo de $S_n$.
 \end{prova}
 
+\begin{exemplos}
+	\begin{enumerate}
+		\item Em $S_2$ temos $A_2 = \{(1)\}$.
 
+		\item Em $S_3 = \{(1), (12), (13), (23), (123), (132)\}$ temos $A_3 = \{(1), (123), (132)\}$.
 
+		\item Em $S_n$ temos $A_4 = \{(1), (123), (132), (124), (142), (134), (143), (234), (243), (12)(34), (13)(24), (14)(23)\}$.
+
+		\item Para $n \ge 4$ $(123)$, $(124) \in A_n$. Assim $A_n$ n\~ao \'e abeliano.
+	\end{enumerate}
+\end{exemplos}
+
+\begin{proposicao}
+	Para $n \ge 2$, $|A_n| = \frac{n!}{2}$.
+\end{proposicao}
+\begin{prova}
+	A aplica\c{c}\~ao $\sgn : S_n \to C_2 = \{-1,1\}$, onde $C_2$ \'e um grupo multiplicativo, \'e um homomorfismo. \'E f\'acil ver que $\ker\sgn = A_n$ e da{\'\i} $|A_n| = \frac{n!}{2}$.
+\end{prova}
 
 
 % section grupos_de_permutacoes (end)
