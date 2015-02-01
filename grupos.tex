@@ -1271,6 +1271,77 @@ A equa\c{c}\~ao \eqref{equacao_de_classes} \'e chamada de \textbf{equa\c{c}\~ao 
 	A aplica\c{c}\~ao $\sgn : S_n \to C_2 = \{-1,1\}$, onde $C_2$ \'e um grupo multiplicativo, \'e um homomorfismo. \'E f\'acil ver que $\ker\sgn = A_n$ e da{\'\i} $|A_n| = \frac{n!}{2}$.
 \end{prova}
 
+\begin{definicao}
+	Seja $n \ge 2$. Se $\alpha \in S_n$ e se $\alpha = (a_{11} \dots a_{1r_1})\cdots (a_{t1} \dots a_{tr_t})$ \'e a sua decomposi\c{c}\~ao em ciclos disjuntos com $r_1 \le r_2 \le \cdots \le r_t$, dizemos que $r_1$, \dots, $r_t$ \'e o \textbf{tipo de decomposi\c{c}\~ao} de $\alpha$.\index{Permuta\c{c}\~oes!Tipo de decomposi\c{c}\~ao}
+\end{definicao}
+
+\begin{exemplo}
+	As permuta\c{c}\~oes $\alpha = (45)(67)(123)$ e $\beta = (15)(36)(247)$  t\^em o mesmo tipo de decomposi\c{c}\~ao, a saber 2, 2, 3.
+\end{exemplo}
+
+\begin{lema}
+	Seja $n \ge 2$. Dada uma permuta\c{c}\~ao $\rho \in S_n$, seja $\rho = (a_{11}\dots a_{1r_1})\cdots (a_{t1}\dots a_{tr_t})$ sua decomposi\c{c}\~ao em ciclos disjuntos.
+	\begin{enumerate}
+		\item Se $\sigma \in S_n$, ent\~ao a permuta\c{c}\~ao $\sigma\rho\sigma^{-1}$ tem a seguinte decomposi\c{c}\~ao em ciclos disjuntos
+		\[
+			\sigma\rho\sigma^{-1} = (\sigma(a_{11})\dots \sigma(a_{1r_1}))\cdots (\sigma(a_{t1})\dots \sigma(a_{tr_t})).
+		\]
+		Em particular, as permuta\c{c}\~oes $\rho$ e $\sigma\rho\sigma^{-1}$ t\^em o mesmo tipo de decomposi\c{c}\~ao.
+
+		\item Reciprocamente, se $\rho$, $\beta \in S_n$ s\~ao permuta\c{c}\~oes com o mesmo tipo de decomposi\c{c}\~ao, ent\~ao existe $\sigma \in S_n$ tal que $\beta = \sigma\rho\sigma^{-1}$.
+
+		\item Se as permuta\c{c}\~oes $\rho$, $\beta \in S_n$ t\^em o mesmo tipo de decomposi\c{c}\~ao e se a permuta\c{c}\~ao $\rho$ deixa pelo menos duas letras fixas, ent\~ao existe $\mu \in A_n$ tal que $\beta = \mu\rho\mu^{-1}$.
+	\end{enumerate}
+\end{lema}
+\begin{prova}
+	\begin{enumerate}
+		\item Seja $\tau = (a_1 \dots a_r)$ um $r$-ciclo qualquer. Queremos mostrar que $\sigma\tau\sigma^{-1} = (\sigma(a_1)\dots\sigma(a_r))$. Para isso, vamos mostrar que
+		\[
+			\sigma\tau\sigma^{-1}|_{\{\sigma(a_1),\dots,\sigma(a_r)\}} = (\sigma(a_1)\dots\sigma(a_r)).
+		\]
+		De fato, para $j \in \{1, \dots, r - 1\}$ temos
+		\[
+			\sigma\tau\sigma^{-1}(\sigma(a_j)) = \sigma\tau(\sigma^{-1}(\sigma(a_j))) = \sigma\tau(a_j) = \sigma(a_{j + 1})
+		\]
+		e para $j = r$
+		\[
+			\sigma\tau\sigma^{-1}(\sigma(a_r)) = \sigma\tau(\sigma^{-1}(\sigma(a_r))) = \sigma\tau(a_r) = \sigma(a_1).
+		\]
+		Al\'em disso, se $b \notin \{\sigma(a_1), \dots, \sigma(a_r)\}$, ent\~ao $\sigma^{-1}(b) \notin \{a_1, \dots, a_r\}$. Da{\'\i} $\tau\sigma^{-1}(b) = \sigma^{-1}(b)$ e assim
+		\[
+			\sigma\tau\sigma^{-1}(b) = \sigma(\tau(\sigma^{-1}(b))) = \sigma\sigma^{-1}(b) = b.
+		\]
+		Portanto, $\sigma\tau\sigma^{-1} = (\sigma(a_1)\dots \sigma(a_r))$.
+
+		Agora, se $\rho = (a_{11}\dots a_{1r_1})\cdots (a_{t1}\dots a_{tr_t})$, ent\~ao
+		\begin{align*}
+			\sigma\rho\sigma^{-1} &= \sigma(a_{11}\dots a_{1r_1})\sigma^{-1}\sigma(a_{21}\dots a_{2r_2})\sigma^{-1}\cdots \sigma(a_{t1}\dots a_{tr_t})\sigma^{-1}\\ &= (\sigma(a_{11})\dots \sigma(a_{1r_1}))(\sigma(a_{21})\dots \sigma(a_{2r_2}))\cdots (\sigma(a_{t1})\dots \sigma(a_{tr_t})).
+		\end{align*}
+		Mais ainda, para todo $i$, $j \in \{1, \dots, t\}$ com $i \ne j$, como $\{a_{i1}, \dots, a_{ir_i}\} \cap \{a_{j1}, \dots, a_{jr_j}\} = \emptyset$ ent\~ao $\{\sigma(a_{i1}), \dots, \sigma(a_{ir_i})\} \cap \{\sigma(a_{i1}), \dots, \sigma(a_{jr_j})\} = \emptyset$. Portanto os ciclos obtidos em $\sigma\rho\sigma^{-1}$ s\~ao disjuntos.
+
+		\item Seja $\beta = (b_{11}\dots b_{1r_1})\cdots (b_{t1}\dots b_{tr_t})$ a decomposi\c{c}\~ao em ciclos disjuntos de $\beta$. Tome
+		\begin{align*}
+			\{c_1, \dots, c_k\} &= \{1, \dots, n\}\backslash \cup_{i = 1}^t\{a_{i1}, \dots, a_{ir_i}\}\\
+			\{d_1, \dots, d_k\} &= \{1, \dots, n\}\backslash \cup_{i = 1}^t\{b_{i1}, \dots, b_{ir_i}\}.
+		\end{align*}
+		Tome $\sigma \in S_n$ dada por
+		\[
+			\sigma \coloneqq \begin{pmatrix}
+				a_{11} & \cdots & a_{1r_1} & \cdots & a_{t1} & \cdots  & a_{tr_t} & c_1 & \cdots & c_k\\
+				b_{11} & \cdots & b_{1r_1} & \cdots & b_{t1} & \cdots & b_{tr_t} & d_1 & \cdots & d_k
+			\end{pmatrix}.
+		\]
+		Aplicando a parte (a), \'e imediato verificar que $\sigma\rho\sigma^{-1} = \beta$. Observe que para cada ordena\c{c}\~ao do conjunto $c_1$, \dots, $c_k$ obtemos uma permuta\c{c}\~ao diferente que funciona.
+
+		\item Pela parte (b), existe $\sigma \in S_n$ tal que $\beta = \sigma\rho\sigma^{-1}$. Usando as mesmas nota\c{c}\~oes de (b), como $\rho$ fixa pelo menos duas letras, ent\~ao $k \ge 2$. Tome ent\~ao
+		\[
+			\mu \coloneqq \begin{cases}
+				\sigma, & \mbox{se } \sigma \in A_n\\
+				\sigma (c_1 c_2), & \mbox{se } \sigma \notin A_n
+			\end{cases}.
+		\]
+	\end{enumerate}
+\end{prova}
 
 % section grupos_de_permutacoes (end)
 
