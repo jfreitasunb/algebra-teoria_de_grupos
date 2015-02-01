@@ -1215,8 +1215,42 @@ A equa\c{c}\~ao \eqref{equacao_de_classes} \'e chamada de \textbf{equa\c{c}\~ao 
 	\end{enumerate}
 \end{exemplos}
 
+\begin{proposicao}
+	Para $\alpha$, $\beta \in S_n$ temos
+	\[
+		\sgn(\alpha\beta) = \sgn(\alpha)\sgn(\beta).
+	\]
+\end{proposicao}
+\begin{prova}
+	Se $\alpha$ \'e um produto de $k$ transposi\c{c}\~oes e $\beta$ \'e um produto de $l$ transposi\c{c}\~oes, ent\~ao $\alpha\beta$ pode ser escrita como um produto de $k + l$ transposi\c{c}\~oes. Logo
+	\[
+		\sgn(\alpha\beta) = (-1)^{r + l} = (-1)^r(-1)^l = \sgn(\alpha)\sgn(\beta),
+	\]
+	como quer{\'\i}amos.
+\end{prova}
 
+\begin{corolario}
+	Invers\~ao e conjuga\c{c}\~ao de uma permuta\c{c}\~ao n\~ao altera seu sinal.
+\end{corolario}
+\begin{prova}
+	Seja $\alpha \in S_n$. Assim $\alpha\alpha^{-1} = (1)$ e da{\'\i} $\sgn(\alpha\alpha^{-1}) = \sgn(1) = 1$. Por outro lado, $\sgn(\alpha\alpha^{-1}) = \sgn(\alpha)\sgn(\alpha^{-1})$. Portanto $\sgn(\alpha) = \sgn(\alpha^{-1})$, como quer{\'\i}amos.
+	
+	Agora, se $\beta = \pi^{-1}\alpha\pi$ para algum $\pi \in S_n$, ent\~ao
+	\[
+		\sgn(\beta) = \sgn(\pi^{-1}\alpha\pi) = \sgn(\pi^{-1})\sgn(\alpha)\sgn(\pi) = \sgn(\alpha).
+	\]
+\end{prova}
 
+\begin{corolario}
+	O conjunto
+	\[
+		A_n = \{\alpha \in S_n \mid \sgn(\alpha) = 1\}
+	\]
+	\'e um subgrupo de $S_n$ chamado de \textbf{grupo alternado}.\index{Grupo Alternado}
+\end{corolario}
+\begin{prova}
+	Como $\sgn(1) = 1$, ent\~ao $(1) \in A_n$. Agora, dados $\alpha$, $\beta \in A_n$, ent\~ao $\sgn(\alpha\beta) = \sgn(\alpha)\sgn(\beta) = 1$. Logo $\alpha$, $\beta \in A_n$. Como $\sgn(\alpha) = \sgn(\alpha^{-1})$, ent\~ao $\alpha^{-1} \in A_n$ para todo $\alpha \in A_n$. Portanto $A_n$ \'e um subgrupo de $S_n$.
+\end{prova}
 
 
 
