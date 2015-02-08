@@ -1366,6 +1366,129 @@ A equa\c{c}\~ao \eqref{equacao_de_classes} \'e chamada de \textbf{equa\c{c}\~ao 
 % section grupos_de_permutacoes (end)
 
 \todo[inline, color=green!10]{Teorema de Sylow}
+
+\section{Teoremas de Sylow} % (fold)
+\label{sec:teoremas_de_sylow}
+
+\begin{teorema}[$1^0$ Teorema de Sylow]\label{primeiro_teorema_de_sylow}
+Seja $G$ um grupo finito tal que \linebreak $|G| = p^m b$, onde
+$p$ {\'e} primo e $p$ e $b$ s{\~a}o primos entre si. Ent{\~a}o, para cada
+$n$, $\ 0 \le n \le m$, existe um subgrupo $H$ de $G$ tal que $|H| =
+p^n$.
+\end{teorema}
+\begin{prova}
+A demonstra{\c c}{\~a}o ser{\'a} por indu{\c c}{\~a}o sobre a ordem de $G$.
+
+Se $|G| = 1$, ent{\~a}o nada h{\'a} a fazer. Assim, suponha que $|G| > 1$ e
+que o teorema seja v{\'a}lido para todo grupo de ordem menor que a ordem de
+$G$. Seja $p$ o primo que aparece no enunciado do teorema. Considere o
+centro, $Z(G)$, de $G$. Temos duas possibilidades para o primo $p$.\\
+\textit{$1^o$ Caso: $p | |Z(G)|$}
+
+Neste caso, Pelo Teorema de Cauchy, existe $g \in Z(G),\ g \neq 1$ tal que
+$|g| = p$. Seja $N = <g>$, assim como $N \trianglelefteq Z(G)$ e $Z(G)$
+{\'e} caracter{\'\i}stico em $G$, segue que $N \trianglelefteq G$. Logo
+$G/N$ {\'e} um grupo e $|G/N| = p^{m-1}b < |G|$ e da{\'\i} pela hip{\'o}tese
+de indu{\c c}{\~a}o, para cada $t,\ 0 \l t \l m-1$, existe $\overline{S}$
+subgrupo de $G/N$ tal que $|\overline{S}| = p^t$. Agora, considere o
+homomorfismo 
+\begin{center}
+$ f: G \to G/N$\\
+$\ \ g \mapsto Ng$
+\end{center}
+
+Temos que $f^{-1}(\overline{S})$ {\'e} um subgrupo de $G$ tal que $\ker(f)
+\subset f^{-1}(\overline{S})$. Inicialmente temos $\ker (f) = N$ pois como
+$f(g) = Ng$, se tomarmos $g \in N$  teremos $Ng = N$. Agora dado $g \in \ker
+(f)$, $f(g) = Ng = N$ e como $\overline{S}$ {\'e} um subgrupo de $G/N$ temos
+que $N \in \overline{S}$ e assim $f(g) \in \overline{S}$ e
+conseq{\"u}entemente $g \in f^{-1} (\overline{S})$, ou seja, $\ker (f) \subset
+f^{-1}(\overline{S})$. Da{\'\i} $$|f^{-1}(\overline{S})| = |N||\overline{S}|
+= p^{t+1},$$ e assim para cada $n,\ 0 \l n \l m$, existe $H$ subgrupo de $G$
+tal que $|H| = p^n$.
+\vspace{.3cm}\\
+\textit{$2^o$ Caso: $p \nmid |Z(G)|$}
+
+Neste caso, sejam $G^* = G - Z(G)$ e $S_{G^*}$ o conjunto de todas as
+bije{\c c}{\~o}es de $G^*$ em $G^*$ ($S_{G^*}$ {\'e} um grupo com a opera{\c
+c}{\~a}o de composi{\c c}{\~a}o de fun{\c c}{\~o}es). Considere a
+aplica{\c c}{\~a}o
+\begin{align*}
+\phi : & G \rightarrow S_{G^*}\\
+&g \mapsto \phi_g : G^* \rightarrow G^*\\
+&\qquad x \mapsto x^g = gxg^{-1}
+\end{align*}
+
+Inicialmente temos que $\phi$ est{\'a} bem definida. De fato, seja $y \notin
+Z(G)$, ent{\~a}o $y^x \notin Z(G)$, pois caso contr{\'a}rio
+ter{\'\i}amos
+\[
+y^x \in Z(G) \Rightarrow (y^x)^{x^{-1}} \in Z(G) \quad
+\text{e}\quad (y^x)^{x^{-1}} = x^{-1}(xyx^{-1})x = y \notin Z(G).
+\]
+Mais ainda, $\phi$ {\'e} um homomorfismo de grupos, pois se $g,\ h \in G$,
+ent{\~a}o 
+\begin{align*}
+\phi_{gh} (x) &= x^{gh} =
+(gh)x(gh)^{-1} = (gh)x(h^{-1}g^{-1}) = g(hxh^{-1})g^{-1} \\&=
+g(\phi_h (x))g^{-1} = \phi_g (\phi_h (x)) = (\phi_g \phi_h)(x).
+\end{align*}
+Logo $\phi_{gh} = \phi_g \phi_h$ e assim $\phi$ {\'e} uma representa{\c
+  c}{\~a}o de $G$ em $S_{G^*}$.
+
+Agora, observando que $\phi_g(x) = gxg^{-1} = y \in G^*$, podemos definir em
+$G^*$ uma rela{\c c}{\~a}o de equival{\^e}ncia da seguinte forma
+\[
+y \sim x \Leftrightarrow \mbox{existe}\ g \in G\ \mbox{tal que}\ \phi_g (x) = y,\
+\text{ou seja},\ gxg^{-1} = y.
+\]
+
+Como $\sim$ {\'e} uma rela{\c c}{\~a}o de equival{\^e}ncia em $G^*$, segue
+que $G^*$ {\'e} a uni{\~a}o disjunta de suas classes de
+equival{\^e}ncia. Denotamos por $orb_\phi (x)$ a classe de equival{\^e}ncia
+de $x$ em $G^*$, que tamb{\'e}m s{\~a}o chamadas de \textbf{{\'o}rbitas} (de
+$x$ segundo $\phi$), temos
+\[
+orb_\phi (x) = \{y \in G^* : y \sim x \} = \{y
+\in G^* : \phi_g (x) = y,\ \mbox{para algum}\ \ g \in G \}
+\]
+e assim 
+\[
+G^* = \bigcup orb_\phi (x)
+\] e segue tamb{\'e}m que $|G^*| = \sum |orb_\phi
+(x)|$.
+
+Pelo Corol{\'a}rio \ref{c5}, temos que
+\[
+|orb_\phi (x)| = |G : C_x|,
+\]
+onde
+\begin{align*}
+C_x &= \{g \in G : \phi_g (x) = x \} = \{g \in G
+: gxg^{-1} = x \} \\
+&= \{g \in G : gx = xg \} = C_G (x)
+\end{align*}
+e da{\'\i} $|orb_\phi (x)| = |G : C_G (x)|$.
+
+Como $G^* = G - Z(G)$ temos que $|G^*| = |G| - |Z(G)|$ e como $p \mid |G|$ e
+$p \nmid |Z(G)|$, ent{\~a}o $p \nmid |G^*|$. Por outro lado, $|G^*| = \sum
+|G : C_G(x)|$ e assim existe $x \in G^*$ tal que $p \nmid |G :
+C_G(x)|$. Como $x \in G^*$, ent{\~a}o $x \notin Z(G)$ e assim $C_G(x)$ {\'e}
+um subgrupo pr{\'o}prio de $G$, ou seja, $|C_G(x)| < |G|$ e da{\'\i} pela
+hip{\'o}tese de indu{\c c}{\~a}o $C_G(x)$ possui um subgrupo de ordem $p^n$
+para cada $p^n \mid |C_G(x)|$ e conseq{\"u}entemente o mesmo ocorre em $G$.
+\end{prova}
+
+\begin{definicao}
+Sabemos, pelo teorema anterior, que se $G$ {\'e} grupo finito tal que $|G| =
+p^m b$, onde $p$ {\'e} primo e $p$ e $b$ s{\~a}o primos entre si, ent{\~a}o
+existem subgrupos de ordem $p^n$ para cada $p^n \mid |G|$, em particular
+existe um subgrupo de ordem $p^m$ e este subgrupo {\'e} chamado de
+\textbf{$p$-subgrupo de Sylow} de $G$.
+\end{definicao}
+
+% section teoremas_de_sylow (end)
+
 \todo[inline, color=red!40]{Grupos livres}
 \todo[inline, color=red!20]{Grupos Sol\'uveis}
 \todo[inline, color=red!10]{Grupos Nilpotentes}
