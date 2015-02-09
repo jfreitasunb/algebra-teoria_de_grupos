@@ -1613,10 +1613,16 @@ existe um subgrupo de ordem $p^m$ e este subgrupo {\'e} chamado de
 \begin{proposicao}
 	Sejam $H$ um $p$-subgrupo de Sylow de um grupo finito $G$ e $K \le G$. Se $H \sub K$, ent\~ao $K = N_G(K)$.
 \end{proposicao}
+\begin{prova}
+	Seja $x \in N_G(K)$. Como $H \sub K \unlhd N_G(K)$, segue que $xHx^{-1} \sub K$. Mas $H$ e $xHx^{-1}$ s\~ao $p$-subgrupos de Sylow de $K$, da{\'\i} existe $y \in H$ tal que $xHx^{-1} = yHy^{-1}$. Assim $y^{-1}x \in N_G(H) \sub K$. Ou seja, $x \in K$ e portanto $N_G(H) = H$.
+\end{prova}
 
 \begin{corolario}
 	Seja $H$ um $p$-subgrupo de Sylow de um grupo finito $G$. Ent\~ao $N_G(N_G(H)) = N_G(H)$.
 \end{corolario}
+\begin{prova}
+	Basta tomar $K = N_G(H)$ na proposi\c{c}\~ao anterior.
+\end{prova}
 
 % section teoremas_de_sylow (end)
 
