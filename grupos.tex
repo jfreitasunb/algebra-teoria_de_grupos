@@ -1279,7 +1279,7 @@ A equa\c{c}\~ao \eqref{equacao_de_classes} \'e chamada de \textbf{equa\c{c}\~ao 
 	As permuta\c{c}\~oes $\alpha = (45)(67)(123)$ e $\beta = (15)(36)(247)$  t\^em o mesmo tipo de decomposi\c{c}\~ao, a saber 2, 2, 3.
 \end{exemplo}
 
-\begin{lema}
+\begin{lema}\label{ciclos_conjugados}
 	Seja $n \ge 2$. Dada uma permuta\c{c}\~ao $\rho \in S_n$, seja $\rho = (a_{11}\dots a_{1r_1})\cdots (a_{t1}\dots a_{tr_t})$ sua decomposi\c{c}\~ao em ciclos disjuntos.
 	\begin{enumerate}
 		\item Se $\sigma \in S_n$, ent\~ao a permuta\c{c}\~ao $\sigma\rho\sigma^{-1}$ tem a seguinte decomposi\c{c}\~ao em ciclos disjuntos
@@ -1344,7 +1344,7 @@ A equa\c{c}\~ao \eqref{equacao_de_classes} \'e chamada de \textbf{equa\c{c}\~ao 
 	\end{enumerate}
 \end{prova}
 
-\begin{proposicao}
+\begin{proposicao}\label{grupo_alternado_gerado_por_tres_ciclos}
 	Seja $n \ge 3$. Ent\~ao $A_n = \ger{\{3\mbox{-ciclos}\}}$.
 \end{proposicao}
 \begin{prova}
@@ -1362,6 +1362,94 @@ A equa\c{c}\~ao \eqref{equacao_de_classes} \'e chamada de \textbf{equa\c{c}\~ao 
 \begin{teorema}
 	Seja $n = 3$ ou $n \ge 5$. Ent\~ao o grupo alternado $A_n$ \'e um grupo simples.
 \end{teorema}
+\begin{prova}
+	O grupo $A_3$ tem ordem 3 e portanto \'e simples.
+
+	Sejam $n \ge 5$ e $H \ne \{1\}$ um subgrupo normal de $A_n$. Queremos mostrar que $H = A_n$. Pela Proposi\c{c}\~ao \ref{grupo_alternado_gerado_por_tres_ciclos} \'e suficiente mostrar que $H$ cont\'em todos os 3-ciclos.
+
+	Suponha que $H$ contenha um 3-ciclo $(a b c)$. Como $n \ge 5$, ent\~ao $\rho = (a b c)$ fixa pelo menos duas letras e da{\'\i} pelo Lema \ref{ciclos_conjugados} para todo 3-ciclo $(i j k)$, existe $\sigma \in A_n$ tal que $(i j k) = \sigma (a b c) \sigma^{-1}$. Mas $H \unlhd A_n$, logo $(i j k) \in H$. Portanto $H = A_n$.
+
+	Vamos mostrar agora que $H$ sempre cont\'em um 3-ciclo. Como $H \ne \{1\}$, ent\~ao existe $\sigma \in H$, $\sigma \ne (1)$. Denote $m = |\sigma| > 1$. Seja $p$ um divisor primo de $m$. Assim $\tau = \sigma^{m/p} \in H$ \'e tal que $|\tau| = p$. Escreva $\tau = \rho_1\cdots\rho_l$, onde $\rho_i \cap \rho_j = \emptyset$ para todo $i \ne j$. Sabemos que $p = |\sigma| = \lcm\{|\rho_1|,\dots, |\rho_l|\}$. Portanto, $\rho_i$ \'e um $p$-ciclo para $i = 1$, \dots, $l$.
+	
+	\textit{$1^o$ Caso: $p = 2$}
+
+	Neste caso todos os $\rho_i$'s s\~ao transposi\c{c}\~oes e $l$ \'e um inteiro par pois $\tau \in H \sub A_n$. Assim $l \ge 2$ e denotando $\rho_1 = (a b)$, $\rho_2 = (c d)$, temos $\tau = (a b)(c d)\rho_3\cdots\rho_l$. Agora como um 3-ciclo \'e um produto de duas transposi\c{c}\~oes com um elemento em comum, precisamos encontrar em $H$ um produto da forma $(i k)(i j)$. Para fazer isso, primeiro vamos mostrar que se $(a b)$ e $(c d)$ forem transposi\c{c}\~oes disjuntas, ent\~ao $(a c)(b d) \in H$. Como $(a b)$ e $(c d)$ s\~ao disjuntos, sabemos que para $\sigma = (a b c)$ temos $\sigma (a b)(c d)\sigma^{-1} = (\sigma(a) \sigma(b))(\sigma(c) \sigma(d))$. Assim
+	\[
+		\sigma(a b)(c d)\sigma^{-1} = (b c)(a d).
+	\]
+	Como $\sigma = (a b c)$ e $\rho_i$, com $i \ge 3$, s\~ao disjuntos (pois caso contr\'ario ter{\'\i}amos em $\tau$ um $r$-ciclo com $r \ge 2$), eles comutam. Logo
+	\begin{align*}
+		\sigma\tau\sigma^{-1} = (a b c)(a b)(c d)\rho_3\dots\rho_l (a b c)^{-1} = (a d)(b c)\rho_l(a b c)^{-1} = (a d)(b c)\rho_3\dots\rho_l \in H
+	\end{align*}
+	pois $\tau \in H \unlhd A_n$ e $(a b c) \in A_n$. Mas $\tau^{-1} \in H$, da{\'\i}
+	\begin{align*}
+		\sigma\tau\sigma^{-1}\tau^{-1} = (a d)(b c)\rho_3\dots\rho_l\rho_l^{-1}\dots\rho_3^{-1}(b c)(a d) = (a d)(b c)(c d)(a b) = (a c)(b d) \in H,
+	\end{align*}
+	como quer{\'\i}amos.
+
+	Agora tomando $K \ne a$, $b$, $c$, $d$, o que \'e poss{\'\i}vel pois $n \ge 5$, temos
+	\begin{align*}
+		(a k c)(a c)(b d)(a k c)^{-1} = (a k)(b d) \in H,
+	\end{align*}
+	pois $(a c)(b d) \in H \unlhd A_n$ e $(a k c) \in A_n$. Portanto $(a c)(b d)(a k)(b d) = (a c)(a k)(b d)(b d) = (a k c) \in H$ e com isso $H = A_n$.
+
+	\textit{$2^o$ Caso: $p = 3$}
+
+	Se $l = 1$, ent\~ao $\tau = \rho_1$ \'e um 3-ciclo em $H$ e acabou.
+
+	Se $l \ge 1$, denote $\rho_1 = (a b c)$ e $\rho_2 = (d e f)$. Ent\~ao $\tau = (a b c)(d e f)\rho_3\dots\rho_l$. Como por hip\'otese todos os $\rho_i$'s s\~ao disjuntos, ent\~ao $a$, $b$, $c$, $d$, $e$ e $f$ n\~ao aparecem nos outros 3-ciclos $\rho_3$, \dots, $\rho_l$. Assim o 3-ciclo $(b c d)$ \'e disjunto de $\rho_3$, \dots, $\rho_l$ e com isso comuta com todos eles. Logo
+	\begin{align*}
+		(b c d)\tau(b c d)^{-1} = (b c d)(a b c)(d e f)\rho_3\dots\rho_l(b c d)^{-1} = (a c d)(b e f)\rho_3\dots\rho_l \in H
+	\end{align*}
+	e como $\tau^{-1} \in H$ ent\~ao
+	\begin{align*}
+		(b c d)\tau(b c d)^{-1}\tau^{-1} = (b c d)(a b c)(d e f)\rho_3\dots\rho_l(b c d)^{-1} = (a c d)(b e f)\rho_3\dots\rho_l\rho_l^{-1}\dots\rho_3^{-1}(d f e)(a c b) = (a c d)(b e f)(d f e)(a c b) = (a d b c e) \in H.
+	\end{align*}
+	Logo $H$ cont\'em um 5-ciclo e assim em particular um elemento de ordem 5. Da{\'\i} basta provar o caso $p > 3$.
+
+	\textit{$3^o$ Caso: $p > 3$}
+
+	Seja $\rho_1 = (a_1 a_2 a_3 a_4 \dots a_p$ e $\tau = (a_1 a_2 a_3 a_4 \dots a_p)\rho_2 \cdots\rho_l$. Novamente, por hip\'otese, todos os $\rho_i$'s s\~ao disjuntos e assim $a_1$, $a_2$, $a_3$, $a_4$, \dots, $a_p$ n\~ao aparecem em $\rho_2$, \dots, $\rho_l$. Logo o 3-ciclo $(a_1 a_2 a_3)$ \'e disjunto de $\rho_2$, \dots, $\rho_l$ e ent\~ao comuta com eles. Da{\'\i}
+	\[
+		(a_1 a_2 a_3)\tau(a_1 a_2 a_3)^{-1} = (a_2 a_3 a_1 a_4 \dots a_p)\rho_2\cdots\rho_l \in H
+	\]
+	e com isso
+	\begin{align*}
+		(a_1 a_2 a_3)\tau(a_1 a_2 a_3)^{-1}\tau^{-1} = (a_2 a_3 a_1 a_4 \dots a_p)(a_1 a_2 a_3 a_4 \dots a_p)^{-1} \in H.
+	\end{align*}
+	Mas $(a_1 a_2 a_3 a_4 \dots a_p)^{-1} = (a_1 a_p a_{p - 1} \dots a_4 a_3 a_2)$ e com isso
+	\[
+		(a_2 a_3 a_1 a_4 \dots a_p)(a_1 a_p a_{p - 1} \dots a_4 a_3 a_2) = (a_1 a_2 a_4) \in H.
+	\]
+	Logo $H = A_n$, provando assim que $A_n$ \'e simples se $n = 3$ ou $n \ge 5$.
+\end{prova}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 % section grupos_de_permutacoes (end)
 
@@ -1383,7 +1471,7 @@ Se $|G| = 1$, ent{\~a}o nada h{\'a} a fazer. Assim, suponha que $|G| > 1$ e
 que o teorema seja v{\'a}lido para todo grupo de ordem menor que a ordem de
 $G$. Seja $p$ o primo que aparece no enunciado do teorema. Considere o
 centro, $Z(G)$, de $G$. Temos duas possibilidades para o primo $p$.\\
-\textit{$1^o$ Caso: $p | |Z(G)|$}
+\textit{$1^o$ Caso: $p \mid |Z(G)|$}
 
 Neste caso, Pelo Teorema de Cauchy, existe $g \in Z(G),\ g \neq 1$ tal que
 $|g| = p$. Seja $N = <g>$, assim como $N \trianglelefteq Z(G)$ e $Z(G)$
@@ -1414,8 +1502,8 @@ bije{\c c}{\~o}es de $G^*$ em $G^*$ ($S_{G^*}$ {\'e} um grupo com a opera{\c
 c}{\~a}o de composi{\c c}{\~a}o de fun{\c c}{\~o}es). Considere a
 aplica{\c c}{\~a}o
 \begin{align*}
-\phi : & G \rightarrow S_{G^*}\\
-&g \mapsto \phi_g : G^* \rightarrow G^*\\
+\phi : & G \to S_{G^*}\\
+&g \mapsto \phi_g : G^* \to G^*\\
 &\qquad x \mapsto x^g = gxg^{-1}
 \end{align*}
 
@@ -1439,7 +1527,7 @@ Logo $\phi_{gh} = \phi_g \phi_h$ e assim $\phi$ {\'e} uma representa{\c
 Agora, observando que $\phi_g(x) = gxg^{-1} = y \in G^*$, podemos definir em
 $G^*$ uma rela{\c c}{\~a}o de equival{\^e}ncia da seguinte forma
 \[
-y \sim x \Leftrightarrow \mbox{existe}\ g \in G\ \mbox{tal que}\ \phi_g (x) = y,\
+y \sim x \mbox{ se, e somente se, existe}\ g \in G\ \mbox{tal que}\ \phi_g (x) = y,\
 \text{ou seja},\ gxg^{-1} = y.
 \]
 
