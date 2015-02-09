@@ -1424,7 +1424,16 @@ A equa\c{c}\~ao \eqref{equacao_de_classes} \'e chamada de \textbf{equa\c{c}\~ao 
 	Logo $H = A_n$, provando assim que $A_n$ \'e simples se $n = 3$ ou $n \ge 5$.
 \end{prova}
 
+\begin{teorema}
+	Seja $K = \{(1), (12)(34), (13)(24), (14)(23)\}$. Ent\~ao $K \le S_n$, chamado de grupo de Klein pois todos os seus elementos t\^em ordem 2. Mais ainda, $\{(1)\}$, $K$ e $A_4$ s\~ao os \'unicos subgrupos normais de $A_4$.
+\end{teorema}
+\begin{prova}
+	\'E imediato verificar que $K \le S_4$. Provemos ent\~ao que $K \unlhd S_4$. Como os elementos de $S_4$ podem ser escritos como produtos de ciclos disjuntos, ent\~ao $A_4 = \{3\mbox{-ciclos}\} \cup K$. Da{\'\i} o \'unico sugrupo de ordem 4 em $A_4$ \'e $K$. Logo $K \unlhd S_4$.
 
+	Agora seja $H \ne \{(1)\}$ um subgrupo normal em $A_4$. Se $H$ cont\'em um 3-ciclo, digamos $(1 2 3)$, ent\~ao $(1 3 2) = (1 2 3)^{-1} \in H$. ASSIM $(1 2 4) = (3 2 4)(1 3 2)(3 2 4)^{-1} \in H$ pois $H \unlhd A_4$. Mas $A_4 = \ger{(1 2 3), (1 2 4)}$ e com isso $H = A_4$.
+
+	Se $H$ n\~ao cont\'em nenhum 3-ciclo, ent\~ao ele deve conter um elemento diferente de $(1)$, digamos $(1 2)(3 4)$. Assim $(1 3)(2 4) = (2 3 4)(1 2)(3 4)(2 3 4)^{-1} \in H$ e $(1 4)(2 3) = (1 2)(3 4)(1 3)(2 4) \in H$. Portanto $H = K$ e o resultado est\'a provado.
+\end{prova}
 
 
 
