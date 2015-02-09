@@ -864,7 +864,7 @@ A equa\c{c}\~ao \eqref{equacao_de_classes} \'e chamada de \textbf{equa\c{c}\~ao 
 	A cargo do leitor.
 \end{prova}
 
-\begin{proposicao}
+\begin{proposicao}\label{ordem_da_classe_de_conjugacao}
 	Seja $G$ um grupo finito e $x \in G$. Ent\~ao
 	\[
 		[G : C_G(x)] = |C_x|.
@@ -1462,9 +1462,9 @@ A equa\c{c}\~ao \eqref{equacao_de_classes} \'e chamada de \textbf{equa\c{c}\~ao 
 
 \begin{teorema}[$1^0$ Teorema de Sylow]\label{primeiro_teorema_de_sylow}
 Seja $G$ um grupo finito tal que \linebreak $|G| = p^m b$, onde
-$p$ {\'e} primo e $p$ e $b$ s{\~a}o primos entre si. Ent{\~a}o, para cada
-$n$, $\ 0 \le n \le m$, existe um subgrupo $H$ de $G$ tal que $|H| =
-p^n$.
+$p$ {\'e} primo e $\gcd\{p, b\} = 1$. Ent{\~a}o, para cada
+$i$, $\ 0 \le i \le m$, existe um subgrupo $H$ de $G$ tal que $|H| =
+p^i$.
 \end{teorema}
 \begin{prova}
 A demonstra{\c c}{\~a}o ser{\'a} por indu{\c c}{\~a}o sobre a ordem de $G$.
@@ -1548,7 +1548,7 @@ G^* = \bigcup orb_\phi (x)
 \] e segue tamb{\'e}m que $|G^*| = \sum |orb_\phi
 (x)|$.
 
-Pelo Corol{\'a}rio \ref{c5}, temos que
+Pela Proposi\c{c}\~ao \ref{ordem_da_classe_de_conjugacao}, temos que
 \[
 |orb_\phi (x)| = |G : C_x|,
 \]
@@ -1576,6 +1576,18 @@ existem subgrupos de ordem $p^n$ para cada $p^n \mid |G|$, em particular
 existe um subgrupo de ordem $p^m$ e este subgrupo {\'e} chamado de
 \textbf{$p$-subgrupo de Sylow} de $G$.
 \end{definicao}
+
+\begin{teorema}
+	Seja $G$ um grupo finito, $p$ um n\'umero primo e seja $n_p$ o n\'umero de $p$-subgrupos de Sylow de $G$. Ent\~ao:
+	\begin{enumerate}
+		\item Todos os $p$-subgrupos de Sylow de $G$ s\~ao conjugados entre si. Em particular, um $p$-subgrupo de Sylow $S$ de $G$ \'e normal em $G$ se, e somente se, $S$ \'e o \'unico $p$-subgrupo de Sylow de $G$.
+
+		\item Se $K$ \'e um $p$-subgrupo de $G$, ent\~ao existe um $p$-subgrupo de Sylow $S$ de $G$ tal que $K \sub S$.
+
+		\item Se $S$ \'e um $p$-subgrupo de Sylow de $G$, ent\~ao $n_p = [G : N_G(S)]$.
+	\end{enumerate}
+\end{teorema}
+
 
 % section teoremas_de_sylow (end)
 
