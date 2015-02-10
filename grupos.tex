@@ -1470,84 +1470,109 @@ A equa\c{c}\~ao \eqref{equacao_de_classes} \'e chamada de \textbf{equa\c{c}\~ao 
 \section{Teoremas de Sylow} % (fold)
 \label{sec:teoremas_de_sylow}
 
+\begin{definicao}
+	Sejam $G$ um grupo, $C$ um conjunto e $\mathcal{P}(C)$ o grupo de permuta\c{c}\~oes de $C$. Uma \textbf{representa\c{c}\~ao de $G$ no grupo de permuta\c{c}\~oes de $C$} \'e um homomorfismo $\rho : G \to \mathcal{P}(C)$. Dizemos tamb\'em que $G$ \textbf{opera sobre o conjunto $C$}.
+\end{definicao}
+
+\begin{exemplos}
+	\begin{enumerate}
+		\item Sejam $G$ um grupo. Denote por $G_0$ o conjunto formado pelos elementos de $G$, sem a opera\c{c}\~ao de grupo. Defina $C = G_0$ e seja
+		\begin{align*}
+			\mathcal{I} : G \to \mathcal{P}(G_0)\\
+			g \mapsto \mathcal{I}_g : G_0 \to G_0\\
+			a \mapsto gag^{-1}.
+		\end{align*}
+		\'E imediato verificar que $\mathcal{I}$ \'e um homomorfismo de grupos, logo uma representa\c{c}\~ao de $G$ no grupo de permuta\c{c}\~oes do conjunto $G_0$.
+
+		\item Seja $G$ um grupo e seja $H$ um subgrupo normal de $G$. Considere a aplica\c{c}\~ao
+		\begin{align*}
+			\mathcal{I} : G \to \mathcal{P}(H_0)\\
+			g \mapsto \mathcal{I}_g : H_0 \to H_0\\
+			a \mapsto ghg^{-1}.
+		\end{align*}
+		\'e uma representa\c{c}\~ao do grupo $G$ no grupo das permuta\c{c}\~oes do conjunto $H_0$.
+
+		\item Seja $G$ um grupo e seja $C = \{H \mid H \le G\}$. A aplica\c{c}\~ao
+		\begin{align*}
+			\mathcal{I} : G \to \mathcal{P}(C)\\
+			a \mapsto \mathcal{I}_a : C \to C\\
+			a \mapsto aHa^{-1}.
+		\end{align*}
+	\end{enumerate}
+\end{exemplos}
+
+Sejam $G$ um grupo, $C$ um conjunto e $\rho : G \to \mathcal{P}(C)$ uma representa\c{c}\~ao de $G$. Sobre o conjunto $G$ definimos uma rela\c{c}\~ao de equival\^encia dada por: para todos $x$, $y \in C$
+\[
+	x \sim y \mbox{ se, e somente se, existe } g \in G \mbox{ tal que } \rho(g)(x) = y
+\]
+onde $\rho(g) \in \mathcal{P}(C)$.
+
+\begin{definicao}
+	Seja $x \in C$. A \textbf{\'orbita} de $x$ \'e o conjunto
+	\[
+		\mathcal{O}(x) \coloneqq \{y \in C \mid y \sim x\} = \{\rho(a)(x) \mid a \in G\}.
+	\]
+	O \textbf{estabilizador} de $x$ \'e o conjunto de elementos de $G$ que deixam o elemento $x$ fixo, isto \'e,
+	\[
+		E(x) \coloneqq \{a \in G \mid \rho(a)(x) = x\}.
+	\]
+	\'E imediato verificar que o estabilizador $E(x)$ \'e um subgrupo de $G$.
+\end{definicao}
+
 \begin{teorema}[$1^0$ Teorema de Sylow]\label{primeiro_teorema_de_sylow}
-Seja $G$ um grupo finito tal que \linebreak $|G| = p^m b$, onde
-$p$ {\'e} primo e $\gcd\{p, b\} = 1$. Ent{\~a}o, para cada
-$i$, $\ 0 \le i \le m$, existe um subgrupo $H$ de $G$ tal que $|H| =
-p^i$.
+Seja $G$ um grupo finito tal que \linebreak $|G| = p^m b$, onde $p$ {\'e} primo e $\gcd\{p, b\} = 1$. Ent{\~a}o, para cada $i$, $\ 0 \le i \le m$, existe um subgrupo $H$ de $G$ tal que $|H| = p^i$.
 \end{teorema}
 \begin{prova}
 A demonstra{\c c}{\~a}o ser{\'a} por indu{\c c}{\~a}o sobre a ordem de $G$.
 
-Se $|G| = 1$, ent{\~a}o nada h{\'a} a fazer. Assim, suponha que $|G| > 1$ e
-que o teorema seja v{\'a}lido para todo grupo de ordem menor que a ordem de
-$G$. Seja $p$ o primo que aparece no enunciado do teorema. Considere o
-centro, $Z(G)$, de $G$. Temos duas possibilidades para o primo $p$.\\
+Se $|G| = 1$, ent{\~a}o nada h{\'a} a fazer. Assim, suponha que $|G| > 1$ e que o teorema seja v{\'a}lido para todo grupo de ordem menor que a ordem de
+$G$. Seja $p$ o primo que aparece no enunciado do teorema. Considere o centro, $Z(G)$, de $G$. Temos duas possibilidades para o primo $p$.\\
 \textit{$1^o$ Caso: $p \mid |Z(G)|$}
 
-Neste caso, Pelo Teorema de Cauchy, existe $g \in Z(G),\ g \neq 1$ tal que
-$|g| = p$. Seja $N = <g>$, assim como $N \trianglelefteq Z(G)$ e $Z(G)$
-{\'e} caracter{\'\i}stico em $G$, segue que $N \trianglelefteq G$. Logo
-$G/N$ {\'e} um grupo e $|G/N| = p^{m-1}b < |G|$ e da{\'\i} pela hip{\'o}tese
-de indu{\c c}{\~a}o, para cada $t,\ 0 \l t \l m-1$, existe $\overline{S}$
-subgrupo de $G/N$ tal que $|\overline{S}| = p^t$. Agora, considere o
-homomorfismo 
+Neste caso, Pelo Teorema de Cauchy, existe $g \in Z(G),\ g \neq 1$ tal que $|g| = p$. Seja $N = <g>$, assim como $N \trianglelefteq Z(G)$ e $Z(G)$ {\'e} caracter{\'\i}stico em $G$, segue que $N \trianglelefteq G$. Logo $G/N$ {\'e} um grupo e $|G/N| = p^{m-1}b < |G|$ e da{\'\i} pela hip{\'o}tese
+de indu{\c c}{\~a}o, para cada $t,\ 0 \l t \l m-1$, existe $\overline{S}$ subgrupo de $G/N$ tal que $|\overline{S}| = p^t$. Agora, considere o homomorfismo
 \begin{center}
 $ f: G \to G/N$\\
 $\ \ g \mapsto Ng$
 \end{center}
 
-Temos que $f^{-1}(\overline{S})$ {\'e} um subgrupo de $G$ tal que $\ker(f)
-\subset f^{-1}(\overline{S})$. Inicialmente temos $\ker (f) = N$ pois como
-$f(g) = Ng$, se tomarmos $g \in N$  teremos $Ng = N$. Agora dado $g \in \ker
-(f)$, $f(g) = Ng = N$ e como $\overline{S}$ {\'e} um subgrupo de $G/N$ temos
-que $N \in \overline{S}$ e assim $f(g) \in \overline{S}$ e
-conseq{\"u}entemente $g \in f^{-1} (\overline{S})$, ou seja, $\ker (f) \subset
-f^{-1}(\overline{S})$. Da{\'\i} $$|f^{-1}(\overline{S})| = |N||\overline{S}|
-= p^{t+1},$$ e assim para cada $n,\ 0 \l n \l m$, existe $H$ subgrupo de $G$
+Temos que $f^{-1}(\overline{S})$ {\'e} um subgrupo de $G$ tal que $\ker(f) \subset f^{-1}(\overline{S})$. Inicialmente temos $\ker (f) = N$ pois como
+$f(g) = Ng$, se tomarmos $g \in N$  teremos $Ng = N$. Agora dado $g \in \ker (f)$, $f(g) = Ng = N$ e como $\overline{S}$ {\'e} um subgrupo de $G/N$ temos
+que $N \in \overline{S}$ e assim $f(g) \in \overline{S}$ e consequentemente $g \in f^{-1} (\overline{S})$, ou seja, $\ker (f) \subset
+f^{-1}(\overline{S})$. Da{\'\i} $$|f^{-1}(\overline{S})| = |N||\overline{S}| = p^{t+1},$$ e assim para cada $n,\ 0 \l n \l m$, existe $H$ subgrupo de $G$
 tal que $|H| = p^n$.
-\vspace{.3cm}\\
+
 \textit{$2^o$ Caso: $p \nmid |Z(G)|$}
 
-Neste caso, sejam $G^* = G - Z(G)$ e $S_{G^*}$ o conjunto de todas as
-bije{\c c}{\~o}es de $G^*$ em $G^*$ ($S_{G^*}$ {\'e} um grupo com a opera{\c
-c}{\~a}o de composi{\c c}{\~a}o de fun{\c c}{\~o}es). Considere a
-aplica{\c c}{\~a}o
+Neste caso, sejam $G^* = G - Z(G)$ e $S_{G^*}$ o conjunto de todas as bije{\c c}{\~o}es de $G^*$ em $G^*$ ($S_{G^*}$ {\'e} um grupo com a opera{\c
+c}{\~a}o de composi{\c c}{\~a}o de fun{\c c}{\~o}es). Considere a aplica{\c c}{\~a}o
 \begin{align*}
 \phi : & G \to S_{G^*}\\
 &g \mapsto \phi_g : G^* \to G^*\\
 &\qquad x \mapsto x^g = gxg^{-1}
 \end{align*}
 
-Inicialmente temos que $\phi$ est{\'a} bem definida. De fato, seja $y \notin
-Z(G)$, ent{\~a}o $y^x \notin Z(G)$, pois caso contr{\'a}rio
+Inicialmente temos que $\phi$ est{\'a} bem definida. De fato, seja $y \notin Z(G)$, ent{\~a}o $y^x \notin Z(G)$, pois caso contr{\'a}rio
 ter{\'\i}amos
 \[
 y^x \in Z(G) \Rightarrow (y^x)^{x^{-1}} \in Z(G) \quad
 \text{e}\quad (y^x)^{x^{-1}} = x^{-1}(xyx^{-1})x = y \notin Z(G).
 \]
-Mais ainda, $\phi$ {\'e} um homomorfismo de grupos, pois se $g,\ h \in G$,
-ent{\~a}o 
+Mais ainda, $\phi$ {\'e} um homomorfismo de grupos, pois se $g,\ h \in G$, ent{\~a}o
 \begin{align*}
 \phi_{gh} (x) &= x^{gh} =
 (gh)x(gh)^{-1} = (gh)x(h^{-1}g^{-1}) = g(hxh^{-1})g^{-1} \\&=
 g(\phi_h (x))g^{-1} = \phi_g (\phi_h (x)) = (\phi_g \phi_h)(x).
 \end{align*}
-Logo $\phi_{gh} = \phi_g \phi_h$ e assim $\phi$ {\'e} uma representa{\c
-  c}{\~a}o de $G$ em $S_{G^*}$.
+Logo $\phi_{gh} = \phi_g \phi_h$ e assim $\phi$ {\'e} uma representa{\c c}{\~a}o de $G$ em $S_{G^*}$.
 
-Agora, observando que $\phi_g(x) = gxg^{-1} = y \in G^*$, podemos definir em
-$G^*$ uma rela{\c c}{\~a}o de equival{\^e}ncia da seguinte forma
+Agora, observando que $\phi_g(x) = gxg^{-1} = y \in G^*$, podemos definir em $G^*$ uma rela{\c c}{\~a}o de equival{\^e}ncia da seguinte forma
 \[
 y \sim x \mbox{ se, e somente se, existe}\ g \in G\ \mbox{tal que}\ \phi_g (x) = y,\
 \text{ou seja},\ gxg^{-1} = y.
 \]
 
-Como $\sim$ {\'e} uma rela{\c c}{\~a}o de equival{\^e}ncia em $G^*$, segue
-que $G^*$ {\'e} a uni{\~a}o disjunta de suas classes de
-equival{\^e}ncia. Denotamos por $orb_\phi (x)$ a classe de equival{\^e}ncia
-de $x$ em $G^*$, que tamb{\'e}m s{\~a}o chamadas de \textbf{{\'o}rbitas} (de
-$x$ segundo $\phi$), temos
+Como $\sim$ {\'e} uma rela{\c c}{\~a}o de equival{\^e}ncia em $G^*$, segue que $G^*$ {\'e} a uni{\~a}o disjunta de suas classes de equival{\^e}ncia. Denotamos por $orb_\phi (x)$ a classe de equival{\^e}ncia de $x$ em $G^*$, que tamb{\'e}m s{\~a}o chamadas de \textbf{{\'o}rbitas} (de $x$ segundo $\phi$), temos
 \[
 orb_\phi (x) = \{y \in G^* : y \sim x \} = \{y
 \in G^* : \phi_g (x) = y,\ \mbox{para algum}\ \ g \in G \}
@@ -1558,7 +1583,7 @@ G^* = \bigcup orb_\phi (x)
 \] e segue tamb{\'e}m que $|G^*| = \sum |orb_\phi
 (x)|$.
 
-Pela Proposi\c{c}\~ao \ref{ordem_da_classe_de_conjugacao}, temos que
+Pela Proposi\c{c}\~ao \ref{ordem_da_classe_de_conjugacao}, temos
 \[
 |orb_\phi (x)| = |G : C_x|,
 \]
@@ -1570,18 +1595,11 @@ C_x &= \{g \in G : \phi_g (x) = x \} = \{g \in G
 \end{align*}
 e da{\'\i} $|orb_\phi (x)| = |G : C_G (x)|$.
 
-Como $G^* = G - Z(G)$ temos que $|G^*| = |G| - |Z(G)|$ e como $p \mid |G|$ e
-$p \nmid |Z(G)|$, ent{\~a}o $p \nmid |G^*|$. Por outro lado, $|G^*| = \sum
-|G : C_G(x)|$ e assim existe $x \in G^*$ tal que $p \nmid |G :
-C_G(x)|$. Como $x \in G^*$, ent{\~a}o $x \notin Z(G)$ e assim $C_G(x)$ {\'e}
-um subgrupo pr{\'o}prio de $G$, ou seja, $|C_G(x)| < |G|$ e da{\'\i} pela
-hip{\'o}tese de indu{\c c}{\~a}o $C_G(x)$ possui um subgrupo de ordem $p^n$
+Como $G^* = G - Z(G)$ temos que $|G^*| = |G| - |Z(G)|$ e como $p \mid |G|$ e $p \nmid |Z(G)|$, ent{\~a}o $p \nmid |G^*|$. Por outro lado, $|G^*| = \sum
+|G : C_G(x)|$ e assim existe $x \in G^*$ tal que $p \nmid |G : C_G(x)|$. Como $x \in G^*$, ent{\~a}o $x \notin Z(G)$ e assim $C_G(x)$ {\'e}
+um subgrupo pr{\'o}prio de $G$, ou seja, $|C_G(x)| < |G|$ e da{\'\i} pela hip{\'o}tese de indu{\c c}{\~a}o $C_G(x)$ possui um subgrupo de ordem $p^n$
 para cada $p^n \mid |C_G(x)|$ e consequentemente o mesmo ocorre em $G$.
 \end{prova}
-
-\begin{corolario}[Generaliza\c{c}\~ao do Lema de Cauchy].
-	Sejam $G$ um grupo finito e $p$ um n\'umero primo que divide $|G|$. Ent\~ao existe um elemento $x \in G$ de ordem $p$.
-\end{corolario}
 
 \begin{corolario}
 	Seja $G$ um grupo finito e seja $p$ um n\'umero primo. Seja $p^m$ a maior pot\^encia de $p$ que divide $|G|$. Ent\~ao existe um subgrupo de $G$ de ordem $p^m$.
@@ -1626,6 +1644,28 @@ p^m b$, onde $p$ {\'e} primo e $\gcd\{p, b\} = 1p$. Os subgrupos de $G$ que t\^e
 		\item Se $S$ \'e um $p$-subgrupo de Sylow de $G$, ent\~ao $n_p = [G : N_G(S)]$.
 	\end{enumerate}
 \end{teorema}
+\begin{prova}
+
+	Seja $S$ um $p$-subgrupo de Sylow qualquer de $G$. Considere o conjunto $C = \{aSa^{-1} \mid a \in G\}$. Para os itens \textit{(a)} e \textit{(b)} basta mostrar que se $H$ \'e um $p$-subgrupo qualquer de $G$, ent\~ao $H$ est\'a contido num conjugado de $S$ em $G$.
+
+	Assim, seja
+	\begin{align*}
+		\mathcal{I}:\ &P \to \mathcal{P}(C)\\
+		&g \mapsto \mathcal{I}_g : C \to C\\
+		&gSg^{-1} \mapsto agSg^{-1}a^{-1}
+	\end{align*}
+
+
+
+
+
+
+
+	Usando a Proposi\c{c}\~ao \ref{ordem_da_classe_de_conjugacao} temos
+	\[
+		|C| = [G : N_G(S)].
+	\]
+\end{prova}
 
 \begin{teorema}[$3^o$ Teorema de Sylow]
 	Sejam $p$ um n\'umero primo e $G$ um grupo finito de ordem $|G| = p^mb$, com $\gcd\{p, b\} = 1$. Seja $n_p$ o n\'umero de $p$-subgrupos de Sylow de $G$. Ent\~ao
