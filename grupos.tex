@@ -1606,8 +1606,15 @@ p^m b$, onde $p$ {\'e} primo e $\gcd\{p, b\} = 1p$. Os subgrupos de $G$ que t\^e
 \end{proposicao}
 
 \begin{lema}
-	Sejam $G$ um grupo finito e $p$ um n\'umero primo. Sejam $H$ um $p$-subgrupo de Sylow de $G$ e $K$ um $p$-subgrupo qualquer de $G$. Ent\~ao $K \cap N_G(S) = K \cap H$.
+	Sejam $G$ um grupo finito e $p$ um n\'umero primo. Sejam $H$ um $p$-subgrupo de Sylow de $G$ e $K$ um $p$-subgrupo qualquer de $G$. Ent\~ao $K \cap N_G(H) = K \cap H$.
 \end{lema}
+\begin{prova}
+	Suponhamos que $K \cap H \varsubsetneq K \cap N_G(H)$ e seja $x \in K \cap N_G(H)\backslash H$. O elemento $x$ tem ordem igual a uma pot\^encia de $p$ pois $x \in K$ e por hip\'otese $K$ \'e um $p$-grupo de $G$. Como $x \in N_G(H)$, ent\~ao $\ger{x}$ \'e um subgrupo de $N_G(H)$. Mas $H \unlhd N_G(H)$ e da{\'\i} $\ger{x}H$ \'e um subgrupo de $N_G(H)$ e portanto um subgrupo de $G$. Al\'em disso, sabemos que
+	\[
+		|\ger{x}H| = \dfrac{|\ger{x}||H|}{|\ger{x}\cap H|},
+	\]
+	onde $|\ger{x}|$ e $|H|$ s\~ao pot\^encias de $p$ e $|\ger{x}\cap H| < |\ger{x}|$ pois $x \notin H$. Logo, $\ger{x}H$ \'e um $p$-subgrupo de $G$ de ordem maior que $|H|$, o que \'e um absurdo pois $H$ \'e um $p$-subgrupo de Sylow de $G$.
+\end{prova}
 
 \begin{teorema}[$2^o$ Teorema de Sylow]
 	Seja $G$ um grupo finito, $p$ um n\'umero primo e seja $n_p$ o n\'umero de $p$-subgrupos de Sylow de $G$. Ent\~ao:
