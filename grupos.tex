@@ -1478,25 +1478,25 @@ A equa\c{c}\~ao \eqref{equacao_de_classes} \'e chamada de \textbf{equa\c{c}\~ao 
 	\begin{enumerate}
 		\item Sejam $G$ um grupo. Denote por $G_0$ o conjunto formado pelos elementos de $G$, sem a opera\c{c}\~ao de grupo. Defina $C = G_0$ e seja
 		\begin{align*}
-			\mathcal{I} : G \to \mathcal{P}(G_0)\\
-			g \mapsto \mathcal{I}_g : G_0 \to G_0\\
-			a \mapsto gag^{-1}.
+			\mathcal{I} :\ &G \to \mathcal{P}(G_0)\\
+			&g \mapsto \mathcal{I}_g : G_0 \to G_0\\
+			& \qquad \qquad a \mapsto gag^{-1}.
 		\end{align*}
 		\'E imediato verificar que $\mathcal{I}$ \'e um homomorfismo de grupos, logo uma representa\c{c}\~ao de $G$ no grupo de permuta\c{c}\~oes do conjunto $G_0$.
 
 		\item Seja $G$ um grupo e seja $H$ um subgrupo normal de $G$. Considere a aplica\c{c}\~ao
 		\begin{align*}
-			\mathcal{I} : G \to \mathcal{P}(H_0)\\
-			g \mapsto \mathcal{I}_g : H_0 \to H_0\\
-			a \mapsto ghg^{-1}.
+			\mathcal{I} :\ &G \to \mathcal{P}(H_0)\\
+			&g \mapsto \mathcal{I}_g : H_0 \to H_0\\
+			& \qquad \qquad a \mapsto gag^{-1}.
 		\end{align*}
 		\'e uma representa\c{c}\~ao do grupo $G$ no grupo das permuta\c{c}\~oes do conjunto $H_0$.
 
 		\item Seja $G$ um grupo e seja $C = \{H \mid H \le G\}$. A aplica\c{c}\~ao
 		\begin{align*}
-			\mathcal{I} : G \to \mathcal{P}(C)\\
-			a \mapsto \mathcal{I}_a : C \to C\\
-			a \mapsto aHa^{-1}.
+			\mathcal{I} :\ &G \to \mathcal{P}(C)\\
+			&a \mapsto \mathcal{I}_a : C \to C\\
+			& \qquad \qquad a \mapsto aHa^{-1}.
 		\end{align*}
 	\end{enumerate}
 \end{exemplos}
@@ -1510,7 +1510,7 @@ onde $\rho(g) \in \mathcal{P}(C)$.
 \begin{definicao}
 	Seja $x \in C$. A \textbf{\'orbita} de $x$ \'e o conjunto
 	\[
-		\mathcal{O}(x) \coloneqq \{y \in C \mid y \sim x\} = \{\rho(a)(x) \mid a \in G\}.
+		\orb(x) \coloneqq \{y \in C \mid y \sim x\} = \{\rho(a)(x) \mid a \in G\}.
 	\]
 	O \textbf{estabilizador} de $x$ \'e o conjunto de elementos de $G$ que deixam o elemento $x$ fixo, isto \'e,
 	\[
@@ -1518,6 +1518,44 @@ onde $\rho(g) \in \mathcal{P}(C)$.
 	\]
 	\'E imediato verificar que o estabilizador $E(x)$ \'e um subgrupo de $G$.
 \end{definicao}
+
+\begin{teorema}\label{orbita_e_classes_laterais}
+	Seja $\rho : G \to \mathcal{P}(C)$ uma representa\c{c}\~ao do grupo $G$ no grupo de permuta\c{c}\~oes do conjunto $C$. Seja $x \in G$. Ent\~ao a aplica\c{c}\~ao $\psi$ dada por
+	\begin{align}
+		\psi:\ &\orb(x) \to \{\mbox{Classes laterais \`a esquerda de } E(X) \mbox{ em } G\}\\
+		&\rho(a)(x) \mapsto aE(x)
+	\end{align}
+	\'e uma bije\c{c}\~ao. Em particular, no caso de $G$ ser um grupo finito, temos $|\orb(x)| = [G : E(x)]$ e que $|\orb(x)|$ divide $|G|$.
+\end{teorema}
+
+\begin{definicao}
+	Dado um subgrupo $H$ de um grupo $G$, o conjunto
+	\[
+		N_G(H) = \{a \in G \mid aHa^{-1} = H\}
+	\]
+	\'e chamado de \textbf{normalizador de $H$ em $G$}.
+\end{definicao}
+
+\begin{proposicao}
+	Seja $H$ um subgrupo de um grupo $G$. Ent\~ao $N_G(H)$ \'e um subgrupo de $G$ e $H \unlhd N_G(H)$. Mais ainda, $H \unlhd G$ se, e somente se, $N_G(H) = G$.
+\end{proposicao}
+
+\begin{lema}\label{numero_de_subgrupos_conjugados}
+	No caso da representa\c{c}\~ao
+	\begin{align*}
+		\mathcal{I} :\ &G \to \mathcal{P}(C)\\
+		&a \mapsto \mathcal{I}_a : C \to C\\
+		& \qquad \qquad a \mapsto aHa^{-1}.
+	\end{align*}
+onde $G$ \'e um grupo e $C = \{H \mid H \le G\}$ temos
+\[
+	|\{\mbox{conjugados de } H \mbox{ em } G\}| = [G : N_G(H)].
+\]	
+\end{lema}
+\begin{prova}
+	Basta aplicar o Teorema \ref{orbita_e_classes_laterais}.
+\end{prova}
+
 
 \begin{teorema}[$1^0$ Teorema de Sylow]\label{primeiro_teorema_de_sylow}
 Seja $G$ um grupo finito tal que \linebreak $|G| = p^m b$, onde $p$ {\'e} primo e $\gcd\{p, b\} = 1$. Ent{\~a}o, para cada $i$, $\ 0 \le i \le m$, existe um subgrupo $H$ de $G$ tal que $|H| = p^i$.
@@ -1529,7 +1567,7 @@ Se $|G| = 1$, ent{\~a}o nada h{\'a} a fazer. Assim, suponha que $|G| > 1$ e que 
 $G$. Seja $p$ o primo que aparece no enunciado do teorema. Considere o centro, $Z(G)$, de $G$. Temos duas possibilidades para o primo $p$.\\
 \textit{$1^o$ Caso: $p \mid |Z(G)|$}
 
-Neste caso, Pelo Teorema de Cauchy, existe $g \in Z(G),\ g \neq 1$ tal que $|g| = p$. Seja $N = <g>$, assim como $N \trianglelefteq Z(G)$ e $Z(G)$ {\'e} caracter{\'\i}stico em $G$, segue que $N \trianglelefteq G$. Logo $G/N$ {\'e} um grupo e $|G/N| = p^{m-1}b < |G|$ e da{\'\i} pela hip{\'o}tese
+Neste caso, pelo Teorema de Cauchy, existe $g \in Z(G),\ g \neq 1$ tal que $|g| = p$. Seja $N = <g>$, assim como $N \trianglelefteq Z(G)$ e $Z(G)$ {\'e} caracter{\'\i}stico em $G$, segue que $N \trianglelefteq G$. Logo $G/N$ {\'e} um grupo e $|G/N| = p^{m-1}b < |G|$ e da{\'\i} pela hip{\'o}tese
 de indu{\c c}{\~a}o, para cada $t,\ 0 \l t \l m-1$, existe $\overline{S}$ subgrupo de $G/N$ tal que $|\overline{S}| = p^t$. Agora, considere o homomorfismo
 \begin{center}
 $ f: G \to G/N$\\
@@ -1611,18 +1649,6 @@ p^m b$, onde $p$ {\'e} primo e $\gcd\{p, b\} = 1p$. Os subgrupos de $G$ que t\^e
 \textbf{$p$-subgrupos de Sylow} de $G$.
 \end{definicao}
 
-\begin{definicao}
-	Dado um subgrupo $H$ de um grupo $G$, o conjunto
-	\[
-		N_G(H) = \{a \in G \mid aHa^{-1} = H\}
-	\]
-	\'e chamado de \textbf{normalizador de $H$ em $G$}.
-\end{definicao}
-
-\begin{proposicao}
-	Seja $H$ um subgrupo de um grupo $G$. Ent\~ao $N_G(H)$ \'e um subgrupo de $G$ e $H \unlhd N_G(H)$. Mais ainda, $H \unlhd G$ se, e somente se, $N_G(H) = G$.
-\end{proposicao}
-
 \begin{lema}
 	Sejam $G$ um grupo finito e $p$ um n\'umero primo. Sejam $H$ um $p$-subgrupo de Sylow de $G$ e $K$ um $p$-subgrupo qualquer de $G$. Ent\~ao $K \cap N_G(H) = K \cap H$.
 \end{lema}
@@ -1652,7 +1678,7 @@ p^m b$, onde $p$ {\'e} primo e $\gcd\{p, b\} = 1p$. Os subgrupos de $G$ que t\^e
 	\begin{align*}
 		\mathcal{I}:\ &P \to \mathcal{P}(C)\\
 		&g \mapsto \mathcal{I}_g : C \to C\\
-		&gSg^{-1} \mapsto agSg^{-1}a^{-1}
+		& \qquad gSg^{-1} \mapsto agSg^{-1}a^{-1}
 	\end{align*}
 
 
