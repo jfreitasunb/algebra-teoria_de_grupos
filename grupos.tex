@@ -1660,7 +1660,7 @@ p^m b$, onde $p$ {\'e} primo e $\gcd\{p, b\} = 1p$. Os subgrupos de $G$ que t\^e
 	onde $|\ger{x}|$ e $|H|$ s\~ao pot\^encias de $p$ e $|\ger{x}\cap H| < |\ger{x}|$ pois $x \notin H$. Logo, $\ger{x}H$ \'e um $p$-subgrupo de $G$ de ordem maior que $|H|$, o que \'e um absurdo pois $H$ \'e um $p$-subgrupo de Sylow de $G$.
 \end{prova}
 
-\begin{teorema}[$2^o$ Teorema de Sylow]
+\begin{teorema}[$2^o$ Teorema de Sylow]\label{segundo_teorema_de_sylow}
 	Seja $G$ um grupo finito, $p$ um n\'umero primo e seja $n_p$ o n\'umero de $p$-subgrupos de Sylow de $G$. Ent\~ao:
 	\begin{enumerate}[label=({\roman*})]
 		\item Todos os $p$-subgrupos de Sylow de $G$ s\~ao conjugados entre si. Em particular, um $p$-subgrupo de Sylow $S$ de $G$ \'e normal em $G$ se, e somente se, $S$ \'e o \'unico $p$-subgrupo de Sylow de $G$.
@@ -1696,16 +1696,16 @@ p^m b$, onde $p$ {\'e} primo e $\gcd\{p, b\} = 1p$. Os subgrupos de $G$ que t\^e
 		|C| = \sum_{i = 1}^k[P : P \cap S_i].
 	\end{equation}
 	Assim de \eqref{primeira_equacao_para_C} e \eqref{segunda_equacao_para_C} encontramos
-	\[
+	\begin{equation}\label{indice_do_normalizador}
 		[G : N_G(S)] = \sum_{i = 1}^k[P : P \cap S_i].
-	\]
+	\end{equation}
 
 	Cada parcela $[P : P \cap S_i]$ \'e igual a 1 ou a um m\'ultiplo de $p$, pois $P$ \'e um $p$-grupo. Por outro lado, o primo $p$ n\~ao divide $[G : S]$ pois $S$ \'e um $p$-subgrupo de Sylow e da{\'\i} n\~ao divide $[G : N_G(S)]$. Consequentemete existe um $j$ tal que $p$ n\~ao divide $[P : P \cap S_j]$, ou seja, tal que $[P : P \cap S_j] = 1$ e portanto tal que $P \sub S_j$.
 
 	Agora, pelo item (i) temos $\{p\mbox{-subgrupos de Sylow}\} = \{\mbox{conjugados de } S\}$. Logo $n_p = [G : N_G(S)]$. Assim provamos o item \textit{(iii)}.
 \end{prova}
 
-\begin{teorema}[$3^o$ Teorema de Sylow]
+\begin{teorema}[$3^o$ Teorema de Sylow]\label{terceiro_teorema_de_sylow}
 	Sejam $p$ um n\'umero primo e $G$ um grupo finito de ordem $|G| = p^mb$, com $\gcd\{p, b\} = 1$. Seja $n_p$ o n\'umero de $p$-subgrupos de Sylow de $G$. Ent\~ao
 	\[
 		\begin{cases}
@@ -1714,6 +1714,23 @@ p^m b$, onde $p$ {\'e} primo e $\gcd\{p, b\} = 1p$. Os subgrupos de $G$ que t\^e
 		\end{cases}.
 	\]
 \end{teorema}
+\begin{prova}
+	Seja $S$ um $p$-subgrupo de Sylow de $G$. \'E imediato que $[G : N_G(S)]$ divide $[G : S] = b$.
+
+	Agora, considere a express\~ao \eqref{indice_do_normalizador} obtida na demonstra\c{c}\~ao do Teorema \ref{segundo_teorema_de_sylow}. Tomando $P = S$ temos
+	\[
+		[G : N_G(S)] = \sum_{i = 1}^k[S : S \cap S_i]
+	\]
+	onde $S_1$, \dots, $S_k$ s\~ao representantes das distintas \'orbitas $\mathcal{O}_1$, \dots, $\mathcal{O}_k$ da seguinte representa\c{c}\~ao
+	\[
+		\mathcal{I} : S \to \mathcal{P}(C)
+	\]
+	onde $C$ \'e o conjunto dos $p$-subgrupos de Sylow de $G$. Fazendo $S_1 = S$ obtemos
+	\[
+		[G : N_G(S)] = [S : S \cap S] + \sum_{i = 2}^k[S : S \cap S_i] \equiv 1 \pmod p.
+	\]
+	Assim o resultado segue.
+\end{prova}
 
 \begin{proposicao}
 	Sejam $H$ um $p$-subgrupo de Sylow de um grupo finito $G$ e $K \le G$. Se $H \sub K$, ent\~ao $K = N_G(K)$.
