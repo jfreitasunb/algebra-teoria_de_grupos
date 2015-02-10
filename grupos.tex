@@ -1649,7 +1649,7 @@ p^m b$, onde $p$ {\'e} primo e $\gcd\{p, b\} = 1p$. Os subgrupos de $G$ que t\^e
 \textbf{$p$-subgrupos de Sylow} de $G$.
 \end{definicao}
 
-\begin{lema}
+\begin{lema}\label{intersecao_de_Sylow_com_normalizador}
 	Sejam $G$ um grupo finito e $p$ um n\'umero primo. Sejam $H$ um $p$-subgrupo de Sylow de $G$ e $K$ um $p$-subgrupo qualquer de $G$. Ent\~ao $K \cap N_G(H) = K \cap H$.
 \end{lema}
 \begin{prova}
@@ -1672,25 +1672,37 @@ p^m b$, onde $p$ {\'e} primo e $\gcd\{p, b\} = 1p$. Os subgrupos de $G$ que t\^e
 \end{teorema}
 \begin{prova}
 
-	Seja $S$ um $p$-subgrupo de Sylow qualquer de $G$. Considere o conjunto $C = \{aSa^{-1} \mid a \in G\}$. Para os itens \textit{(a)} e \textit{(b)} basta mostrar que se $H$ \'e um $p$-subgrupo qualquer de $G$, ent\~ao $H$ est\'a contido num conjugado de $S$ em $G$.
-
-	Assim, seja
-	\begin{align*}
-		\mathcal{I}:\ &P \to \mathcal{P}(C)\\
-		&g \mapsto \mathcal{I}_g : C \to C\\
-		& \qquad gSg^{-1} \mapsto agSg^{-1}a^{-1}
-	\end{align*}
-
-
-
-
-
-
-
-	Usando a Proposi\c{c}\~ao \ref{ordem_da_classe_de_conjugacao} temos
+	Seja $S$ um $p$-subgrupo de Sylow qualquer de $G$. Considere o conjunto $C = \{aSa^{-1} \mid a \in G\}$. Por defini\c{c}\~ao o conjunto $C$ \'e a \'orbita de $S$ na representa\c{c}\~ao por conjuga\c{c}\~ao $\mathcal{I} : G \to \mathcal{P}(D)$ onde $D = \{H \le G\}$. Portanto pelo Teorema \ref{orbita_e_classes_laterais}
 	\[
 		|C| = [G : N_G(S)].
 	\]
+
+	Para os itens \textit{(i)} e \textit{(ii)} basta mostrar que se $H$ \'e um $p$-subgrupo qualquer de $G$, ent\~ao $H$ est\'a contido num conjugado de $S$ em $G$.
+
+	Assim, considere a seguinte representa\c{c}\~ao de $P$:
+	\begin{align*}
+		\mathcal{I}:\ &P \to \mathcal{P}(C)\\
+		&g \mapsto \mathcal{I}_g : C \to C\\
+		& \qquad gSg^{-1} \mapsto agSg^{-1}a^{-1}.
+	\end{align*}
+
+	Sejam $\mathcal{O}_1$, \dots, $\mathcal{O}_k$ as \'orbitas distintas desta representa\c{c}\~ao e para cada $\mathcal{O}_i$ escolha um representante $S_i = g_iSg_i^{-1}$ dentro de $\mathcal{O}_i$. Temos
+	\begin{equation}\label{primeira_equacao_para_C}
+		|C| = \sum_{i = 1}^k |\mathcal{O}_i|
+	\end{equation}
+
+	e al\'em disso, pelo Teorema \ref{orbita_e_classes_laterais} temos $|\mathcal{O}_i| = [P : E(S_i)] = [P : P \cap N_G(S_i)]$ e pelo Lema \ref{intersecao_de_Sylow_com_normalizador} temos $[P : P \cap N_G(S_i)] = [P : P \cap S_i]$. Portanto obtemos
+	\begin{equation}\label{segunda_equacao_para_C}
+		|C| = \sum_{i = 1}^k[P : P \cap S_i].
+	\end{equation}
+	Assim de \eqref{primeira_equacao_para_C} e \eqref{segunda_equacao_para_C} encontramos
+	\[
+		[G : N_G(S)] = \sum_{i = 1}^k[P : P \cap S_i].
+	\]
+
+	Cada parcela $[P : P \cap S_i]$ \'e igual a 1 ou a um m\'ultiplo de $p$, pois $P$ \'e um $p$-grupo. Por outro lado, o primo $p$ n\~ao divide $[G : S]$ pois $S$ \'e um $p$-subgrupo de Sylow e da{\'\i} n\~ao divide $[G : N_G(S)]$. Consequentemete existe um $j$ tal que $p$ n\~ao divide $[P : P \cap S_j]$, ou seja, tal que $[P : P \cap S_j] = 1$ e portanto tal que $P \sub S_j$.
+
+	Agora, pelo item (i) temos $\{p\mbox{-subgrupos de Sylow}\} = \{\mbox{conjugados de } S\}$. Logo $n_p = [G : N_G(S)]$. Assim provamos o item \textit{(iii)}.
 \end{prova}
 
 \begin{teorema}[$3^o$ Teorema de Sylow]
