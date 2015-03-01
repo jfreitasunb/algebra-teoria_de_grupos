@@ -1745,6 +1745,15 @@ p^m b$, onde $p$ {\'e} primo e $\gcd\{p, b\} = 1p$. Os subgrupos de $G$ que t\^e
 		Se $n_5 = 76$, ent\~ao $G$ possui $76\times 4 = 304$ elementos de ordem 5, pois a interse\c{c}\~ao de dois subgrupos distintos de $G$ com ordem 5 \'e trivial. E se $n_{19} = 20$, ent\~ao existem $20 \times 18 = 360$ elementos de ordem 19, o que \'e imposs{\'\i}vel pois $|G| = 380$. Portanto, $n_5 = 1$ ou $n_{19} = 1$ e da{\'\i} $H$ ou $K$ \'e normal em $G$. Considere ent\~ao o subgrupo $HK$ de $G$ de ordem $5\cdot 19$, pois $H \cap K = \{1\}$. Aplicando o Terceiro Teorema de Sylow ao grupo $HK$, existem um \'unico subgrupo de ordem 5, que \'e obrigatoriamente $H$ e somente um subgrupo de ordem 19, que \'e $K$. Assim $H \unlhd HK$ e $K \unlhd HK$. Da{\'\i} $HK \sub N_G(H)$ e com isso $n_5 = [G : N_G(H)] \le [G : HK] = 2^2$. Mas $n_5 = 1$ ou $n_5 = 76$. Logo $n_5 = 1$. Analogamente, $HK \sub N_G(K)$ e d\'ai $n_{19} = 1$ pois $n_{19} = [G : N_G(K)] \le [G : HK] = 2^2$.
 
 		Portanto $G$ n\~ao \'e simples.
+
+		\item Todo grupo de ordem 159 \'e c{\'\i}clico.
+
+		De fato, seja $G$ um grupo de ordem 159. Assim como $|G| = 3 \cdot 53$, ent\~ao existem subgrupos $H$, $K \le G$ tais que $|H| = 3$ e $|K| = 53$. Al\'em disso, sejam $n_3$ e $n_{53}$ o n\'umero de 5-subgrupos de Sylow e de 53-subgrupos de Sylow de $G$. Ent\~ao
+		\begin{align*}
+			n_3 \mid 53,\ n_3 \equiv 1 \pmod 3\\
+			n_{59} \mid 3,\ n_{53} \equiv 1 \pmod {53}.
+		\end{align*}
+		Logo $n_3 = 1$ e $n_{53} = 1$. Da{\'\i} $H \unlhd G$ e $K \unlhd G$. Com isso $HK$ \'e um subgrupo de $G$ de ordem $3\cdot 53$ pois $H \cap K = \{1\}$. Ent\~ao $G = HK$. Finalmente, tomando $x$ gerador de $H$ e $y$ gerador de $K$ \'e f\'acil mostrar que $G = \ger{xy}$, como quer{\'\i}amos.
 	\end{enumerate}
 \end{exemplos}
 % section teoremas_de_sylow (end)
