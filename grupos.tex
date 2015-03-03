@@ -1833,6 +1833,37 @@ O conceito de grupos sol\'uveis foi introduzido por E. Galois quando estudava o 
 	\'e uma cadeia normal de $G$ cujos quocientes t\^em ordem $p$ como quer{\'\i}amos. Portanto $G$ \'e sol\'uvel.
 \end{prova}
 
+\begin{definicao}
+	\begin{enumerate}
+		\item Dados um grupo $G$ e dois elementos $x$, $y \in G$ o \textbf{comutador} de $x$ e $y$ \'e o elemento
+		\[
+			[x, y] = x^{-1}y^{-1}xy \in G.
+		\]
+		Mais geralmente, um \textbf{comutador de comprimento} $n \ge 2$ \'e definido indutivamente por
+		\[
+			[x_1, \dots, x_n] = [[x_1, \dots, x_{n - 1}], x_n],
+		\]
+		onde $x_i \in G$ para $i = 1$, \dots, $n$.
+		
+		\item Dados dois subconjuntos $H$ e $K$ de um grupo $G$, denotamos por $[H, K]$ o subgrupo de $G$ gerado por
+		\[
+			[H, K] = \ger{\{[x , y] = x^{-1}y^{-1}xy \mid x \in H, y \in K\}}.
+		\]
+		Em particular o grupo $G'= [G, G]$ \'e chamado de \textbf{subgrupo comutador} ou \textbf{subgrupo derivado de $G$}. Indutivamente podemos definir uma seque\^encia de subgrupos de $G$ da forma:
+		\begin{align*}
+			&G^{(0)} = G\\
+			&G^{(1)} = [G^{(0)}, G^{(0)}] = [G, G] = G'\\
+			&\vdots\\
+			&G^{(n)} = [G^{(n - 1)}, G^{(n - 1)}].
+		\end{align*}
+
+		\item O subgrupo $G^{(n)}$ definido anteriormente \'e chamado de \textbf{$n$-\'esimo grupo derivado} de $G$ e a sequ\^encia
+		\[
+			G = G^{(0)} \supseteq G^{(1)} \supseteq \cdots \supseteq G^{(n)} \supseteq \cdots
+		\]
+		chama-se \textbf{sequ\^encia derivada} de $G$.
+	\end{enumerate}
+\end{definicao}
 
 
 
