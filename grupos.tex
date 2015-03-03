@@ -1804,6 +1804,34 @@ O conceito de grupos sol\'uveis foi introduzido por E. Galois quando estudava o 
 	\end{enumerate}
 \end{exemplos}
 
+\begin{proposicao}
+	Todo $p$-grupo finito \'e sol\'uvel.
+\end{proposicao}
+\begin{prova}
+	Suponha que $G$ \'e um grupo com $|G| = p^n$, com $n \ge 1$. Queremos encontrar s\'erie subnormal
+	\[
+		\{1\} = G_0 \sub G_1 \sub \cdots \sub G_t = G
+	\]
+	tal que $G_{i - 1} \unlhd G_i$ e $G_i/G_{i - 1}$ \'e abeliano para $1 \le i \le n$.
+
+	Na verdade, vamos mostar que \'e poss{\'\i}vel encontrar uma cadeia de subgrupos normais de $G$ tais que
+	\[
+		\{1\} = H_0 \sub H_1 \sub \cdots \sub H_t = G
+	\]
+	tal que cada quociente $H_{i + 1}/H_i$ \'e de ordem $p$ e est\'a contido no centro de $G/H_i$, $1 \le i \le t - 1$. Vamos mostrar tal fato por indu\c{c}\~ao em $n$. Se $n = 1$, nada h\'a a fazer. Suponha ent\~ao que a afirma\c{c}\~ao \'e v\'alida para todo grupo de ordem $p^{n - 1}$ e seja $G$ um grupo de ordem $p^n$. Comom $|G| = p^n > 1$, ent\~ao $Z(G) \ne \{1\}$. Seja $x \in Z(G)$, $x \ne 1$ tal que $|x| = p$. Denote por $K = \ger{x}$. Considere $\pi : G \to G/K$ a proje\c{c}\~ao can\^onica. Denote por $\overline{G} = G/K$. Assim $|\overline{G}| = p^{n - 1}$ e aplicando a hip\'otese de indu\c{c}\~ao, existe uma cadeia de subgrupos normais de $\overline{G}$
+	\[
+		\{\overline{1}\} = \overline{K_1} \sub \overline{K_2} \sub \cdots \sub \overline{K_t} = \overline{G}
+	\]
+	tal que $\overline{K_{i + 1}}/\overline{K_i}$ tem ordem $p$ e est\'a contido no centro de $\overline{G}/\overline{K_i}$, $1 \le i \le t - 1$. Agora do Teorema dos Isomorfismos, todo subgrupo normal de $\overline{G}$ \'e da forma $\overline{K_i} = K_i/K$, onde $K_i$ \'e um subgrupo normal de $G$ que cont\'em $K$. Tamb\'em do Teorema dos Isomorfismos temos
+	\[
+		\dfrac{\overline{K_{i + 1}}}{\overline{K_i}} = \dfrac{\dfrac{K_{i + 1}}{K}}{\dfrac{K_i}{K}} \cong \dfrac{K_{i + 1}}{K_i}.
+	\]
+	Logo $K_{i + 1}/K_i$ tem ordem $p$ e est\'a contido no centro de $G/K_i$, $1 \le i \le t - 1$. Logo
+	\[
+		\{1\} = K_0 \sub K_1 = \ger{x} \sub K_2 \sub \cdots \sub K_t = G
+	\]
+	\'e uma cadeia normal de $G$ cujos quocientes t\^em ordem $p$ como quer{\'\i}amos. Portanto $G$ \'e sol\'uvel.
+\end{prova}
 
 
 
