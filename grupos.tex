@@ -1894,7 +1894,26 @@ O conceito de grupos sol\'uveis foi introduzido por E. Galois quando estudava o 
 	Agora como $G^{(i)} = [G^{(i - 1)}, G^{(i - 1)}]$, logo $\phi(G^{(n)}) = [\phi(G^{(n - 1)}), \phi(G^{(n - 1)})]$. Assim por indu\c{c}\~ao segue que $G^{(i)}$ \'e caracter{\'\i}stico em $G$ para todo $i \ge 1$.
 \end{prova}
 
+\begin{teorema}
+	Um grupo $G$ \'e sol\'uvel se, e somente se, sua s\'erie derivada termina, isto \'e, se existe um inteiro positivo $n$ tal que $G^{(n)} = \{1\}$.
+\end{teorema}
+\begin{prova}
+	Se existe $n$ tal que $G^{(n)} = \{1\}$, ent\~ao temos a s\'erie
+	\begin{equation}\label{serie_derivada_e_solubilidade}
+		G = G^{(0)} \supseteq G^{(1)} \supseteq G^{(2)} \supseteq \cdots \supseteq G^{(n)} = \{1\}.
+	\end{equation}
+Inicialmente cada $G^{(i)}$ \'e normal em $G$ pois \'e caracter{\'\i}stico em $G$. Logo $G^{(i)}$ \'e normal em $G^{(i - 1)}$ para $1 \le i \le n$. Agora, $G^{(i)} = [G^{(i - 1)}, G^{(i - 1)}] = (G^{(i - 1)})'$ e assim $G^{(i - 1)}/G^{(i)}$ \'e abeliano para $1 \le i \le n$. Portanto a s\'erie \eqref{serie_derivada_e_solubilidade} \'e uma s\'erie subnormal abeliana para $G$, ou seja, $G$ \'e sol\'uvel.
 
+Agora suponha que $G$ \'e sol\'uvel. Assim existe uma s\'erie subnormal abeliana
+\[
+	G = G_0 \supseteq G_1 \supseteq G_2 \supseteq \cdots \supseteq G_n = \{1\}
+\]
+onde $G_{i + 1}$ \'e normal em $G_i$ e $G_i/G_{i + 1}$ \'e abeliano, $1 \le i \le t$. Vamos mostrar por indu\c{c}\~ao em $i$ que $G^{(i)} \le G_i$. Como $G^{(0)} = G = G_0$, a base da indu\c{c}\~ao \'e verdadeira. Suponha ent\~ao que $G^{(i)} \le G_i$. Como $G_i/G_{i + 1}$ \'e abeliano e $G_{i + 1} \unlhd G_i$, ent\~ao $(G_i)' \le G_{i + 1}$. Mas pela hip\'otese de indu\c{c}\~ao, $G^{(i)} \le G_i$ da{\'\i}
+\[
+	G^{(i + 1)} = (G^{(i)})' \le (G_i)' \le G_{i + 1}
+\]
+como quer{\'\i}amos. Em particular, $G^{(n)} \le G_n = \{1\}$, isto \'e, $G^{(n)} = \{1\}$. Portanto a s\'erie derivada termina.
+\end{prova}
 % section grupos_soluvies (end)
 
 \todo[inline, color=red!10]{Grupos Nilpotentes}
