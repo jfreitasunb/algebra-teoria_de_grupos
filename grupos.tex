@@ -1914,6 +1914,71 @@ onde $G_{i + 1}$ \'e normal em $G_i$ e $G_i/G_{i + 1}$ \'e abeliano, $1 \le i \l
 \]
 como quer{\'\i}amos. Em particular, $G^{(n)} \le G_n = \{1\}$, isto \'e, $G^{(n)} = \{1\}$. Portanto a s\'erie derivada termina.
 \end{prova}
+
+\begin{proposicao}
+	Todo quociente de um grupo sol\'uvel \'e sol\'uvel.
+\end{proposicao}
+\begin{prova}
+	Seja
+	\[
+		\{1\} = G_t \le G_{t - 1} \le \cdots \le G_2 \le G_1 \le G_0 = G
+	\]
+	uma s\'erie subnormal abeliana para $G$. Seja $N \unlhd G$. Assim $NG_i$ \'e um subgrupo de $G$ para $i = 1$, \dots, $t$ e com isso obtemos uma s\'erie de subgrupos
+	\begin{equation}\label{serie_multiplicada_por_subgrupo}
+		\{1\} \le N = NG_t \le \cdots \le NG_2 \le NG_1 \le NG_0 = G.
+	\end{equation}
+	Mostremos que tal s\'erie \'e subnormal. Primeiro, como $NG_{i + 1} \le G$, ent\~ao $(NG_{i + 1})(NG_{i + 1}) = NG_{i + 1}$. Mais ainda, $NG_{i + 1}N \le (NG_{i + 1})(NG_{i + 1})$, da{\'\i}
+	\begin{align*}
+		(ng_i)^{-1}(NG_{i + 1})(ng_i) = g^{-1}(n^{-1}NG_{i + 1}n)g_i \le g_i^{-1}NG_{i + 1}Ng_i \le g_i^{-1}(NG_{i + 1})g_i.
+	\end{align*}
+	Agora, $N \unlhd G$, logo $g_i^{-1}N = Ng^{-1}$ e ent\~ao
+	\[
+		(ng_i)^{-1}(NG_{i + 1})(ng_i) \le g_i^{-1}NG_{i + 1}g_i = Ng_i^{-1}G_{i + 1}g_i.
+	\]
+	Mas $G_{i + 1} \unlhd G_i$ e com isso $Ng_i^{-1}G_{i + 1}g_i \le NG_{i + 1}$. Portanto $(ng_i)^{-1}(NG_{i + 1})(ng_i) \le NG_{i + 1}$, isto \'e, $NG_{i + 1} \unlhd NG_i$ para $0 \le i \le t$.
+
+	Como consequ\^encia do Teorema dos Isomorfismos temos
+	\[
+		\dfrac{G_i}{G_i \cap (NG_{i + 1})} \cong \dfrac{(NG_{i + 1})G_i}{NG_{i + 1}} = \dfrac{NG_i}{NG_{i + 1}}
+	\]
+	pois $G_{i + 1}G_i = G_i$. Como $G_{i + 1} \unlhd (G_i \cap NG_i)$, ent\~ao novamente pelo Teorema dos Isomorfismos a fun\c{c}\~ao $G/G_{i + 1} \to G_i/(G_i \cap NG_{i + 1})$ \'e sobrejetora. Logo o homomorfismo $G_i/G_{i + 1} \to NG_i/NG_{i + 1}$ \'e sobrejetor. Como $G_i/G_{i + 1}$ \'e abeliano, ent\~ao $NG_i/NG_{i + 1}$ \'e abeliano. Portanto a s\'erie
+	\[
+		\{\overline{1}\} = \dfrac{NG_t}{N} \le \dfrac{NG_{t - 1}}{N} \le \cdots \le  \dfrac{NG_1}{N} \le \dfrac{NG_0}{N} = \dfrac{G}{N}
+	\]
+	\'e uma s\'erie subnormal abeliana para $G/N$, ou seja, $G/N$ \'e sol\'uvel.
+\end{prova}
+
+\begin{proposicao}
+	Todo subgrupo $H$ de um grupo sol\'uvel $G$ \'e sol\'uvel.
+\end{proposicao}
+\begin{prova}
+	Como $G$ \'e sol\'uvel, existe
+	\[
+		\{1\} = G_t \le G_{t - 1} \le \cdots \le G_2 \le G_1 \le G_0 = G
+	\]
+	uma s\'erie subnormal abeliana. Seja $H$ um subgrupo de $G$ e considere a s\'erie
+	\begin{equation}\label{serie_para_subgrupo}
+		\{1\} = H \cap G_t \le H \cap G_{t - 1} \le \cdots \le H \cap G_2 \le H \cap G_1 \le H \cap G_0 = H.
+	\end{equation}
+
+	Se $h_{i + 1} \in H \cap G_{i + 1}$ e $g_i \in H \cap G_i$, ent\~ao $g_i^{-1}h_{i + 1}g_i \in H$ e tamb\'em $g_i^{-1}h_{i + 1}g_i \in G_{i + 1}$ pois $G_{i + 1} \unlhd G_i$. Da{\'\i} $g_i^{-1}h_{i + 1}g_i \in H \cap G_{i + 1}$, isto \'e, $H \cap G_{i + 1} \unlhd H \cap G_i$. Al\'em disso,
+	\[
+		\dfrac{H \cap G_i}{H \cap G_{i + 1}} = \dfrac{H \cap G_i}{(H \cap G_i) \cap G_{i + 1}} \cong \dfrac{G_{i + 1}(H \cap G_i)}{G_{i + 1}} \le \dfrac{G_i}{G_{i + 1}}
+	\]
+	e como $G_i/G_{i + 1}$ \'e abeliano, ent\~ao $(H \cap G_i)/(H \cap G_{i + 1})$ \'e abeliano. Portanto \eqref{serie_para_subgrupo} \'e uma s\'erie subnormal abeliana para $H$, ou seja, $H$ \'e sol\'uvel.
+\end{prova}
+
+
+
+
+
+
+
+
+
+
+
+
 % section grupos_soluvies (end)
 
 \todo[inline, color=red!10]{Grupos Nilpotentes}
