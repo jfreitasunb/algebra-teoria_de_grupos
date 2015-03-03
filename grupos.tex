@@ -1883,6 +1883,17 @@ O conceito de grupos sol\'uveis foi introduzido por E. Galois quando estudava o 
 	Como $\phi_a : G \to G$ dada por $\phi_a(x) = a^{-1}xa$ \'e um automorfismo de $G$, ent\~ao todo subgrupo caracter{\'\i}stico de $G$ \'e em particular normal em G.
 \end{observacao}
 
+\begin{proposicao}
+	Seja $H$ um subgrupo de um grupo $G$. Se $H$ \'e caracter{\'\i}stico em $G$, ent\~ao $H'$ tamb\'em \'e caracter{\'\i}stico em $G$. Em particular, $G^{(i)}$ \'e caracter{\'\i}stico em $G$ para todo $i \in \N$.
+\end{proposicao}
+\begin{prova}
+	Como $H' = \ger{\{x^{-1}y^{-1}xy \mid x, y \in H\}}$, basta mostrar que $\phi([x, y]) \in H'$ para todo $\phi : G \to G$ automorfismo.
+
+	Inicialmente temos $\phi([x, y]) = [\phi(x), \phi(y)]$ e como $H\ car\ G$ $\phi(x)$, $\phi(y) \in H$. Da{\'\i} $\phi([x, y]) \in H'$. Portanto $\phi(H') = H'$, ou seja, $H'$ \'e caracter{\'\i}stico em $G$.
+
+	Agora como $G^{(i)} = [G^{(i - 1)}, G^{(i - 1)}]$, logo $\phi(G^{(n)}) = [\phi(G^{(n - 1)}), \phi(G^{(n - 1)})]$. Assim por indu\c{c}\~ao segue que $G^{(i)}$ \'e caracter{\'\i}stico em $G$ para todo $i \ge 1$.
+\end{prova}
+
 
 % section grupos_soluvies (end)
 
