@@ -1968,7 +1968,25 @@ como quer{\'\i}amos. Em particular, $G^{(n)} \le G_n = \{1\}$, isto \'e, $G^{(n)
 	e como $G_i/G_{i + 1}$ \'e abeliano, ent\~ao $(H \cap G_i)/(H \cap G_{i + 1})$ \'e abeliano. Portanto \eqref{serie_para_subgrupo} \'e uma s\'erie subnormal abeliana para $H$, ou seja, $H$ \'e sol\'uvel.
 \end{prova}
 
-
+\begin{proposicao}
+	Seja $H$ um subgrupo normal de um grupo $G$. Se ambos $H$ e $G/H$ s\~ao sol\'uveis, ent\~ao $G$ \'e sol\'uvel.
+\end{proposicao}
+\begin{prova}
+	Como $G/H$ e $H$ s\~ao sol\'uveis, existem s\'eries subnormais abelianas
+	\begin{align*}
+		&\{\overline{1}\} = \overline{K_0} \le \overline{K_1} \le \cdots \le \overline{K}_m = G/H\\
+		&\{1\} = P_0 \le P_1 \le \cdots \le P_n = H.
+	\end{align*}
+	Assim existem subgrupos $K_i \le G$ tais que $\overline{K_i} = K_i/H$, $K_i \supseteq H$ e $K_i \unlhd K_{i + 1}$. Mais ainda
+	\[
+		\dfrac{\overline{K_{i + 1}}}{\overline{K_i}} \cong \dfrac{K_{i + 1}}{K_i}
+	\]
+	e da{\'\i} $K_{i + 1}/K_i$ \'e abeliano. Logo
+	\[
+		\{1\} = P_0 \le P_1 \le \cdots \le P_{n - 1} \le P_n = H = K_0 \le K_1 \le \cdots \le K_m = G
+	\]
+	\'e uma s\'erie subnormal abeliana para $G$. Portanto, $G$ \'e sol\'uvel.
+\end{prova}
 
 
 
