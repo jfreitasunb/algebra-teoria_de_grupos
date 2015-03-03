@@ -1865,6 +1865,23 @@ O conceito de grupos sol\'uveis foi introduzido por E. Galois quando estudava o 
 	\end{enumerate}
 \end{definicao}
 
+\begin{lema}
+	Sejam $G$ e $H$ grupos e $\phi : G \to H$ um homomorfismo de grupos. Dados $x$, $y \in G$ temos $\phi([x, y]) = [\phi(x), \phi(y)]$.
+\end{lema}
+\begin{prova}
+	De fato
+	\begin{align*}
+		\phi([x, y]) = \phi(x^{-1}y^{-1}xy) = \phi(x^{-1})\phi(y^{-1})\phi(x)\phi(y) = [\phi(x), \phi(y)].
+	\end{align*}
+\end{prova}
+
+\begin{definicao}
+	Um subgrupo $H$ de um grupo $G$ \'e chamado de \textbf{subgrupo caracter{\'\i}stico} se $\phi(H) = H$ para todo automorfismo $\phi : G \to G$. Denotamos tal fato por $H\ car\ G$.
+\end{definicao}
+
+\begin{observacao}
+	Como $\phi_a : G \to G$ dada por $\phi_a(x) = a^{-1}xa$ \'e um automorfismo de $G$, ent\~ao todo subgrupo caracter{\'\i}stico de $G$ \'e em particular normal em G.
+\end{observacao}
 
 
 % section grupos_soluvies (end)
