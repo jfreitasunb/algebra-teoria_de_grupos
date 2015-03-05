@@ -1988,6 +1988,33 @@ como quer{\'\i}amos. Em particular, $G^{(n)} \le G_n = \{1\}$, isto \'e, $G^{(n)
 	\'e uma s\'erie subnormal abeliana para $G$. Portanto, $G$ \'e sol\'uvel.
 \end{prova}
 
+\begin{corolario}
+	Se $H$ e $K$ s\~ao grupos sol\'uveis, ent\~ao $H \times K$ \'e sol\'uvel.
+\end{corolario}
+\begin{prova}
+	Como $(H\times K)/H \cong K$, o resultado segue da proposi\c{c}\~ao anterior.
+\end{prova}
+
+\begin{proposicao}
+	Um grupo sol\'uvel finito $G$ cont\'em uma s\'erie subnormal abeliana cujos fatores s\~ao todos c{\'\i}clicos de ordem prima.
+\end{proposicao}
+\begin{prova}
+	A demonstra\c{c}\~ao ser\'a por indu\c{c}\~ao na ordem de $G$. Se $|G| = 1$, n\~ao h\'a nada a fazer. Suponha ent\~ao que $|G| = n > 1$ e que o resultado vale para todo grupo sol\'uvel de ordem menor que $n$. Se $|G| = p$, com $p$  primo ent\~ao o resultado \'e verdadeiro. Assim suponha que a ordem de $G$ n\~ao \'e um primo. Como $G$ \'e sol\'uvel, existe $H \unlhd G$. Como $|H|$ e $|G/H|$ s\~ao menores que $n$, segue pela hip\'otese de indu\c{c}\~ao que existem s\'eries subnormais abelianas com fatores c{\'\i}clicos
+	\begin{align*}
+		&\{1\} = H_0 \le H_1 \le \cdots \le H_m = H\\
+		\{\overline{1}\} = \overline{P_0} \le \overline{P_1} \le \cdots \le \overline{P_n} = G/H.
+	\end{align*}
+	Logo existem $P_i \le G$, $H \sub P_i$, $P_i \unlhd P_{i + 1}$, $i = 0$, \dots, $n - 1$. Como
+	\[
+		\dfrac{\overline{P_{i + 1}}}{\overline{P_i}} = \dfrac{\dfrac{P_{i + 1}}{H}}{\dfrac{P_i}{H}} \cong \dfrac{P_{i + 1}}{P_i}
+	\]
+	e ent\~ao
+	\[
+		\{1\} = H_0 \le H_1 \le \cdots \le H_m = H = P_0 \le P_1 \le \cdots \le P_m = G
+	\]
+	\'e uma s\'erie subnormal para $G$ onde os quocientes s\~ao c{\'\i}clicos de ordem prima.
+\end{prova}
+
 
 
 
