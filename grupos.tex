@@ -2171,6 +2171,15 @@ s\~ao chamadas de \textbf{s\'erie central superior (ou ascendente)} e \textbf{s\
 	Agora seja $\phi : G \to H$ um homomorfismo. Por indu\c{c}\~ao mostra-se que $\phi(\gamma_i(G)) = \gamma_i(\phi(G))$ para todo $i$. Da{\'\i} $\gamma_n(\phi(G)) = \phi(\gamma_n(G)) = \phi(\{1\}) = \{1\}$ e com isso $\phi(G)$ \'e nilpotente.
 \end{prova}
 
+Considere o grupo $S_3$. Sabemos que $S_3$ n\~ao \'e nilpotente. Agora $A_3$ \'e nilpotente pois \'e abeliano. Al\'em disso, $S_3/A_3$ tamb\'em \'e nilpotente por ser abeliano. Portanto, em geral se $H \unlhd G$ \'e tal que $H$ e $G/H$ s\~ao nilpotentes, n\~ao implica que $G$ \'e nilpotente.
+
+\begin{proposicao}
+	Produto direto finito de grupos nilpotentes \'e nilpotente.
+\end{proposicao}
+\begin{prova}
+	Sejam $H_i$ $i =1$, \dots, $r$ grupos nilpotentes. Logo existem $n_i$ tais que $\gamma_{n_i}(H_i) = \{1\}$ para todo $i = 1$, \dots, $r$. Seja $G = H_1 \times \cdots \times H_r$. Por indu\c{c}\~ao, \'e f\'acil mostrar que $\gamma_j(G) = \gamma_j(H_1) \times \cdots \times \gamma_j(H_r)$ para todo $j$. Tomando $n = \lcm\{n_1, \dots, n_r\}$ temos $\gamma_n(G) = \{1\}$. Logo $G$ \'e nilpotente.
+\end{prova}
+
 
 
 
