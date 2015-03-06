@@ -1729,7 +1729,7 @@ p^m b$, onde $p$ {\'e} primo e $\gcd\{p, b\} = 1p$. Os subgrupos de $G$ que t\^e
 	Seja $x \in N_G(K)$. Como $H \sub K \unlhd N_G(K)$, segue que $xHx^{-1} \sub K$. Mas $H$ e $xHx^{-1}$ s\~ao $p$-subgrupos de Sylow de $K$, da{\'\i} existe $y \in H$ tal que $xHx^{-1} = yHy^{-1}$. Assim $y^{-1}x \in N_G(H) \sub K$. Ou seja, $x \in K$ e portanto $N_G(H) = H$.
 \end{prova}
 
-\begin{corolario}
+\begin{corolario}\label{normalizador_do_normalizador_de_Sylow}
 	Seja $H$ um $p$-subgrupo de Sylow de um grupo finito $G$. Ent\~ao $N_G(N_G(H)) = N_G(H)$.
 \end{corolario}
 \begin{prova}
@@ -2202,7 +2202,7 @@ s\~ao chamadas de \textbf{s\'erie central superior (ou ascendente)} e \textbf{s\
 
 Considere o grupo $S_3$. Sabemos que $S_3$ n\~ao \'e nilpotente. Agora $A_3$ \'e nilpotente pois \'e abeliano. Al\'em disso, $S_3/A_3$ tamb\'em \'e nilpotente por ser abeliano. Portanto, em geral se $H \unlhd G$ \'e tal que $H$ e $G/H$ s\~ao nilpotentes, n\~ao implica que $G$ \'e nilpotente.
 
-\begin{proposicao}
+\begin{proposicao}\label{produto_direto_de_grupos_nilpotentes}
 	Produto direto finito de grupos nilpotentes \'e nilpotente.
 \end{proposicao}
 \begin{prova}
@@ -2217,7 +2217,7 @@ Considere o grupo $S_3$. Sabemos que $S_3$ n\~ao \'e nilpotente. Agora $A_3$ \'e
 	Como $G$ \'e nilpotente, existe $n \in \N$ tal que $G = Z_n(G)$. Seja $i$ o menor {\'\i}ndice tal que $H \cap Z_i(G) \ne \{1\}$. Dado $x \in H \cap Z_i(G)$ e $y \in G$, ent\~ao $[x,y] = x^{-1}y^{-1}xy \in H$ pois $H \unlhd G$ e $x^{-1}y^{-1}xy \in Z_{i - 1}(G)$. Da{\'\i} $[H \cap Z_i(G), G] \sub H \cap Z_{i - 1}(G) = \{1\}$ e ent\~ao $H \cap Z_i(G) \sub H \cap Z(G)$. Portanto $H \cap Z(G) \ne \{1\}$.
 \end{prova}
 
-\begin{proposicao}\label{subgrupo_contido_propriamente_no_normalizador}
+\begin{proposicao}\label{propriedade_do_normalizador}
 	Seja $H$ um subgrupo pr\'oprio de um grupo nilpotente $G$. Ent\~ao $H \subsetneq N_G(H)$.
 \end{proposicao}
 \begin{prova}
@@ -2227,7 +2227,7 @@ Considere o grupo $S_3$. Sabemos que $S_3$ n\~ao \'e nilpotente. Agora $A_3$ \'e
 	\]
 	Ent\~ao $\gamma_n(G) \le H$ mas $\gamma_1(G)$ n\~ao \'e subgrupo de $H$. Seja $i$ o menor inteiro positivo tal que $\gamma_i(G) \le H$ e $\gamma_{i - 1}(G)$ n\~ao \'e subgrupo de $H$. Agora
 	\[
-		[\gamma_{i - 1}(G), H] \le [gamma_{i - 1}(G), G] = \gamma_i(G) \le H
+		[\gamma_{i - 1}(G), H] \le [\gamma_{i - 1}(G), G] = \gamma_i(G) \le H
 	\]
 	e assim para $x \in \gamma_{i - 1}(G)$ e $y \in H$ temos $[x, y^{-1}] = x^{-1}yxy^{-1}\in H$. Mas $y \in H$, da{\'\i} $x^{-1}yx \in H$ para $x \in \gamma_{i - 1}(G)$ e $y \in H$. Ou seja, $x^{-1}Hx = H$ para todo $x \in \gamma_{i - 1}(G)$ e ent\~ao $\gamma_{i - 1}(G) \le N_G(H)$. Como $\gamma_{i - 1}(G) \ne H$, ent\~ao $N_G(H) \ne H$.
 \end{prova}
@@ -2246,17 +2246,55 @@ Considere o grupo $S_3$. Sabemos que $S_3$ n\~ao \'e nilpotente. Agora $A_3$ \'e
 	\end{enumerate}
 \end{definicao}
 
-\begin{lema}
+\begin{lema}\label{subgrupo_subnormal_em_grupo_nilpotente_finito}
 	Seja $G$ um grupo nilpotente finito. Ent\~ao todo subgrupo de $G$ \'e subnormal.
 \end{lema}
 \begin{prova}
-	Seja $H \le G$. Defina $H_0 = H$ e indutivamente $H_n = N_G(H_{n - 1})$. Da Proposi\c{c}\~ao \ref{subgrupo_contido_propriamente_no_normalizador} segue que se $H_{n - 1} \ne G$, ent\~ao $|H_{n - 1}| < |H_n|$. Como $G$ \'e finito, existe $i$ tal que $H_i = G$. Assim a cadeia
+	Seja $H \le G$. Defina $H_0 = H$ e indutivamente $H_n = N_G(H_{n - 1})$. Da Proposi\c{c}\~ao \ref{propriedade_do_normalizador} segue que se $H_{n - 1} \ne G$, ent\~ao $|H_{n - 1}| < |H_n|$. Como $G$ \'e finito, existe $i$ tal que $H_i = G$. Assim a cadeia
 	\[
 		H = H_0 \le H_1 \le \cdots \le H_i = G
 	\]
 	\'e tal que $H_{j - 1} \unlhd H_j$ para $j = 1$, \dots, $n$. Logo $H$ \'e subnormal.
 \end{prova}
 
+\begin{teorema}
+	Seja $G$ um grupo finito. Ent\~ao as seguintes condi\c{c}\~oes s\~ao equivalentes:
+	\begin{enumerate}
+		\item $G$ \'e nilpotente.
+		\item $G$ tem a propriedade do normalizador.
+		\item Todo subgrupo de Sylow de $G$ \'e normal.
+		\item $G$ \'e o produto direto de seus subgrupos de Sylow.
+		\item Todo subgrupo de $G$ \'e subnormal.
+		\item Todo subgrupo maximal de $G$ \'e normal.
+	\end{enumerate}
+	\begin{prova}
+		Vamos mostrar primeiro que $(i) \Rightarrow (ii) \Rightarrow (iii) \Rightarrow (iv) \Rightarrow (i)$.
+		\begin{itemize}
+			\item $(i) \Rightarrow (ii)$ Feito na Proposi\c{c}\~ao \ref{propriedade_do_normalizador}.
+
+			\item $(ii) \Rightarrow (iii)$ Sejam $K$ um $p$-subgrupo de Sylow de $G$ e $H = N_G(K)$. Se $K \ne G$, ent\~ao por $(ii)$, $H \subsetneq N_G(H)$. Mas pelo Corol\'ario \ref{normalizador_do_normalizador_de_Sylow} temos $N_G(N_G(K)) = N_G(K) = H$. Logo $H = G$ e assim $K \unlhd G$.
+
+			\item $(iii) \Rightarrow (iv)$ Como todo subgrupo de Sylow de $G$ \'e normal, ent\~ao se $H_1$, \dots, $H_t$ s\~ao todos os subgrupos de Sylow de $G$ para primos distintos, ent\~ao $H_1\dots H_t$ \'e um subgrupo de $G$ de ordem igual  a $|G|$ e tal que $H_i \cap (H_1 \dots H_{i - 1}H_{i + 1}\dots H_t) = \{1\}$. Logo $G \cong H_1 \times \cdots H_t$, como quer{\'\i}amos.
+
+			\item $(iv) \Rightarrow (i)$ Como cada $H_i$ \'e um $p$-grupo, ent\~ao cada $H_i$ \'e nilpotente, logo da Proposi\c{c}\~ao \ref{produto_direto_de_grupos_nilpotentes} segue que $G$ \'e nilpotente.
+		\end{itemize}
+
+		Mostremos agora que $(i) \Rightarrow (v) \Rightarrow (vi) \Rightarrow(i)$.
+		\begin{itemize}
+			\item $(i) \Rightarrow (v)$ Feito no Lema \ref{subgrupo_subnormal_em_grupo_nilpotente_finito}.
+
+			\item $(v) \Rightarrow (vi)$ Seja $H$ um subgrupo maximal de $G$. Sabemos que $H$ \'e subnormal. Da{\'\i} $H \sub M \unlhd G$, o que contraria o fato de $H$ ser maximal. Logo $H \unlhd G$.
+
+			\item $(vi) \Rightarrow (i)$ Para isso vamos mostrar que todo $p$-subgrupo de Sylow de $G$ \'e normal e da{\'\i} como $(iii) \Rightarrow (i)$ teremos o resultado desejado.
+
+			Seja $H$ um $p$-subgrupo de Sylow de $G$. Se $N_G(H)$ \'e um subgrupo pr\'oprio de $G$, ent\~ao $N_G(H) \sub M \subsetneq G$ onde $M$ \'e um subgrupo maximal de $G$. Assim $M$ \'e normal em $G$. Agora seja $x \in G$. Como $H \sub M \unlhd G$, ent\~ao $x^{-1}Hx \sub M$. Mas $H$ e $x^{-1}Hx$ s\~ao $p$-subgrupos de Sylow, logo existe $y \in M$ tal que $x^{-1}Hx = y^{-1}Hy$ e da{\'\i} $yx^{-1}Hxy^{-1} = H$, ou seja, $yx^{-1} \in M$. Com isso $x \in M$ e portanto $M = G$, o que \'e uma contradi\c{c}\~ao. Portanto $N_G(H) = G$, ou seja, $H \unlhd G$ como quer{\'\i}amos.
+		\end{itemize}
+	\end{prova}
+\end{teorema}
+
+\begin{corolario}
+	Seja $G$ um grupo nilpotente finito. Ent\~ao $G \cong S(p_1) \times \cdots \times S(p_r)$, onde $p_1$, \dots, $p_r$ s\~ao os primos distintos que divivem a ordem de $G$ e $S(p_i)$ \'e o $p_i$-subgrupo de Sylow de $G$ para $1 \le i \le r$.
+\end{corolario}
 
 
 
