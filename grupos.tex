@@ -2063,6 +2063,38 @@ Se $G_1 =\{1\}$, ent\~ao $G_2 \sub Z(G)$ e sucessivamente. Como a s\'erie centra
 	\end{enumerate}
 \end{exemplo}
 
+Dado um grupo $G$ defina
+\begin{align*}
+	\gamma_1(G) = G\\
+	\gamma_2(G) = G'\\
+	\gamma_3(G) = [\gamma_2(G), G] = [G', G]\\
+	\vdots\\
+	\gamma_i(G) = [\gamma_{i - 1}(G), G].
+\end{align*}
+
+Note que $\gamma_1 \supseteq \gamma_2(G) \supseteq \gamma_3(G) \supseteq \cdots \supseteq \gamma_i(G) \supseteq \cdots$. Agora, como $Z(G) \unlhd G$, seja $\pi : G \to G/Z(G)$ a proje\c{c}\~ao can\^onica. Como
+\[
+	Z\left(\dfrac{G}{Z(G)}\right) \unlhd \dfrac{G}{Z(G)}
+\]
+ent\~ao
+\[
+	\pi^{-1}\left(Z\left(\dfrac{G}{Z(G)}\right)\right) \unlhd G.
+\]
+Defina
+\begin{align*}
+	Z_0(G) = \{1\}\\
+	Z_1(G) = Z(G)\\
+	Z_i(G) = \pi_i^{-1}\left(Z\left(\dfrac{G}{Z_{i - 1}(G)}\right)\right)
+\end{align*}
+para $i > 1$, onde $\pi_i : G \to G/Z_{i - 1}(G)$. Assim $Z_i(G) \unlhd G$ para todo $i$. O subgrupo $Z_i$ \'e chamado de \textbf{$i$-\'esimo centro} de $G$.
+
+As sequ\^encias
+\begin{align}
+	\{1\} = Z_0(G) \sub Z_1(G) \sub Z_2(G) \sub \cdots \sub Z_n(G) \sub \cdots\\
+	G = \gamma_1(G) \supseteq \gamma_2(G) \supseteq \gamma_3(G) \supseteq \cdots \supseteq \gamma_n(G) \supseteq \cdots
+\end{align}
+s\~ao chamadas de \textbf{s\'erie central superior (ou ascendente)} e \textbf{s\'erie central inferior (ou descendente)} de $G$, respectivamente. Claramente estas s\'eries s\~ao centrais, \'E imediato verificar que $\gamma_i(G)$ \'e caracter{\'\i}stico em $G$ para todo $i$.
+
 
 
 
