@@ -2162,8 +2162,14 @@ s\~ao chamadas de \textbf{s\'erie central superior (ou ascendente)} e \textbf{s\
 	Seja $G$ um $p$-grupo finito. Ent\~ao $Z(G) \ne \{1\}$. Como todo quociente de $G$ \'e tamb\'em um $p$-grupo, ent\~ao $Z_{i - 1}(G) \subsetneq Z_i(G)$ para todo $i$. Como $G$ \'e finito, existe $n$ tal que $Z_n(G) = G$, logo $G$ \'e nilpotente.
 \end{prova}
 
+\begin{lema}
+	Subgrupos e imagens homomorficas de grupos nilpotentes s\~ao tamb\'em nilpotentes. Em particular quociente de grupos nilpotentes tamb\'em \'e nilpotente.
+\end{lema}
+\begin{prova}
+	Seja $G$ um grupo nilpotente e $H \le G$. Como $G$ \'e nilpotente, existe $n$ tal que $\gamma_n(G) = \{1\}$. \'E imediato mostrar que $\gamma_i(H) \le \gamma_i(G)$ para todo $i$. Logo $\gamma_n(H) \le \gamma_(G) = \{1\}$ e com isso $H$ \'e nilpotente.
 
-
+	Agora seja $\phi : G \to H$ um homomorfismo. Por indu\c{c}\~ao mostra-se que $\phi(\gamma_i(G)) = \gamma_i(\phi(G))$ para todo $i$. Da{\'\i} $\gamma_n(\phi(G)) = \phi(\gamma_n(G)) = \phi(\{1\}) = \{1\}$ e com isso $\phi(G)$ \'e nilpotente.
+\end{prova}
 
 
 
