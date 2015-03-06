@@ -2093,7 +2093,36 @@ As sequ\^encias
 	\{1\} = Z_0(G) \sub Z_1(G) \sub Z_2(G) \sub \cdots \sub Z_n(G) \sub \cdots\label{serie_central_superior}\\
 	G = \gamma_1(G) \supseteq \gamma_2(G) \supseteq \gamma_3(G) \supseteq \cdots \supseteq \gamma_n(G) \supseteq \cdots\label{serie_central_inferior}
 \end{align}
-s\~ao chamadas de \textbf{s\'erie central superior (ou ascendente)} e \textbf{s\'erie central inferior (ou descendente)} de $G$, respectivamente. Claramente estas s\'eries s\~ao centrais, \'E imediato verificar que $\gamma_i(G)$ \'e caracter{\'\i}stico em $G$ para todo $i$.
+s\~ao chamadas de \textbf{s\'erie central superior (ou ascendente)} e \textbf{s\'erie central inferior (ou descendente)} de $G$, respectivamente. Claramente estas s\'eries s\~ao centrais.
+
+\begin{lema}
+	\begin{enumerate}
+		\item Se $H \le G$, ent\~ao $\gamma_i(H) \le \gamma_i(G)$ para todo $i$.
+		\item Se $\phi: G \to K$ \'e um homomorfismo sobrejetor, ent\~ao $\phi(\gamma_i(G)) = \gamma_i(K)$ para todo $i$.
+		\item $\gamma_i(G)$ \'e um subgrupo caracter{\'\i}stico de $G$ para todo $i$.
+	\end{enumerate}
+\end{lema}
+\begin{prova}
+	\begin{enumerate}
+		\item Indu\c{c}\~ao em $i$. Primeiro $\gamma_1(H) = H \le G = \gamma_1(G)$. Suponha que $\gamma_i(H) \le \gamma_i(G)$, assim
+		\[
+			\gamma_{i + 1}(H) = [\gamma_i(H), H] \le [\gamma_i(G), G] = \gamma_i(G),
+		\]
+		como quer{\'\i}amos.
+
+		\item Indu\c{c}\~ao em $i$. Inicialmente $\phi(\gamma_1(G)) = \phi(G) = K = \gamma_1(K)$. Suponha ent\~ao que $\phi(\gamma_i(G)) = \gamma_i(K)$. Dados $x \in \gamma_i(G)$ e $y \in G$ temos
+		\[
+			\phi([x,y]) = [\phi(x), \phi(y)] \in [\phi(\gamma_i(G)), \phi(G)] = [\gamma_i(K), K] = \gamma_{i + 1}(K).
+		\]
+		Da{\'\i} $\phi(\gamma_{i + 1}(G)) = \phi([\gamma_i(G), G]) \le \gamma_{i + 1}(K)$. Por outro lado, se $a \in \gamma_i(K)$ e $b \in K$, ent\~ao existem $x \in \gamma_i(G)$ e $y \in G$ tais que $\phi(x) = a$ e $\phi(y) = b$. Assim
+		\[
+			[a, b] = [\phi(x), \phi(y)] = \phi([x, y]) \in \phi([\gamma_i(G), G]) = \phi(\gamma_{i + 1}(G))
+		\]
+		e ent\~ao $\gamma_{i + 1}(K) = [\gamma_i(K), K] \le \phi(\gamma_{i + 1}(G))$. Portanto $\phi(\gamma_{i + 1}(G)) = \gamma_{i + 1}(K)$, como quer{\'\i}amos.
+
+		\item Se $\phi$ \'e um automorfismo $G$, ent\~ao $\phi$ \'e sobrejetor e pelo item anterior $\phi(\gamma_i(G)) = \gamma_i(G)$, ou seja, $\gamma_i(G)$ \'e caracter{\'\i}stico em $G$.
+	\end{enumerate}
+\end{prova}
 
 \begin{lema}\label{lema_serie_central_superior}
 	Seja
