@@ -2114,7 +2114,24 @@ s\~ao chamadas de \textbf{s\'erie central superior (ou ascendente)} e \textbf{s\
 	como quer{\'\i}amos.
 \end{prova}
 
-
+\begin{lema}
+	Seja
+	\[
+		\{1\} = A_0 \sub A_1 \sub \cdots \sub A_n = G
+	\]
+	uma s\'erie central para um grupo $G$. Ent\~ao $\gamma_i(G) \sub A_{n - i + 1}$ para todo $i$.
+\end{lema}
+\begin{prova}
+	Se $i = 1$ o resultado \'e imediato. Suponha, por indu\c{c}\~ao, que $\gamma_i(G) \sub A_{n - i + 1}$. Como $A_{n - i + 1}/A_{n - i} \sub Z(G/A_{n - i})$ dado $x \in \gamma_i(G)$ temos $xA_{n - i} \in Z(G/A_{n - i})$ e da{\'\i} $xA_{n - i}$ comuta com $yA_{n - i}$ para todo $y \in G$. Assim
+	\[
+		(xA_{n - i})(yA_{n - i}) = (yA_{n - i})(xA_{n - i}),
+	\]
+	ou seja, $[x, y] \in A_{n - i}$. Com isso $[\gamma_i(G), G] \sub A_{n - i}$. Logo
+	\[
+		\gamma_{i + 1}(G) = [\gamma_i(G), G] \sub [A_{n - i + 1}, G] \sub A_{n - i}
+	\]
+	como quer{\'\i}amos.
+\end{prova}
 
 
 
