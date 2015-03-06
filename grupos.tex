@@ -2095,7 +2095,7 @@ As sequ\^encias
 \end{align}
 s\~ao chamadas de \textbf{s\'erie central superior (ou ascendente)} e \textbf{s\'erie central inferior (ou descendente)} de $G$, respectivamente. Claramente estas s\'eries s\~ao centrais, \'E imediato verificar que $\gamma_i(G)$ \'e caracter{\'\i}stico em $G$ para todo $i$.
 
-\begin{lema}
+\begin{lema}\label{lema_serie_central_superior}
 	Seja
 	\[
 		\{1\} = A_0 \sub A_1 \sub \cdots \sub A_n \sub \cdots
@@ -2114,7 +2114,7 @@ s\~ao chamadas de \textbf{s\'erie central superior (ou ascendente)} e \textbf{s\
 	como quer{\'\i}amos.
 \end{prova}
 
-\begin{lema}
+\begin{lema}\label{lema_serie_central_inferior}
 	Seja
 	\[
 		\{1\} = A_0 \sub A_1 \sub \cdots \sub A_n = G
@@ -2133,6 +2133,14 @@ s\~ao chamadas de \textbf{s\'erie central superior (ou ascendente)} e \textbf{s\
 	como quer{\'\i}amos.
 \end{prova}
 
+\begin{teorema}
+	Seja $G$ um grupo. São equivalentes:
+	\begin{enumerate}
+		\item $G$ é nilpotente.
+		\item Existe um inteiro positivo $m$ tal que $Z_m(G) = G$.
+		\item Existe um inteiro positivo $n$ tal que $\gamma_n(G) = \{1\}$.
+	\end{enumerate}
+\end{teorema}
 
 
 
