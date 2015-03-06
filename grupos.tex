@@ -1737,7 +1737,7 @@ p^m b$, onde $p$ {\'e} primo e $\gcd\{p, b\} = 1p$. Os subgrupos de $G$ que t\^e
 \end{prova}
 
 \begin{exemplos}
-	\begin{enumerate}
+	\begin{enumerate}[label=({\arabic*})]
 		\item Se $|G| = 6$, ent\~ao $n_2 = 1$ ou $n_2 = 3$. Sem outras informa\c{c}\~oes sobre $G$ n\~ao \'e poss{\'\i}vel determinar o valor de $n_2$.
 
 		\item Seja $G$ um grupo de ordem 380. Ent\~ao $|G| = 2^2\cdot5\cdot19$. Assim em $G$, existem subgrupos de ordem 2, 4, 5, e 19. Para o caso do subgrupo de ordem 5 pelo Terceiro Teorema de Sylow, Teorema \ref{terceiro_teorema_de_sylow}, temos $n_5 \equiv 1 \pmod 5$ e $n_5 \mid 2^2\cdot19$. Logo $n_5 = 1$ ou $n_5 = 76$. De modo an\'alogo, obtemos $n_{19} = 1$ ou $n_{19} = 20$. Sejam $H$, $K \le G$ tais que $|H| = 5$ e $|K| = 19$.
@@ -1775,8 +1775,6 @@ p^m b$, onde $p$ {\'e} primo e $\gcd\{p, b\} = 1p$. Os subgrupos de $G$ que t\^e
 \end{exemplos}
 % section teoremas_de_sylow (end)
 
-\todo[inline, color=red!40]{Grupos livres}
-
 \section{Grupos Sol\'uvies} % (fold)
 \label{sec:grupos_soluvies}
 
@@ -1791,7 +1789,7 @@ O conceito de grupos sol\'uveis foi introduzido por E. Galois quando estudava o 
 \end{definicao}
 
 \begin{exemplos}
-	\begin{enumerate}
+	\begin{enumerate}[label=({\arabic*})]
 		\item Todo grupo abeliano \'e sol\'uvel.
 
 		\item O grupo $S_3$ \'e sol\'uvel. De fato, em $S_3$ tomando $\sigma = (123)$ e $H = \ger{\sigma}$, ent\~ao $|G/H| = 2$. Logo $H \unlhd S_3$ e $G/H$ \'e abeliano. Como $H$ \'e c{\'\i}clico, ent\~ao $H$ \'e abeliano e com isso a cadeia $\{1\} \sub H \sub S_3$ \'e uma s\'erie subnormal abeliana para $S_3$.
@@ -1834,7 +1832,7 @@ O conceito de grupos sol\'uveis foi introduzido por E. Galois quando estudava o 
 \end{prova}
 
 \begin{definicao}
-	\begin{enumerate}
+	\begin{enumerate}[label=({\roman*})]
 		\item Dados um grupo $G$ e dois elementos $x$, $y \in G$ o \textbf{comutador} de $x$ e $y$ \'e o elemento
 		\[
 			[x, y] = x^{-1}y^{-1}xy \in G.
@@ -1851,10 +1849,10 @@ O conceito de grupos sol\'uveis foi introduzido por E. Galois quando estudava o 
 		\]
 		Em particular o grupo $G'= [G, G]$ \'e chamado de \textbf{subgrupo comutador} ou \textbf{subgrupo derivado de $G$}. Indutivamente podemos definir uma seque\^encia de subgrupos de $G$ da forma:
 		\begin{align*}
-			&G^{(0)} = G\\
-			&G^{(1)} = [G^{(0)}, G^{(0)}] = [G, G] = G'\\
+			G^{(0)} &= G\\
+			G^{(1)} &= [G^{(0)}, G^{(0)}] = [G, G] = G'\\
 			&\vdots\\
-			&G^{(n)} = [G^{(n - 1)}, G^{(n - 1)}].
+			G^{(n)} &= [G^{(n - 1)}, G^{(n - 1)}].
 		\end{align*}
 
 		\item O subgrupo $G^{(n)}$ definido anteriormente \'e chamado de \textbf{$n$-\'esimo grupo derivado} de $G$ e a sequ\^encia
@@ -2002,7 +2000,7 @@ como quer{\'\i}amos. Em particular, $G^{(n)} \le G_n = \{1\}$, isto \'e, $G^{(n)
 	A demonstra\c{c}\~ao ser\'a por indu\c{c}\~ao na ordem de $G$. Se $|G| = 1$, n\~ao h\'a nada a fazer. Suponha ent\~ao que $|G| = n > 1$ e que o resultado vale para todo grupo sol\'uvel de ordem menor que $n$. Se $|G| = p$, com $p$  primo ent\~ao o resultado \'e verdadeiro. Assim suponha que a ordem de $G$ n\~ao \'e um primo. Como $G$ \'e sol\'uvel, existe $H \unlhd G$. Como $|H|$ e $|G/H|$ s\~ao menores que $n$, segue pela hip\'otese de indu\c{c}\~ao que existem s\'eries subnormais abelianas com fatores c{\'\i}clicos
 	\begin{align*}
 		&\{1\} = H_0 \le H_1 \le \cdots \le H_m = H\\
-		\{\overline{1}\} = \overline{P_0} \le \overline{P_1} \le \cdots \le \overline{P_n} = G/H.
+		&\{\overline{1}\} = \overline{P_0} \le \overline{P_1} \le \cdots \le \overline{P_n} = G/H.
 	\end{align*}
 	Logo existem $P_i \le G$, $H \sub P_i$, $P_i \unlhd P_{i + 1}$, $i = 0$, \dots, $n - 1$. Como
 	\[
@@ -2050,7 +2048,7 @@ Observe que da defini\c{c}\~ao de nilpot\^encia temos
 Se $G_1 =\{1\}$, ent\~ao $G_2 \sub Z(G)$ e sucessivamente. Como a s\'erie central \eqref{serie_central} termina, ent\~ao todo grupo nilpotente tem centro n\~ao trivial. Al\'em disso, todo grupo nilpotente \'e sol\'uvel.
 
 \begin{exemplo}
-	\begin{enumerate}
+	\begin{enumerate}[label=({\arabic*})]
 		\item Todo grupo abeliano \'e nilpotente.
 
 		\item J\'a mostramos que todo $p$-grupo finito $G$ possui uma s\'erie
@@ -2065,11 +2063,11 @@ Se $G_1 =\{1\}$, ent\~ao $G_2 \sub Z(G)$ e sucessivamente. Como a s\'erie centra
 
 Dado um grupo $G$ defina
 \begin{align*}
-	\gamma_1(G) = G\\
-	\gamma_2(G) = G'\\
-	\gamma_3(G) = [\gamma_2(G), G] = [G', G]\\
-	\vdots\\
-	\gamma_i(G) = [\gamma_{i - 1}(G), G].
+	\gamma_1(G) &= G\\
+	\gamma_2(G) &= G'\\
+	\gamma_3(G) &= [\gamma_2(G), G] = [G', G]\\
+	&\vdots\\
+	\gamma_i(G) &= [\gamma_{i - 1}(G), G].
 \end{align*}
 
 Note que $\gamma_1 \supseteq \gamma_2(G) \supseteq \gamma_3(G) \supseteq \cdots \supseteq \gamma_i(G) \supseteq \cdots$. Agora, como $Z(G) \unlhd G$, seja $\pi : G \to G/Z(G)$ a proje\c{c}\~ao can\^onica. Como
@@ -2082,9 +2080,9 @@ ent\~ao
 \]
 Defina
 \begin{align*}
-	Z_0(G) = \{1\}\\
-	Z_1(G) = Z(G)\\
-	Z_i(G) = \pi_i^{-1}\left(Z\left(\dfrac{G}{Z_{i - 1}(G)}\right)\right)
+	Z_0(G) &= \{1\}\\
+	Z_1(G) &= Z(G)\\
+	Z_i(G) &= \pi_i^{-1}\left(Z\left(\dfrac{G}{Z_{i - 1}(G)}\right)\right)
 \end{align*}
 para $i > 1$, onde $\pi_i : G \to G/Z_{i - 1}(G)$. Assim $Z_i(G) \unlhd G$ para todo $i$. O subgrupo $Z_i$ \'e chamado de \textbf{$i$-\'esimo centro} de $G$.
 
@@ -2096,14 +2094,14 @@ As sequ\^encias
 s\~ao chamadas de \textbf{s\'erie central superior (ou ascendente)} e \textbf{s\'erie central inferior (ou descendente)} de $G$, respectivamente. Claramente estas s\'eries s\~ao centrais.
 
 \begin{lema}
-	\begin{enumerate}
+	\begin{enumerate}[label=({\roman*})]
 		\item Se $H \le G$, ent\~ao $\gamma_i(H) \le \gamma_i(G)$ para todo $i$.
 		\item Se $\phi: G \to K$ \'e um homomorfismo sobrejetor, ent\~ao $\phi(\gamma_i(G)) = \gamma_i(K)$ para todo $i$.
 		\item $\gamma_i(G)$ \'e um subgrupo caracter{\'\i}stico de $G$ para todo $i$.
 	\end{enumerate}
 \end{lema}
 \begin{prova}
-	\begin{enumerate}
+	\begin{enumerate}[label=({\roman*})]
 		\item Indu\c{c}\~ao em $i$. Primeiro $\gamma_1(H) = H \le G = \gamma_1(G)$. Suponha que $\gamma_i(H) \le \gamma_i(G)$, assim
 		\[
 			\gamma_{i + 1}(H) = [\gamma_i(H), H] \le [\gamma_i(G), G] = \gamma_i(G),
@@ -2164,20 +2162,20 @@ s\~ao chamadas de \textbf{s\'erie central superior (ou ascendente)} e \textbf{s\
 
 \begin{teorema}
 	Seja $G$ um grupo. S\~ao equivalentes:
-	\begin{enumerate}
-		\item $G$ \'e nilpotente.
-		\item Existe um inteiro positivo $m$ tal que $Z_m(G) = G$.
-		\item Existe um inteiro positivo $n$ tal que $\gamma_n(G) = \{1\}$.
+	\begin{enumerate}[label=({\roman*})]
+		\item\label{item_1_nilpotente} $G$ \'e nilpotente.
+		\item\label{item_2_nilpotente} Existe um inteiro positivo $m$ tal que $Z_m(G) = G$.
+		\item\label{item_3_nilpotente} Existe um inteiro positivo $n$ tal que $\gamma_n(G) = \{1\}$.
 	\end{enumerate}
 \end{teorema}
 \begin{prova}
-	Primeiro provaremos que $(i) \Rightarrow (ii)$ e que $(i) \Rightarrow (iii)$. Para isso, suponha que $G$ \'e nilpotente. Assin existe uma s\'erie central
+	Primeiro provaremos que $\ref{item_1_nilpotente} \Rightarrow \ref{item_2_nilpotente}$ e que $\ref{item_1_nilpotente} \Rightarrow \ref{item_3_nilpotente}$. Para isso, suponha que $G$ \'e nilpotente. Assin existe uma s\'erie central
 	\[
 		\{1\} = G_0 \le G_1 \le \cdots \le G_n = G
 	\]
 	para $G$. Do Lema \ref{lema_serie_central_superior} temos $G_i \sub Z_i(G)$ para todo $i$. Logo $Z_n(G) = G$. Agora do Lema \ref{lema_serie_central_inferior} temos $\gamma_i(G) \sub G_{n - i + 1}$ para todo $i$, donde obtemos $\gamma_{n + 1}(G) \sub G_{n - (n + 1) + 1} = G_0 = G$ como quer{\'\i}amos. Mais ainda, mostramos que a s\'erie central superior e inferior tem o mesmo comprimento.
 
-	\'E imediato verificar que $(ii) \Rightarrow (i)$. Mostremos ent\~ao que $(iii) \Rightarrow (i)$. Se $\gamma_m(G) = \{1\}$ para algum $m$ ent\~ao
+	\'E imediato verificar que $\ref{item_2_nilpotente} \Rightarrow \ref{item_1_nilpotente}$. Mostremos ent\~ao que $\ref{item_3_nilpotente} \Rightarrow \ref{item_1_nilpotente}$. Se $\gamma_m(G) = \{1\}$ para algum $m$ ent\~ao
 	\[
 		G = \gamma_1(G) \supseteq \gamma_2(G) \supseteq \cdots \supseteq \gamma_m(G) = \{1\}
 	\]
@@ -2233,7 +2231,7 @@ Considere o grupo $S_3$. Sabemos que $S_3$ n\~ao \'e nilpotente. Agora $A_3$ \'e
 \end{prova}
 
 \begin{definicao}
-	\begin{enumerate}
+	\begin{enumerate}[label=({\roman*})]
 		\item Um subgrupo pr\'oprio $M$ de um grupo $G$ \'e chamado de \textbf{maximal} se n\~ao existe subgrupo $H \le G$ tal que $M \subsetneq H \subsetneq G$.
 
 		\item Dizemos que um grupo $G$ tem a \textbf{propriedade do normalizador} de todo subgrupo pr\'oprio de $G$ est\'a contido propriamente em seu normalizador.
@@ -2259,33 +2257,33 @@ Considere o grupo $S_3$. Sabemos que $S_3$ n\~ao \'e nilpotente. Agora $A_3$ \'e
 
 \begin{teorema}
 	Seja $G$ um grupo finito. Ent\~ao as seguintes condi\c{c}\~oes s\~ao equivalentes:
-	\begin{enumerate}
-		\item $G$ \'e nilpotente.
-		\item $G$ tem a propriedade do normalizador.
-		\item Todo subgrupo de Sylow de $G$ \'e normal.
-		\item $G$ \'e o produto direto de seus subgrupos de Sylow.
-		\item Todo subgrupo de $G$ \'e subnormal.
-		\item Todo subgrupo maximal de $G$ \'e normal.
+	\begin{enumerate}[label=({\roman*})]
+		\item\label{item_1_classificacao_nilpotente_finito} $G$ \'e nilpotente.
+		\item\label{item_2_classificacao_nilpotente_finito} $G$ tem a propriedade do normalizador.
+		\item\label{item_3_classificacao_nilpotente_finito} Todo subgrupo de Sylow de $G$ \'e normal.
+		\item\label{item_4_classificacao_nilpotente_finito} $G$ \'e o produto direto de seus subgrupos de Sylow.
+		\item\label{item_5_classificacao_nilpotente_finito} Todo subgrupo de $G$ \'e subnormal.
+		\item\label{item_6_classificacao_nilpotente_finito} Todo subgrupo maximal de $G$ \'e normal.
 	\end{enumerate}
 	\begin{prova}
-		Vamos mostrar primeiro que $(i) \Rightarrow (ii) \Rightarrow (iii) \Rightarrow (iv) \Rightarrow (i)$.
+		Vamos mostrar primeiro que $\ref{item_1_classificacao_nilpotente_finito} \Rightarrow \ref{item_2_classificacao_nilpotente_finito} \Rightarrow \ref{item_3_classificacao_nilpotente_finito} \Rightarrow \ref{item_4_classificacao_nilpotente_finito} \Rightarrow \ref{item_1_classificacao_nilpotente_finito}$.
 		\begin{itemize}
-			\item $(i) \Rightarrow (ii)$ Feito na Proposi\c{c}\~ao \ref{propriedade_do_normalizador}.
+			\item $\ref{item_1_classificacao_nilpotente_finito} \Rightarrow \ref{item_2_classificacao_nilpotente_finito}$ Feito na Proposi\c{c}\~ao \ref{propriedade_do_normalizador}.
 
-			\item $(ii) \Rightarrow (iii)$ Sejam $K$ um $p$-subgrupo de Sylow de $G$ e $H = N_G(K)$. Se $K \ne G$, ent\~ao por $(ii)$, $H \subsetneq N_G(H)$. Mas pelo Corol\'ario \ref{normalizador_do_normalizador_de_Sylow} temos $N_G(N_G(K)) = N_G(K) = H$. Logo $H = G$ e assim $K \unlhd G$.
+			\item $\ref{item_2_classificacao_nilpotente_finito} \Rightarrow \ref{item_3_classificacao_nilpotente_finito}$ Sejam $K$ um $p$-subgrupo de Sylow de $G$ e $H = N_G(K)$. Se $K \ne G$, ent\~ao por $\ref{item_2_classificacao_nilpotente_finito}$, $H \subsetneq N_G(H)$. Mas pelo Corol\'ario \ref{normalizador_do_normalizador_de_Sylow} temos $N_G(N_G(K)) = N_G(K) = H$. Logo $H = G$ e assim $K \unlhd G$.
 
-			\item $(iii) \Rightarrow (iv)$ Como todo subgrupo de Sylow de $G$ \'e normal, ent\~ao se $H_1$, \dots, $H_t$ s\~ao todos os subgrupos de Sylow de $G$ para primos distintos, ent\~ao $H_1\dots H_t$ \'e um subgrupo de $G$ de ordem igual  a $|G|$ e tal que $H_i \cap (H_1 \dots H_{i - 1}H_{i + 1}\dots H_t) = \{1\}$. Logo $G \cong H_1 \times \cdots H_t$, como quer{\'\i}amos.
+			\item $\ref{item_3_classificacao_nilpotente_finito} \Rightarrow \ref{item_4_classificacao_nilpotente_finito}$ Como todo subgrupo de Sylow de $G$ \'e normal, ent\~ao se $H_1$, \dots, $H_t$ s\~ao todos os subgrupos de Sylow de $G$ para primos distintos, ent\~ao $H_1\dots H_t$ \'e um subgrupo de $G$ de ordem igual  a $|G|$ e tal que $H_i \cap (H_1 \dots H_{i - 1}H_{i + 1}\dots H_t) = \{1\}$. Logo $G \cong H_1 \times \cdots H_t$, como quer{\'\i}amos.
 
-			\item $(iv) \Rightarrow (i)$ Como cada $H_i$ \'e um $p$-grupo, ent\~ao cada $H_i$ \'e nilpotente, logo da Proposi\c{c}\~ao \ref{produto_direto_de_grupos_nilpotentes} segue que $G$ \'e nilpotente.
+			\item $\ref{item_4_classificacao_nilpotente_finito} \Rightarrow \ref{item_1_classificacao_nilpotente_finito}$ Como cada $H_i$ \'e um $p$-grupo, ent\~ao cada $H_i$ \'e nilpotente, logo da Proposi\c{c}\~ao \ref{produto_direto_de_grupos_nilpotentes} segue que $G$ \'e nilpotente.
 		\end{itemize}
 
-		Mostremos agora que $(i) \Rightarrow (v) \Rightarrow (vi) \Rightarrow(i)$.
+		Mostremos agora que $\ref{item_1_classificacao_nilpotente_finito} \Rightarrow \ref{item_5_classificacao_nilpotente_finito} \Rightarrow \ref{item_6_classificacao_nilpotente_finito} \Rightarrow\ref{item_1_classificacao_nilpotente_finito}$.
 		\begin{itemize}
-			\item $(i) \Rightarrow (v)$ Feito no Lema \ref{subgrupo_subnormal_em_grupo_nilpotente_finito}.
+			\item $\ref{item_1_classificacao_nilpotente_finito} \Rightarrow \ref{item_5_classificacao_nilpotente_finito}$ Feito no Lema \ref{subgrupo_subnormal_em_grupo_nilpotente_finito}.
 
-			\item $(v) \Rightarrow (vi)$ Seja $H$ um subgrupo maximal de $G$. Sabemos que $H$ \'e subnormal. Da{\'\i} $H \sub M \unlhd G$, o que contraria o fato de $H$ ser maximal. Logo $H \unlhd G$.
+			\item $\ref{item_5_classificacao_nilpotente_finito} \Rightarrow \ref{item_6_classificacao_nilpotente_finito}$ Seja $H$ um subgrupo maximal de $G$. Sabemos que $H$ \'e subnormal. Da{\'\i} $H \sub M \unlhd G$, o que contraria o fato de $H$ ser maximal. Logo $H \unlhd G$.
 
-			\item $(vi) \Rightarrow (i)$ Para isso vamos mostrar que todo $p$-subgrupo de Sylow de $G$ \'e normal e da{\'\i} como $(iii) \Rightarrow (i)$ teremos o resultado desejado.
+			\item $\ref{item_6_classificacao_nilpotente_finito} \Rightarrow \ref{item_1_classificacao_nilpotente_finito}$ Para isso vamos mostrar que todo $p$-subgrupo de Sylow de $G$ \'e normal e da{\'\i} como $\ref{item_3_classificacao_nilpotente_finito} \Rightarrow \ref{item_1_classificacao_nilpotente_finito}$ teremos o resultado desejado.
 
 			Seja $H$ um $p$-subgrupo de Sylow de $G$. Se $N_G(H)$ \'e um subgrupo pr\'oprio de $G$, ent\~ao $N_G(H) \sub M \subsetneq G$ onde $M$ \'e um subgrupo maximal de $G$. Assim $M$ \'e normal em $G$. Agora seja $x \in G$. Como $H \sub M \unlhd G$, ent\~ao $x^{-1}Hx \sub M$. Mas $H$ e $x^{-1}Hx$ s\~ao $p$-subgrupos de Sylow, logo existe $y \in M$ tal que $x^{-1}Hx = y^{-1}Hy$ e da{\'\i} $yx^{-1}Hxy^{-1} = H$, ou seja, $yx^{-1} \in M$. Com isso $x \in M$ e portanto $M = G$, o que \'e uma contradi\c{c}\~ao. Portanto $N_G(H) = G$, ou seja, $H \unlhd G$ como quer{\'\i}amos.
 		\end{itemize}
