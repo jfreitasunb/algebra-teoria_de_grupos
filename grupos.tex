@@ -2217,6 +2217,46 @@ Considere o grupo $S_3$. Sabemos que $S_3$ n\~ao \'e nilpotente. Agora $A_3$ \'e
 	Como $G$ \'e nilpotente, existe $n \in \N$ tal que $G = Z_n(G)$. Seja $i$ o menor {\'\i}ndice tal que $H \cap Z_i(G) \ne \{1\}$. Dado $x \in H \cap Z_i(G)$ e $y \in G$, ent\~ao $[x,y] = x^{-1}y^{-1}xy \in H$ pois $H \unlhd G$ e $x^{-1}y^{-1}xy \in Z_{i - 1}(G)$. Da{\'\i} $[H \cap Z_i(G), G] \sub H \cap Z_{i - 1}(G) = \{1\}$ e ent\~ao $H \cap Z_i(G) \sub H \cap Z(G)$. Portanto $H \cap Z(G) \ne \{1\}$.
 \end{prova}
 
+\begin{proposicao}
+	Seja $H$ um subgrupo pr\'oprio de um grupo nilpotente $G$. Ent\~ao $H \subsetneq N_G(H)$.
+\end{proposicao}
+\begin{prova}
+	Como $G$ \'e nilpotente, existe $n \in \N$ tal que
+	\[
+		G = \gamma_1(G) \supseteq \gamma_2(G) \supseteq \cdots \supseteq \gamma_n(G) = \{1\}.
+	\]
+	Ent\~ao $\gamma_n(G) \le H$ mas $\gamma_1(G)$ n\~ao \'e subgrupo de $H$. Seja $i$ o menor inteiro positivo tal que $\gamma_i(G) \le H$ e $\gamma_{i - 1}(G)$ n\~ao \'e subgrupo de $H$. Agora
+	\[
+		[\gamma_{i - 1}(G), H] \le [gamma_{i - 1}(G), G] = \gamma_i(G) \le H
+	\]
+	e assim para $x \in \gamma_{i - 1}(G)$ e $y \in H$ temos $[x, y^{-1}] = x^{-1}yxy^{-1}\in H$. Mas $y \in H$, da{\'\i} $x^{-1}yx \in H$ para $x \in \gamma_{i - 1}(G)$ e $y \in H$. Ou seja, $x^{-1}Hx = H$ para todo $x \in \gamma_{i - 1}(G)$ e ent\~ao $\gamma_{i - 1}(G) \le N_G(H)$. Como $\gamma_{i - 1}(G) \ne H$, ent\~ao $N_G(H) \ne H$.
+\end{prova}
+
+\begin{definicao}
+	\begin{enumerate}
+		\item Um subgrupo pr\'oprio $M$ de um grupo $G$ \'e chamado de \textbf{maximal} se n\~ao existe subgrupo $H \le G$ tal que $M \subsetneq H \subsetneq G$.
+
+		\item Dizemos que um grupo $G$ tem a \textbf{propriedade do normalizador} de todo subgrupo pr\'oprio de $G$ est\'a contido propriamente em seu normalizador.
+
+		\item Um subgrupo $H$ de um grupo $G$ \'e chamado de \textbf{subnormal} se existe uma cadeia de subgrupos
+		\[
+			H = H_0 \le H_1 \le \cdots \le H_n = G
+		\]
+		tal que $H_{i - 1} \unlhd H_i$ para $1 \le i \le n$.
+	\end{enumerate}
+\end{definicao}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
