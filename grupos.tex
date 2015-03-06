@@ -2217,7 +2217,7 @@ Considere o grupo $S_3$. Sabemos que $S_3$ n\~ao \'e nilpotente. Agora $A_3$ \'e
 	Como $G$ \'e nilpotente, existe $n \in \N$ tal que $G = Z_n(G)$. Seja $i$ o menor {\'\i}ndice tal que $H \cap Z_i(G) \ne \{1\}$. Dado $x \in H \cap Z_i(G)$ e $y \in G$, ent\~ao $[x,y] = x^{-1}y^{-1}xy \in H$ pois $H \unlhd G$ e $x^{-1}y^{-1}xy \in Z_{i - 1}(G)$. Da{\'\i} $[H \cap Z_i(G), G] \sub H \cap Z_{i - 1}(G) = \{1\}$ e ent\~ao $H \cap Z_i(G) \sub H \cap Z(G)$. Portanto $H \cap Z(G) \ne \{1\}$.
 \end{prova}
 
-\begin{proposicao}
+\begin{proposicao}\label{subgrupo_contido_propriamente_no_normalizador}
 	Seja $H$ um subgrupo pr\'oprio de um grupo nilpotente $G$. Ent\~ao $H \subsetneq N_G(H)$.
 \end{proposicao}
 \begin{prova}
@@ -2246,7 +2246,16 @@ Considere o grupo $S_3$. Sabemos que $S_3$ n\~ao \'e nilpotente. Agora $A_3$ \'e
 	\end{enumerate}
 \end{definicao}
 
-
+\begin{lema}
+	Seja $G$ um grupo nilpotente finito. Ent\~ao todo subgrupo de $G$ \'e subnormal.
+\end{lema}
+\begin{prova}
+	Seja $H \le G$. Defina $H_0 = H$ e indutivamente $H_n = N_G(H_{n - 1})$. Da Proposi\c{c}\~ao \ref{subgrupo_contido_propriamente_no_normalizador} segue que se $H_{n - 1} \ne G$, ent\~ao $|H_{n - 1}| < |H_n|$. Como $G$ \'e finito, existe $i$ tal que $H_i = G$. Assim a cadeia
+	\[
+		H = H_0 \le H_1 \le \cdots \le H_i = G
+	\]
+	\'e tal que $H_{j - 1} \unlhd H_j$ para $j = 1$, \dots, $n$. Logo $H$ \'e subnormal.
+\end{prova}
 
 
 
