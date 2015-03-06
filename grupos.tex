@@ -2034,11 +2034,49 @@ Burnside tamb\'em conjeturou que: ``Todo grupo de ordem {\'\i}mpar \'e sol\'uvel
 
 \begin{definicao}
 	Um grupo $G$ \'e chamado de \textbf{nilpotente} se existe uma s\'erie de subgrupos
-	\begin{equation}
+	\begin{equation}\label{serie_central}
 		\{1\} = G_0 \le G_1 \le \cdots \le G_{n - 1} \le G_n = G
 	\end{equation}
 	tal que cada subgrupo $G_{i - 1}$ \'e normal em $G$ e cada quociente $G_i/G_{i - 1} \sub Z(G/G_{i - 1})$ para $1 \le i \le n$.
 \end{definicao}
+
+Uma s\'erie de subgrupos de um grupo $G$ satisfazendo as propriedades de \eqref{serie_central} \'e chamada de uma \textbf{s\'erie central} de $G$. O menor $n$ tal que a s\'erie \eqref{serie_central} \'e central \'e chamado de \textbf{classe de nilpot\^encia} de $G$.
+
+Observe que da defini\c{c}\~ao de nilpot\^encia temos
+\[
+	\dfrac{G_1}{G_0} = G_1 \sub Z(G/G_0) = Z(G).
+\]
+
+Se $G_1 =\{1\}$, ent\~ao $G_2 \sub Z(G)$ e sucessivamente. Como a s\'erie central \eqref{serie_central} termina, ent\~ao todo grupo nilpotente tem centro n\~ao trivial. Al\'em disso, todo grupo nilpotente \'e sol\'uvel.
+
+\begin{exemplo}
+	\begin{enumerate}
+		\item Todo grupo abeliano \'e nilpotente.
+
+		\item J\'a mostramos que todo $p$-grupo finito $G$ possui uma s\'erie
+		\[
+			\{1\} = G_0 \le G_1 \le \cdots \le G_n = G
+		\]
+		tal que $G_i \unlhd G$ e $G_i/G_{i - 1} \sub Z(G/G_{i - 1})$. Logo todo $p$-grupo finito \'e nilpotente.
+
+		\item Sabemos que $S_3$ \'e sol\'uvel. No entanto $Z(S_3) = \{1\}$ e assim $S_3$ n\~ao \'e nilpotente.
+	\end{enumerate}
+\end{exemplo}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 % section grupos_nilpotentes (end)
 
 % \section{Exerc{\'\i}cios} % (fold)
