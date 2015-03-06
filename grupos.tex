@@ -2090,11 +2090,29 @@ para $i > 1$, onde $\pi_i : G \to G/Z_{i - 1}(G)$. Assim $Z_i(G) \unlhd G$ para 
 
 As sequ\^encias
 \begin{align}
-	\{1\} = Z_0(G) \sub Z_1(G) \sub Z_2(G) \sub \cdots \sub Z_n(G) \sub \cdots\\
-	G = \gamma_1(G) \supseteq \gamma_2(G) \supseteq \gamma_3(G) \supseteq \cdots \supseteq \gamma_n(G) \supseteq \cdots
+	\{1\} = Z_0(G) \sub Z_1(G) \sub Z_2(G) \sub \cdots \sub Z_n(G) \sub \cdots\label{serie_central_superior}\\
+	G = \gamma_1(G) \supseteq \gamma_2(G) \supseteq \gamma_3(G) \supseteq \cdots \supseteq \gamma_n(G) \supseteq \cdots\label{serie_central_inferior}
 \end{align}
 s\~ao chamadas de \textbf{s\'erie central superior (ou ascendente)} e \textbf{s\'erie central inferior (ou descendente)} de $G$, respectivamente. Claramente estas s\'eries s\~ao centrais, \'E imediato verificar que $\gamma_i(G)$ \'e caracter{\'\i}stico em $G$ para todo $i$.
 
+\begin{lema}
+	Seja
+	\[
+		\{1\} = A_0 \sub A_1 \sub \cdots \sub A_n \sub \cdots
+	\]
+	uma s\'erie central para um grupo $G$, isto \'e, $A_{i - 1} \unlhd G$ e $A_i/A_{i - 1} \sub Z(G/A_{i - 1})$ para todo $i$. Ent\~ao $A_i \sub Z_i(G)$ para todo $i$.
+\end{lema}
+\begin{prova}
+	Vamos usar indu\c{c}\~ao em $i$. Se $i = 1$, nada h\'a a fazer. Suponha que $A_i \sub Z_i(G)$. Dado $x \in A_{i + 1}$ e $y \in G$, como $A_{i + 1}/A_i \sub Z(G/A_i)$ temos
+	\[
+		(xA_i)(yA_i) = (yA_i)(xA_i)
+	\]
+	ou seja, $xyA_i = yxA_i$ e da{\'\i} $x^{-1}y^{-1}xyA_i = A_i$, isto \'e, $x^{-1}y^{-1}xy \in A_i \sub Z_i(G)$ por hip\'otese. Logo $xZ_i(G)$ e $yZ_i(G)$ comutam para todo $y \in G$. Ent\~ao $xZ_i(G) \in Z(G/Z_i(G))$ e com isso
+	\[
+		x \in \pi^{-1}\left(Z\left(\dfrac{G}{Z_i(G)}\right)\right) = Z_{i - 1}(G),
+	\]
+	como quer{\'\i}amos.
+\end{prova}
 
 
 
