@@ -2134,14 +2134,26 @@ s\~ao chamadas de \textbf{s\'erie central superior (ou ascendente)} e \textbf{s\
 \end{prova}
 
 \begin{teorema}
-	Seja $G$ um grupo. São equivalentes:
+	Seja $G$ um grupo. S\~ao equivalentes:
 	\begin{enumerate}
-		\item $G$ é nilpotente.
+		\item $G$ \'e nilpotente.
 		\item Existe um inteiro positivo $m$ tal que $Z_m(G) = G$.
 		\item Existe um inteiro positivo $n$ tal que $\gamma_n(G) = \{1\}$.
 	\end{enumerate}
 \end{teorema}
+\begin{prova}
+	Primeiro provaremos que $(i) \Rightarrow (ii)$ e que $(i) \Rightarrow (iii)$. Para isso, suponha que $G$ \'e nilpotente. Assin existe uma s\'erie central
+	\[
+		\{1\} = G_0 \le G_1 \le \cdots \le G_n = G
+	\]
+	para $G$. Do Lema \ref{lema_serie_central_superior} temos $G_i \sub Z_i(G)$ para todo $i$. Logo $Z_n(G) = G$. Agora do Lema \ref{lema_serie_central_inferior} temos $\gamma_i(G) \sub G_{n - i + 1}$ para todo $i$, donde obtemos $\gamma_{n + 1}(G) \sub G_{n - (n + 1) + 1} = G_0 = G$ como quer{\'\i}amos. Mais ainda, mostramos que a s\'erie central superior e inferior tem o mesmo comprimento.
 
+	\'E imediato verificar que $(ii) \Rightarrow (i)$. Mostremos ent\~ao que $(iii) \Rightarrow (i)$. Se $\gamma_m(G) = \{1\}$ para algum $m$ ent\~ao
+	\[
+		G = \gamma_1(G) \supseteq \gamma_2(G) \supseteq \cdots \supseteq \gamma_m(G) = \{1\}
+	\]
+	\'e uma s\'erie central para $G$. De fato, como $\gamma_i(G)$ \'e caracter{\'\i}stico em $G$, ent\~ao $\gamma_i(G) \unlhd G$ para todo $i$. Agora, dado $x \in \gamma_i(G)$ e $y \in G$, ent\~ao $[x, y] \in \gamma_i(G)$ e da{\'\i} $x\gamma_i(G)$ e $y\gamma_i(G)$ comutam. Logo $\gamma_i(G)/\gamma_{i - 1}(G) \le Z(G/\gamma_i(G))$ para todo $i$. Portanto $G$ \'e sol\'uvel.
+\end{prova}
 
 
 
