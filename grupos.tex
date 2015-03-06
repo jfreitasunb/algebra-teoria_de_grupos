@@ -2181,6 +2181,14 @@ Considere o grupo $S_3$. Sabemos que $S_3$ n\~ao \'e nilpotente. Agora $A_3$ \'e
 \end{prova}
 
 
+\begin{proposicao}
+	Seja $H \ne \{1\}$ um subgrupo normal de um grupo nilpotente $G$. Ent\~ao $H \cap Z(G) \ne \{1\}$.
+\end{proposicao}
+\begin{prova}
+	Como $G$ \'e nilpotente, existe $n \in \N$ tal que $G = Z_n(G)$. Seja $i$ o menor {\'\i}ndice tal que $H \cap Z_i(G) \ne \{1\}$. Dado $x \in H \cap Z_i(G)$ e $y \in G$, ent\~ao $[x,y] = x^{-1}y^{-1}xy \in H$ pois $H \unlhd G$ e $x^{-1}y^{-1}xy \in Z_{i - 1}(G)$. Da{\'\i} $[H \cap Z_i(G), G] \sub H \cap Z_{i - 1}(G) = \{1\}$ e ent\~ao $H \cap Z_i(G) \sub H \cap Z(G)$. Portanto $H \cap Z(G) \ne \{1\}$.
+\end{prova}
+
+
 
 
 
